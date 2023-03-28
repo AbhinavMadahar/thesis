@@ -16,7 +16,7 @@ There are several subareas on which I am considering focusing, such as improving
 ## Timeline
 
 I expect to spend the first three semesters of my PhD focusing on coursework, research taking a second priority.
-After that, I will focus on 
+After that, I will focus on research.
 
 ## Next steps
 

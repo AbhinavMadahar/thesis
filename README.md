@@ -1,4 +1,4 @@
-# README
+# Abhinav Madahar's PhD Research
 
 This directory contains all my research work conducted as part of my doctoral studies.
 Large projects are added as git submodules.

@@ -1,6 +1,6 @@
 # Abhinav Madahar's PhD Research
 
-This directory contains all my research work conducted as part of my doctoral studies.
+This directory contains all my research work conducted as part of my doctoral thesis.
 Large projects are added as git submodules.
 
 My lab journal is contained in the `journal` directory.

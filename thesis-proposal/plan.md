@@ -11,7 +11,11 @@ I need to say that I will further research on XYZ topic, but I do not need to sp
 
 - [ ] Outline a plan via a todo list
 - [x] Decide topic
-- [ ] Learn more about the field (goals, prior work, current work, future directions)
+- [ ] Run a literature review on commonsense reasoning
+	- [ ] Find some survey papers in the field
+	- [ ] Read those survey papers, taking notes (TODO: identify what to note)
+	- [ ] Read papers referenced by those papers
+	- [ ] Recur the previous step until you've read two hundred papers or cannot find relevant unread papers, whichever comes first
 - [ ] Decide which subfields to focus on
 	- For each subfield, identify its:
 		- [ ] goals,

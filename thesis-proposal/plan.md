@@ -17,10 +17,10 @@ I need to say that I will further research on XYZ topic, but I do not need to sp
 	- [ ] Read papers referenced by those papers
 	- [ ] Recur the previous step until you've read two hundred papers or cannot find relevant unread papers, whichever comes first
 - [ ] Identify major subfields. For each subfield, identify
-		- [ ] goals,
-		- [ ] prior work,
-		- [ ] current work, and
-		- [ ] future directions
+	- [ ] goals,
+	- [ ] prior work,
+	- [ ] current work, and
+	- [ ] future directions
 - [ ] Decide which subfields to focus on for my thesis
 - [ ] Outline potential ways to further research in each subfield
 - [ ] Draft the thesis proposal

@@ -9,7 +9,7 @@ I need to say that I will further research on XYZ topic, but I do not need to sp
 
 ## Todo
 
-- [ ] Outline a plan via a todo list
+- [x] Outline a plan via a todo list
 - [x] Decide topic
 - [ ] Run a literature review on commonsense reasoning
 	- [ ] Find some survey papers in the field

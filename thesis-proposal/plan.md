@@ -12,7 +12,7 @@ I need to say that I will further research on XYZ topic, but I do not need to sp
 - [x] Outline a plan via a todo list
 - [x] Decide topic
 - [ ] Run a literature review on commonsense reasoning
-	- [ ] Find some survey papers in the field
+	- [x] Find some survey papers in the field
 	- [ ] Read those survey papers, taking notes (TODO: identify what to note)
 	- [ ] Read papers referenced by those papers
 	- [ ] Recur the previous step until you cannot find any more papers published within the last three years (fixed at January 1, 2020 onwards)

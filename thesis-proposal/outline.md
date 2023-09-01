@@ -7,7 +7,7 @@ I do not include auxiliary sections such as the title page, abstract, and refere
 
 - Background (four pages)
 	- What is commonsense reasoning? Why is important?
-	- What are the downstream tasks which use commonsense reasoning in conversational agents? Why is it important?
+	- What are the downstream tasks which use commonsense reasoning? Why is it important?
 - Finding better ways to do commonsense reasoning (five pages)
 	- Aims (half page)
 	- Motivation (half page)

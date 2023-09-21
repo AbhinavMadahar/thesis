@@ -9,10 +9,18 @@ One sentence is around twenty words.
 This means that, for example, a single page should have around thirty-five sentences.
 This makes it easy to estimate how long each section should be.
 
+Important points which I can use as needed:
+
+- Right now, there is no universally-agreed-upon scheme for codifying commonsense knowledge (Richardson and Heck, 2023).
+- Language models implicitly have some amount of commonsense reasoning because commonsense knowledge is present in the data (Richardson and Heck, 2023).
+- Current state-of-the-art commonsense techniques tend to use a custom dataset with annotations designed for learning commonsense (Richardson and Heck, 2023).
+
 Thesis proposal total length: fifteen pages
 
 - Introduction (one page)
-  - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
+  - Explain the importance of AGI and artificial conciousness
+  - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness
+    - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
 - Background (three pages)
   - What is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)
@@ -26,80 +34,316 @@ Thesis proposal total length: fifteen pages
 - Finding better ways to do commonsense reasoning (five pages)
   - Aims (half page)
   - Motivation (half page)
-  - Prior work (two-and-a-half pages)
-  - Proposition to find better ways to do this (half page)
+  - Specific promising avenues of research
+    - Natural language explanations (NLE)
+      - What is NLE?
+      - Why is research in NLE important?
+        - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
+          - TODO: fill
+      - Prior work on using NLE to improve commonsense reasoning
+        - (Bosselut et al, 2019)
+          - TODO: fill
+        - (Gabriel et al, 2021)
+          - TODO: fill
+      - Proposition to find better ways to use NLE to do commonsense reasoning
   - Methods (one page)
 - Finding better ways to apply commonsense reasoning to downstream tasks (five pages)
   - Aims
   - Motivation
     - Improvements to commonsense reasoning can improve models which tackle downstream tasks, including sequence classification, question answering, dialogue modelling, and dialogue summarisation (Richardson and Heck, 2023).
-  - Dialogue summarisation (one page)
-    - What is it?
-      - Generating a summary of a conversation while preserving its context (Kim et al, 2022)
-      - Formally, the goal is to learn a mapping function $\mathbb{M}: \mathcal{D} \to \mathcal{Y}$ where $\mathcal{D} = \{u_1, u_2, \ldots, u_n\}$ is a dialogue with $n$ utterances and $\mathcal{Y} = \{y_1, y_2, \ldots, y_m\}$ is a summary of the dialogue consisting of $m$ sentences (Kim et al, 2022)
-      - Abstractive summarisation, creating a summary from scratch, is more difficult than extractive summarisation, creating one using snippets of the original text (Kim et al, 2022)
-      - Abstractive dialogue summarisation is the task of generating a summary of a conversation (Kim et al, 2022)
-      - Dialogue summarisation is more difficult than document summarisation for two reasons. First, people do not state obvious matters, assuming that the interlocutor implicitly understands them (Grice, 1975). Second, conversations have an interactive flow of information between the speakers (Li et al, 2021)
-      - How is performance on this task measured? (TODO)
-        - Aims
-        - Motivation
-    - Prior work
-      - SICK and SICK++ (Kim et al, 2022)
-        - SICK means Summarizing with Injected Commonsense Knowledge (Kim et al, 2022), and SICK++ is an extension (Kim et al, 2022).
-        - They extend the task of dialogue summarisation with two modifications:
-          - First, they generate and filter to arrive at a set of commonsense knowledge $\mathcal{C} = \{c_1, c_2, \ldots, c_n\}$ based on $\mathcal{D}$ (TODO: explain how this set is found using sections 3.2 and 3.3 of (Kim et al, 2022)). Then, they use a slightly-modified mapping function $\mathbb{M}: \mathcal{X} \to \mathcal{Y}$ where $\mathcal{X}$ is a cross concatenation of $\mathcal{D}$ and $\mathcal{C}$. (TODO: further explain this cross concatenation using section 3.3 of (Kim et al, 2022)) (Kim et al, 2022)
-          - Second, they add an auxiliary task commonsense supervision $\mathbb{M}^*: \mathcal{X} \to \mathcal{Z}$ where the target commonsense $\mathcal{Z}$ is found based on $\mathcal{Y}$ (TODO: use section 3.4 of (Kim et al, 2022) to explain how the target commonsense is found) (Kim et al, 2022).
-        - SICK
-          - How it uses commonsense reasoning:
-            - There are 23 possible relation types (e.g. xIntent, xWant, xNeed, etc.)
-            - For each utterance $u_i$ in the dialogue $\mathcal{D}$, they have a commonsense inference $c_i$ from the sequence of corresponding commonsense inferences $\mathcal{C}$, found through the process described in the auxiliary information section
-            - They cross concatenate, appending each $c_i$ after its corresponding $u_i$. Formally, this is expressed as $\mathcal{X} = \mathcal{D} \bigoplus \mathcal{C} = \cdots || u_i || <\text{I}> c_i </\text{I}> || \cdots$ where $<\text{I}>$ and $</\text{I}>$ are special tokens which demarcate the commonsense inferences.
-            - This is then fed into a standard transformer-based encoder-decoder architecture. Through the cross concatenation, the encoder is able to use both the utterances, $\mathcal{D}$, and the commonsense inferences, $\mathcal{C}$. It is trained with a standard negative-log-likelihood loss.
-          - Auxiliary information:
-            - How it generates the commonsense inferences:
-              - It uses a two-step procedure to generate commonsense inferences from a given utterance and, optionally, the previous utterance
-              - They only consider a certain subset of relation types, e.g. xIntent and xWant, rather than all the relationship types. In (Kim et al, 2022), they consider $k=5$ relation types, which are selected for an utterance.
-              - Because (1) adding too much information may confuse the model and (2) transformers have an inherently limited maximum input sequence length, they include a second step, filtering, which finds the best commonsense inference from those generated.
-              - The first step, generating the commonsense inferences:
-                - They use a commonsense knowledge model such as COMET (Hwang et al, 2021) or PARA-COMET (Gabriel et al, 2021)
-                - COMET accepts the given utterance desired relation type (e.g., xIntent) as inputs to generate a commonsense inference. PARA-COMET accepts the previous utterance as a third input and conditions the output inference on that previous utterance.
-                - For each relation type, they generate several candidate commonsense inferences
-              - The second step, filtering the commonsense inferences:
-                - For each relation type $r \in R$ and inference index $j \in \left\{ 1, \ldots, k \right\}$, they find the commonsense inference $c_j^r$ most semantically relevant to the utterance. Formally, they find for every utterance $u_i$ a $c_i$ given by $c_i = \argmax_{c_j^r} \text{similarity-score}(u_i, c_j^r)$.
-                - To find the semantic relevance of a commonsense inference to an utterance, they use SBERT (Reimers and Gurevych, 2019)
-                - They compile the selected commonsense inferences into $\mathcal{C} = \left\{c_i\right\}_{i=1}^(n}$.
-        - SICK++
-          - Here, they include an auxiliary task titled commonsense supervision.
-          - To encourage the model to consider commonsense inferences, they include a second decoder $\mathbb{D_{\text{cs}}}$ which generates commonsense inferences, the target commonsense inferences coming from an commonsense knowledge model such as COMET and PARA-COMET.
-          - $\mathbb{D_{\text{cs}}}$ is paired with a loss analogous to that of the dialogue summarisation decoder $\mathbb{D_{\text{ds}}}$ from SICK
-          - The two decoders are then trained together in a multi-task learning setting.
-      - (Feng et al, 2021) and (Zhou et al, 2022) use ConceptNet (Speer et al, 2017) to fill in missing cues between dialogue (Kim et al, 2022)
-        - TODO: add these papers' content
-    - Proposition to find better ways to do this
-      - Using commonsense as additional context in dialogue summarisation is an under-explored direction (Kim et al, 2022)
-    - Methods
-      - Datasets
-      - Evaluation metrics
-  - Sequence classification (one page)
-    - What is it?
+  - Methods
+    - Evaluation metrics
+      - GRADE (Huang et al, 2020)
+        - TODO: fill
+      - (Zhou et al, 2021)
+        - TODO: fill
+  - Techniques which apply to multiple tasks
+    - Knowledge graph grounding (KGG)
+      - What is KGG?
+        - TODO: fill
+      - Prior work on using commonsense reasoning via KGG to improve performance on this task
+        - (Young et al, 2018)
+          - TODO: fill
+        - (Ma et al, 2021)
+          - TODO: fill
+        - (Zhong, Wang, and Miao, 2019)
+          - TODO: fill
+        - (Moon et al, 2019)
+          - TODO: fill
+        - (Zhang, Li, and Zhao, 2021)
+          - TODO: fill
+        - (Tu et al, 2022)
+          - TODO: fill
+        - (Xie, Sun, and Ji, 2022)
+          - TODO: fill
+        - (Feng, Feng, and Qin, 2021a)
+          - TODO: fill
+        - (Zhou et al, 2018)
+          - TODO: fill
+        - (Wu et al, 2020)
+          - TODO: fill
+        - (Varshney, Prabhakar, and Ekbal, 2022)
+          - TODO: fill
+        - (Gupta, Jhamtani, and Bigham, 2022)
+          - TODO: fill
+      - Proposition to find better ways to use KGG to improve performance
+  - Subtasks
+    - Dialogue summarisation (one page)
+      - What is it?
+        - Generating a summary of a conversation while preserving its context (Kim et al, 2022) and retaining factual consistency (Richardson and Heck, 2023).
+        - Formally, the goal is to learn a mapping function $\mathbb{M}: \mathcal{D} \to \mathcal{Y}$ where $\mathcal{D} = \{u_1, u_2, \ldots, u_n\}$ is a dialogue with $n$ utterances and $\mathcal{Y} = \{y_1, y_2, \ldots, y_m\}$ is a summary of the dialogue consisting of $m$ sentences (Kim et al, 2022)
+        - Abstractive summarisation, creating a summary from scratch, is more difficult than extractive summarisation, creating one using snippets of the original text (Kim et al, 2022)
+        - Abstractive dialogue summarisation is the task of generating a summary of a conversation (Kim et al, 2022)
+        - Dialogue summarisation is more difficult than document summarisation for two reasons. First, people do not state obvious matters, assuming that the interlocutor implicitly understands them (Grice, 1975). Second, conversations have an interactive flow of information between the speakers (Li et al, 2021)
+      - Methods
+        - Datasets
+          - ICSI Meetings Corpus (Janin et al, 2003)
+            - TODO: fill
+          - AMI Meeting Corpus (McCowan et al, 2005)
+            - TODO: fill
+          - SAMsum (Gliwa et al, 2019)
+            - TODO: fill
+        - Evaluation metrics
+      - How is performance on this task measured?
       - Aims
       - Motivation
-    - Prior work
-    - Proposition to find better ways to do this
-    - Methods
-  - Question answering (one page)
-    - What is it?
+        - Dialogue summarisation is useful for meetings, where virtual assistants can summarise a meeting's key points and action items (Richardson and Heck, 2023). An early work in this direction is (Tur et al, 2010). Finding better ways to summarise dialogue would make it easier for businesses to find key take-aways from their meetings.
+          - TODO: add a bit more from (Tur et al, 2010).
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - SICK and SICK++ (Kim et al, 2022)
+          - SICK means Summarizing with Injected Commonsense Knowledge (Kim et al, 2022), and SICK++ is an extension (Kim et al, 2022).
+          - They extend the task of dialogue summarisation with two modifications:
+            - First, they generate and filter to arrive at a set of commonsense knowledge $\mathcal{C} = \{c_1, c_2, \ldots, c_n\}$ based on $\mathcal{D}$ (TODO: explain how this set is found using sections 3.2 and 3.3 of (Kim et al, 2022)). Then, they use a slightly-modified mapping function $\mathbb{M}: \mathcal{X} \to \mathcal{Y}$ where $\mathcal{X}$ is a cross concatenation of $\mathcal{D}$ and $\mathcal{C}$. (TODO: further explain this cross concatenation using section 3.3 of (Kim et al, 2022)) (Kim et al, 2022)
+            - Second, they add an auxiliary task commonsense supervision $\mathbb{M}^*: \mathcal{X} \to \mathcal{Z}$ where the target commonsense $\mathcal{Z}$ is found based on $\mathcal{Y}$ (TODO: use section 3.4 of (Kim et al, 2022) to explain how the target commonsense is found) (Kim et al, 2022).
+          - SICK
+            - How it uses commonsense reasoning:
+              - There are 23 possible relation types (e.g. xIntent, xWant, xNeed, etc.)
+              - For each utterance $u_i$ in the dialogue $\mathcal{D}$, they have a commonsense inference $c_i$ from the sequence of corresponding commonsense inferences $\mathcal{C}$, found through the process described in the auxiliary information section
+              - They cross concatenate, appending each $c_i$ after its corresponding $u_i$. Formally, this is expressed as $\mathcal{X} = \mathcal{D} \bigoplus \mathcal{C} = \cdots || u_i || <\text{I}> c_i </\text{I}> || \cdots$ where $<\text{I}>$ and $</\text{I}>$ are special tokens which demarcate the commonsense inferences.
+              - This is then fed into a standard transformer-based encoder-decoder architecture. Through the cross concatenation, the encoder is able to use both the utterances, $\mathcal{D}$, and the commonsense inferences, $\mathcal{C}$. It is trained with a standard negative-log-likelihood loss.
+            - Auxiliary information:
+              - How it generates the commonsense inferences:
+                - It uses a two-step procedure to generate commonsense inferences from a given utterance and, optionally, the previous utterance
+                - They only consider a certain subset of relation types, e.g. xIntent and xWant, rather than all the relationship types. In (Kim et al, 2022), they consider $k=5$ relation types, which are selected for an utterance.
+                - Because (1) adding too much information may confuse the model and (2) transformers have an inherently limited maximum input sequence length, they include a second step, filtering, which finds the best commonsense inference from those generated.
+                - The first step, generating the commonsense inferences:
+                  - They use a commonsense knowledge model such as COMET (Hwang et al, 2021) or PARA-COMET (Gabriel et al, 2021)
+                  - COMET accepts the given utterance desired relation type (e.g., xIntent) as inputs to generate a commonsense inference. PARA-COMET accepts the previous utterance as a third input and conditions the output inference on that previous utterance.
+                  - For each relation type, they generate several candidate commonsense inferences
+                - The second step, filtering the commonsense inferences:
+                  - For each relation type $r \in R$ and inference index $j \in \left\{ 1, \ldots, k \right\}$, they find the commonsense inference $c_j^r$ most semantically relevant to the utterance. Formally, they find for every utterance $u_i$ a $c_i$ given by $c_i = \argmax_{c_j^r} \text{similarity-score}(u_i, c_j^r)$.
+                  - To find the semantic relevance of a commonsense inference to an utterance, they use SBERT (Reimers and Gurevych, 2019)
+                  - They compile the selected commonsense inferences into $\mathcal{C} = \left\{c_i\right\}_{i=1}^(n}$.
+          - SICK++
+            - Here, they include an auxiliary task titled commonsense supervision.
+            - To encourage the model to consider commonsense inferences, they include a second decoder $\mathbb{D_{\text{cs}}}$ which generates commonsense inferences, the target commonsense inferences coming from an commonsense knowledge model such as COMET and PARA-COMET.
+            - $\mathbb{D_{\text{cs}}}$ is paired with a loss analogous to that of the dialogue summarisation decoder $\mathbb{D_{\text{ds}}}$ from SICK
+            - The two decoders are then trained together in a multi-task learning setting.
+        - (Feng et al, 2021) and (Zhou et al, 2022) use ConceptNet (Speer et al, 2017) to fill in missing cues between dialogue (Kim et al, 2022)
+          - TODO: add these papers' content
+      - Proposition to find better ways to do this
+        - Using commonsense as additional context in dialogue summarisation is an under-explored direction (Kim et al, 2022)
+    - Sequence classification (one page)
+      - What is it?
+        - The problem of identifying some attribute of the dialogue, e.g.
+          - what is the intent of the conversation?
+          - what is the emotional state of the other speaker?
+          - what is the topic of the conversation?
+      - Subproblems include:
+        - Slot filling
+          - What is this problem?
+          - Methods
+            - Datasets
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+        - Domain classification
+          - What is this problem?
+          - Methods
+            - Datasets
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+        - Intent detection
+          - What is this problem?
+          - Methods
+            - Datasets
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+        - Emotion detection (AKA 'emotion classification')
+          - What is this problem?
+          - Methods
+            - Datasets
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+            - (Ghosal et al, 2020)
+              - TODO: fill
+            - (Li et al, 2021)
+              - TODO: fill
+          - Proposition to find better ways to do this
+        - Causal emotion entailment
+          - What is this problem?
+          - Methods
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+            - (Li et al, 2022)
+              - TODO: fill
+        - Sentence topic prediction
+          - What is this problem?
+          - Methods
+            - Datasets
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+        - Sequential dialogue context modelling
+          - What is this problem?
+          - Methods
+            - Datasets
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+    - Writing template-based explanations in task-oriented dialogue
+      - What is this problem?
+      - Aims
+      - Methods
+      - How is performance on this task measured?
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - (Arabshahi et al, 2021)
+          - TODO: fill
+      - Proposition to find better ways to do this
+    - Question answering (one page)
+      - What is it?
       - Aims
       - Motivation
-    - Prior work
-    - Proposition to find better ways to do this
-    - Methods
-  - Dialogue modelling (one page)
-    - What is it?
+      - Methods
+        - Evaluation metrics
+          - Evaluation metrics of the come in several forms: true/false, short-answer multi-choice QA, and long-answer multi-choice QA (Richardson and Heck, 2023)
+          - True/false
+            - CommonsenseQA 2.0 (Talmor et al, 2022)
+              - TODO: fill
+            - Com2Sense (Singh et al, 2021)
+              - TODO: fill
+            - ETHICS (Hendrycks et al, 2020)
+              - TODO: fill
+            - CyclC
+              - TODO: find out what this is and fill
+          - Short-answer multi-choice QA
+            - CommonsenseQA 1.0 (Talmor et al, 2018)
+              - TODO: fill
+            - QASC (Khot et al, 2020)
+              - TODO: fill
+            - WinoGrande (Sakaguchi et al, 2021)
+              - TODO: fill
+          - Long-answer multi-choice QA
+            - SocialIQA (Sap et al, 2019b)
+              - TODO: fill
+            - CosmosQA (Huang et al, 2019)
+              - TODO: fill
+            - αNLI (Bhagavatula et al, 2019)
+              - TODO: fill
+            - SWAG (Zellers et al, 2018)
+              - TODO: fill
+            - HellaSWAG (Zellers et al, 2019)
+              - TODO: fill
+            - PIQA (Bisk  et  al, 2020)
+              - TODO: fill
+          - Rainbow (Lourie et al, 2021) combines other QA benchmarks into a single one.
+            - TODO: fill
+          - NumerSense (Lin et al, 2020) is a masked language modelling benchmark focused on temporal commonsense
+          - TODO: fill
+        - Datasets
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - Multi-choice QA (MCQA) over dialogues
+          - What is it?
+            - The problem of answering multi-choice questions given a dialogue as context (Richardson and Heck, 2023).
+          - Methods
+            - Datasets
+              - CIDER
+                - TODO: fill
+              - MuTual (Cui et al, 2020)
+                - TODO: fill
+              - DREAM (Sun et al, 2019)
+                - TODO: fill
+              - Ubuntu Dialogue Corpus (Lowe et al, 2015)
+                - TODO: fill
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+        - Multi-turn conversational QA (CQA)
+          - What is it?
+            - The problem of asking or answering questions in a multi-turn dialogue (Richardson and Heck, 2023).
+          - Methods
+            - Datasets
+              - CoQA (Reddy, Chen, and Manning, 2019)
+                - TODO: fill
+              - QuAC (Choi et al, 2018)
+                - TODO: fill
+            - Evaluation metrics
+          - How is performance on this task measured?
+          - Aims
+          - Motivation
+          - Prior work on using commonsense reasoning to improve performance on this task
+          - Proposition to find better ways to do this
+      - Proposition to find better ways to do this
+    - Dialogue modelling (one page)
+      - What is it?
+        - TODO: define dialogue modelling
+        - It is used for both open dialogue, the setting where the conversation does not have any particular goal, as typified by the chatbot setting, and task-oriented dialogue (Richardson and Heck, 2023).
+        - State-of-the-art models tend to use end-to-end dalogue systems based on large neural models (Ni et al, 2022).
+      - Methods
+        - Datasets
+          - PERSONA-CHAT (Zhang et al, 2018)
+            - TODO: fill
+          - ConvAI2 (Dinan et al, 2020)
+            - TODO: fill
+          - DailyDialogue (Li et al, 2017)
+            - TODO: fill
+          - MultiWOZ (Budzianowski et al, 2018)
+            - TODO: fill
+        - Evaluation metrics
+      - How is performance on this task measured?
       - Aims
       - Motivation
-    - Prior work
-    - Proposition to find better ways to do this
-    - Methods
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - (Zhou et al, 2021a)
+          - TODO: fill
+        - (Zhou et al, 2021b)
+          - TODO: fill
+        - (Majumder et al, 2020)
+          - TODO: fill
+      - Proposition to find better ways to do this
+    - Dialogue systems
+      - What is it?
+      - Methods
+      - How is performance on this task measured?
+      - Aims
+      - Motivation
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - (Majumder et al, 2020)
+      - Proposition to find better ways to do this
 - Timeline (half page)
 - Conclusion (half page)

@@ -17,12 +17,16 @@ Important points which I can use as needed:
 
 Thesis proposal total length: fifteen pages
 
-- Introduction (one page)
+- Introduction (four pages)
   - Explain the importance of AGI and artificial conciousness
+  - Distinguish between research on the trunk from research on the branches
   - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness
     - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
-- Background (three pages)
-  - What is commonsense reasoning? Why is important? (one-and-a-half pages)
+  - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches
+  - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments
+  - Acknowledge that AGI and artificial conciousness are extremely difficult goals, and that it would be almost presumptuous of me to imagine that I can make significant progress towards these goals, but that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work
+- Background (two pages)
+  - More precisely, what is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)
       - Specific definition:
         - TODO: fill
@@ -36,7 +40,7 @@ Thesis proposal total length: fifteen pages
   - What are the downstream tasks which use commonsense reasoning? Why are they important? (one-and-a-half pages)
     - What they are: (one page)
     - Why they're important: (half page)
-- Finding better ways to do commonsense reasoning (five pages)
+- Finding better ways to do commonsense reasoning (four pages)
   - Aims (half page)
   - Motivation (half page)
   - Promising avenues of research
@@ -52,7 +56,7 @@ Thesis proposal total length: fifteen pages
           - TODO: fill
       - Proposition to find better ways to use NLE to do commonsense reasoning
   - Methods (one page)
-- Finding better ways to apply commonsense reasoning to downstream tasks (five pages)
+- Finding better ways to apply commonsense reasoning to downstream tasks (four pages)
   - Aims
   - Motivation
     - Improvements to commonsense reasoning can improve models which tackle downstream tasks, including sequence classification, question answering, dialogue modelling, and dialogue summarisation (Richardson and Heck, 2023).
@@ -138,7 +142,7 @@ Thesis proposal total length: fifteen pages
                 - The second step, filtering the commonsense inferences:
                   - For each relation type $r \in R$ and inference index $j \in \left\{ 1, \ldots, k \right\}$, they find the commonsense inference $c_j^r$ most semantically relevant to the utterance. Formally, they find for every utterance $u_i$ a $c_i$ given by $c_i = \argmax_{c_j^r} \text{similarity-score}(u_i, c_j^r)$.
                   - To find the semantic relevance of a commonsense inference to an utterance, they use SBERT (Reimers and Gurevych, 2019)
-                  - They compile the selected commonsense inferences into $\mathcal{C} = \left\{c_i\right\}_{i=1}^(n}$.
+                  - They compile the selected commonsense inferences into $\mathcal{C} = \left\{c_i\right\}_{i=1}^{n}$.
           - SICK++
             - Here, they include an auxiliary task titled commonsense supervision.
             - To encourage the model to consider commonsense inferences, they include a second decoder $\mathbb{D_{\text{cs}}}$ which generates commonsense inferences, the target commonsense inferences coming from an commonsense knowledge model such as COMET and PARA-COMET.

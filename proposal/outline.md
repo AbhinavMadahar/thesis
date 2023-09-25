@@ -24,9 +24,14 @@ Thesis proposal total length: fifteen pages
 - Background (three pages)
   - What is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)
-      - Two major avenues through which it can be achieved are commonsense knowledge graphs and commonsense knowledge models (Kim et al, 2022)
-      - Static knowledge graphs (e.g. ATOMIC (Sap et al, 2019)) represent entities as nodes and relations as edges (Kim et al, 2022)
-      - Commonsense knowledge models (e.g. COMET (Bosselut et al, 2019)) generate implicit commonsense inferences in multiple dimensions based on the knowledge graph on which they are trained (Kim et al, 2022)
+      - Specific definition:
+        - TODO: fill
+      - Broad overview of different techniques and avenues:
+        - Two major avenues through which it can be achieved are commonsense knowledge graphs and commonsense knowledge models (Kim et al, 2022)
+        - Static knowledge graphs (e.g. ATOMIC (Sap et al, 2019)) represent entities as nodes and relations as edges (Kim et al, 2022)
+        - Commonsense knowledge models (e.g. COMET (Bosselut et al, 2019)) generate implicit commonsense inferences in multiple dimensions based on the knowledge graph on which they are trained (Kim et al, 2022)
+      - Discussion on implicit commonsense reasoning found in large language models:
+        - TODO: fill
     - Why it's important: (half page)
   - What are the downstream tasks which use commonsense reasoning? Why are they important? (one-and-a-half pages)
     - What they are: (one page)
@@ -34,7 +39,7 @@ Thesis proposal total length: fifteen pages
 - Finding better ways to do commonsense reasoning (five pages)
   - Aims (half page)
   - Motivation (half page)
-  - Specific promising avenues of research
+  - Promising avenues of research
     - Natural language explanations (NLE)
       - What is NLE?
       - Why is research in NLE important?

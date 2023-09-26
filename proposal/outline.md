@@ -18,13 +18,15 @@ Important points which I can use as needed:
 Thesis proposal total length: fifteen pages
 
 - Introduction (four pages)
-  - Explain the importance of AGI and artificial conciousness
-  - Distinguish between research on the trunk from research on the branches
+  - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work
+  - Based on this, raise the importance of pursuing the major endgoals of AGI and artificial conciousness
+  - Distinguish between research on the trunk and research on the branches
   - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness
     - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
   - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches
+    - Note that a substantial portion of academia will read my grad school application, so this thesis proposal is the soap box on which I disseminate my message
+  - Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply)
   - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments
-  - Acknowledge that AGI and artificial conciousness are extremely difficult goals, and that it would be almost presumptuous of me to imagine that I can make significant progress towards these goals, but that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work
 - Background (two pages)
   - More precisely, what is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)
@@ -41,22 +43,21 @@ Thesis proposal total length: fifteen pages
     - What they are: (one page)
     - Why they're important: (half page)
 - Finding better ways to do commonsense reasoning (four pages)
-  - Aims (half page)
-  - Motivation (half page)
-  - Promising avenues of research
-    - Natural language explanations (NLE)
-      - What is NLE?
-      - Why is research in NLE important?
-        - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
-          - TODO: fill
-      - Prior work on using NLE to improve commonsense reasoning
-        - (Bosselut et al, 2019)
-          - TODO: fill
-        - (Gabriel et al, 2021)
-          - TODO: fill
-      - Proposition to find better ways to use NLE to do commonsense reasoning
+  - Explain that this is an example of trunk work
+  - Natural language explanations (NLE)
+    - What is NLE?
+    - Why is research in NLE important?
+      - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
+        - TODO: fill
+    - Prior work on using NLE to improve commonsense reasoning
+      - (Bosselut et al, 2019)
+        - TODO: fill
+      - (Gabriel et al, 2021)
+        - TODO: fill
+    - Proposition to find better ways to use NLE to do commonsense reasoning
   - Methods (one page)
 - Finding better ways to apply commonsense reasoning to downstream tasks (four pages)
+  - Explain that this is an example of branch work
   - Aims
   - Motivation
     - Improvements to commonsense reasoning can improve models which tackle downstream tasks, including sequence classification, question answering, dialogue modelling, and dialogue summarisation (Richardson and Heck, 2023).

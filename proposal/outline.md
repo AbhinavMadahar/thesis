@@ -27,6 +27,11 @@ Thesis proposal total length: fifteen pages
     - Note that a substantial portion of academia will read my grad school application, so this thesis proposal is the soap box on which I disseminate my message
   - Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply)
   - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments
+  - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis
+    - Rahimi argued that we should move away from merely creating new techniques which perform more well and towards developing a deeper understanding of how and why certain techniques work
+    - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
+    - I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal
+    - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
 - Background (two pages)
   - More precisely, what is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)

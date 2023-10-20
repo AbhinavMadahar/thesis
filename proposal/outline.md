@@ -20,6 +20,7 @@ Thesis proposal total length: fifteen pages
 - Introduction (four pages)
   - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work
   - Based on this, raise the importance of pursuing the major endgoals of AGI and artificial conciousness
+    - North Star
   - Distinguish between research on the trunk and research on the branches
     - Note that research can sometimes have both aspects
       - AlexNet (Krizhevsky et al, 2012) had the trunk property of ushering in the modern era of deep networks
@@ -29,6 +30,7 @@ Thesis proposal total length: fifteen pages
     - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
   - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches
     - Note that a substantial portion of academia will read my grad school application, so this thesis proposal is the soap box on which I disseminate my message
+      - Note within this idea that I was inadvertently given this platform through the happenstance of the application having a section where you can upload arbitrary documents
   - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments
   - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis
     - Rahimi argued that we should move away from merely creating new techniques which perform more well and towards developing a deeper understanding of how and why certain techniques work
@@ -52,6 +54,16 @@ Thesis proposal total length: fifteen pages
     - Why they're important: (half page)
 - Finding better ways to do commonsense reasoning (four pages)
   - Explain that this is an example of trunk work
+  - Define and describe abductive reasoning
+    - TODO: fill from (Qin et al, 2020)
+    - Describe abductive NLI
+      - TODO: fill from (Bhagavatula et al, 2020)
+    - Describe abductive NLG
+      - TODO: fill from (Bhagavatula et al, 2020)
+    - Prior work
+      - TODO: fill from (Qin et al, 2020)
+  - Define and describe counterfactual reasoning
+    - TODO: fill from (Qin et al, 2020)
   - Natural language explanations (NLE)
     - What is NLE?
     - Why is research in NLE important?
@@ -199,6 +211,7 @@ Thesis proposal total length: fifteen pages
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
         - Emotion detection (AKA 'emotion classification')
+          - TODO: fill from (Yi et al, 2022)
           - What is this problem?
           - Methods
             - Datasets

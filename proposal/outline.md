@@ -17,9 +17,11 @@ Important points which I can use as needed:
 
 Thesis proposal total length: fifteen pages
 
-- Introduction (four pages)
+- Introduction (three pages; one hundred sentences)
   - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work
-  - Based on this, raise the importance of pursuing the major endgoals of AGI and artificial conciousness
+  - Based on this, define and raise the importance of pursuing the major endgoals of AGI and artificial conciousness
+    - Define AGI
+    - Define artificial conciousness
     - North Star
   - Distinguish between research on the trunk and research on the branches
     - Note that research can sometimes have both aspects
@@ -37,7 +39,7 @@ Thesis proposal total length: fifteen pages
     - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
     - I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal
     - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
-- Background (two pages)
+- Background (two pages; seventy sentences)
   - More precisely, what is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)
       - Specific definition:
@@ -52,9 +54,9 @@ Thesis proposal total length: fifteen pages
   - What are the downstream tasks which use commonsense reasoning? Why are they important? (one-and-a-half pages)
     - What they are: (one page)
     - Why they're important: (half page)
-- Finding better ways to do commonsense reasoning (four pages)
-  - Explain that this is an example of trunk work
-  - Define and describe abductive reasoning
+- Finding better ways to do commonsense reasoning (four pages; one-hundred twenty sentences)
+  - Explain that this is an example of trunk work (five sentences)
+  - Define and describe abductive reasoning (fifteen sentences)
     - TODO: fill from (Qin et al, 2020)
     - Describe abductive NLI
       - TODO: fill from (Bhagavatula et al, 2020)
@@ -62,9 +64,9 @@ Thesis proposal total length: fifteen pages
       - TODO: fill from (Bhagavatula et al, 2020)
     - Prior work
       - TODO: fill from (Qin et al, 2020)
-  - Define and describe counterfactual reasoning
+  - Define and describe counterfactual reasoning (fifteen sentences)
     - TODO: fill from (Qin et al, 2020)
-  - Natural language explanations (NLE)
+  - Natural language explanations (NLE) (thirty sentences)
     - What is NLE?
     - Why is research in NLE important?
       - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
@@ -75,19 +77,17 @@ Thesis proposal total length: fifteen pages
       - (Gabriel et al, 2021)
         - TODO: fill
     - Proposition to find better ways to use NLE to do commonsense reasoning
-  - Methods (one page)
-- Finding better ways to apply commonsense reasoning to downstream tasks (four pages)
-  - Explain that this is an example of branch work
-  - Aims
-  - Motivation
-    - Improvements to commonsense reasoning can improve models which tackle downstream tasks, including sequence classification, question answering, dialogue modelling, and dialogue summarisation (Richardson and Heck, 2023).
-  - Methods
+  - Methods (one page) (fifteen sentences)
+  - TODO: add forty sentences, ideally by adding another avenue through which we can potentially achieve commonsense reasoning
+- Finding better ways to apply commonsense reasoning to downstream tasks (five pages; one-hundred seventy-five sentences)
+  - Explain that this is an example of branch work (five sentences)
+  - Methods (ten sentences)
     - Evaluation metrics
       - GRADE (Huang et al, 2020)
         - TODO: fill
       - (Zhou et al, 2021)
         - TODO: fill
-  - Techniques which apply to multiple tasks
+  - Techniques which apply to multiple tasks (thirty sentences)
     - Knowledge graph grounding (KGG)
       - What is KGG?
         - TODO: fill
@@ -117,8 +117,9 @@ Thesis proposal total length: fifteen pages
         - (Gupta, Jhamtani, and Bigham, 2022)
           - TODO: fill
       - Proposition to find better ways to use KGG to improve performance
-  - Subtasks
-    - Dialogue summarisation (one page)
+  - Subtasks (one-hundred fifty sentences)
+    - TODO: add non-NLP subtasks, such as those from computer vision
+    - Dialogue summarisation (one page) (thirty sentences)
       - What is it?
         - Generating a summary of a conversation while preserving its context (Kim et al, 2022) and retaining factual consistency (Richardson and Heck, 2023).
         - Formally, the goal is to learn a mapping function $\mathbb{M}: \mathcal{D} \to \mathcal{Y}$ where $\mathcal{D} = \{u_1, u_2, \ldots, u_n\}$ is a dialogue with $n$ utterances and $\mathcal{Y} = \{y_1, y_2, \ldots, y_m\}$ is a summary of the dialogue consisting of $m$ sentences (Kim et al, 2022)
@@ -173,7 +174,7 @@ Thesis proposal total length: fifteen pages
           - TODO: add these papers' content
       - Proposition to find better ways to do this
         - Using commonsense as additional context in dialogue summarisation is an under-explored direction (Kim et al, 2022)
-    - Sequence classification (one page)
+    - Sequence classification (one page; thirty sentences)
       - What is it?
         - The problem of identifying some attribute of the dialogue, e.g.
           - what is the intent of the conversation?
@@ -263,7 +264,7 @@ Thesis proposal total length: fifteen pages
         - (Arabshahi et al, 2021)
           - TODO: fill
       - Proposition to find better ways to do this
-    - Question answering (one page)
+    - Question answering (one page; thirty sentences)
       - What is it?
       - Aims
       - Motivation
@@ -340,7 +341,7 @@ Thesis proposal total length: fifteen pages
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
       - Proposition to find better ways to do this
-    - Dialogue modelling (one page)
+    - Dialogue modelling (one page; thirty sentences)
       - What is it?
         - TODO: define dialogue modelling
         - It is used for both open dialogue, the setting where the conversation does not have any particular goal, as typified by the chatbot setting, and task-oriented dialogue (Richardson and Heck, 2023).
@@ -367,7 +368,7 @@ Thesis proposal total length: fifteen pages
         - (Majumder et al, 2020)
           - TODO: fill
       - Proposition to find better ways to do this
-    - Dialogue systems
+    - Dialogue systems (thirty sentences)
       - What is it?
       - Methods
       - How is performance on this task measured?

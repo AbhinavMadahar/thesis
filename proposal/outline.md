@@ -6,10 +6,8 @@ I do not include auxiliary sections such as the title page, abstract, and refere
 One page of text has around seven hundred words.
 I expect to include some graphics in this document, but not so many that they break the one page ~= seven hundred words estimate.
 One sentence is around twenty words.
-This means that, for example, a single page should have around thirty-five sentences.
+This means that, fuor example, a single page should have around thirty-five sentences.
 This makes it easy to estimate how long each section should be.
-
-Important points which I can use as needed:
 
 - Right now, there is no universally-agreed-upon scheme for codifying commonsense knowledge (Richardson and Heck, 2023).
 - Language models implicitly have some amount of commonsense reasoning because commonsense knowledge is present in the data (Richardson and Heck, 2023).
@@ -18,27 +16,40 @@ Important points which I can use as needed:
 Thesis proposal total length: fifteen pages
 
 - Introduction (three pages; one hundred sentences)
-  - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work
-  - Based on this, define and raise the importance of pursuing the major endgoals of AGI and artificial conciousness
+  - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)
+  - Based on this, define and raise the importance of pursuing the major endgoals of AGI and artificial conciousness (five sentences)
     - Define AGI
-    - Define artificial conciousness
-    - North Star
-  - Distinguish between research on the trunk and research on the branches
+      - An artificial general intelligence is a machine which can perform intellectual labour
+    - Define artificial conciousness machine which can perform intellectual labour
+      - An artificial conciousness is a machine which is aware of its own existence
+      - Sentience is slightly different from conciousness
+        - TODO: explain how they are different, relying on (Butlin et al, 2023)
+    - TODO: add the two definitions of AI from the intro to the 2022 Daedalus issue on AI, noting how they are similar to my respective definitions of AGI and artificial conciousness
+  - Distinguish between research on the trunk and research on the branches (ten sentences)
+    - Artificial intelligence systems in present-day research tend to understand some concept and then do something with this understanding
+      - For example, in machine translation via an attentionless encoder-decoder architecture, the encoder comes to understand the input text by putting it in the latent space and the decoder uses this latent-space-representation-based understanding to write text in the destination language
+    - What is research on the trunk?
+      - It is research which advances how an artificial intelligence understands concepts
+      - In the machine translation example given, improving the encoder's ability to understand the input text would be movement forwards in the trunk direction
+    - What is research on the branches?
+      - It is research which advances how an artificial intelligence uses its understanding to do something useful
+      - In the machine translation example given, improving the decoder's ability to write text in the destination language would be movement forwards in the branch direction
     - Note that research can sometimes have both aspects
-      - AlexNet (Krizhevsky et al, 2012) had the trunk property of ushering in the modern era of deep networks
-      - It also had the branch property of applying deep networks to image classification
-  - Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply)
-  - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness
+      - AlexNet (Krizhevsky et al, 2012) had
+        - The trunk property of ushering in the modern era of deep networks
+        - The branch property of applying deep networks to image classification
+  - Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply) (ten sentences)
+  - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness (ten sentences)
     - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
-  - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches
-    - Note that a substantial portion of academia will read my grad school application, so this thesis proposal is the soap box on which I disseminate my message
-      - Note within this idea that I was inadvertently given this platform through the happenstance of the application having a section where you can upload arbitrary documents
-  - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments
-  - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis
+    - TODO: fill
+  - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches (five sentences)
+  - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments (fifteen sentences)
+  - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis (ten sentences)
     - Rahimi argued that we should move away from merely creating new techniques which perform more well and towards developing a deeper understanding of how and why certain techniques work
     - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
     - I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal
     - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
+  - TODO: somehow add thirty sentences
 - Background (two pages; seventy sentences)
   - More precisely, what is commonsense reasoning? Why is important? (one-and-a-half pages)
     - What it is: (one page)
@@ -77,8 +88,13 @@ Thesis proposal total length: fifteen pages
       - (Gabriel et al, 2021)
         - TODO: fill
     - Proposition to find better ways to use NLE to do commonsense reasoning
+  - Using pre-trained language models as neural knowledge bases (twenty sentences)
+    - TODO: fill from (Lin et al, 2020)
   - Methods (one page) (fifteen sentences)
-  - TODO: add forty sentences, ideally by adding another avenue through which we can potentially achieve commonsense reasoning
+    - Datasets
+      - NumerSense
+        - TODO: fill from (Lin et al, 2020)
+  - TODO: add twenty sentences, ideally by adding another avenue through which we can potentially achieve commonsense reasoning
 - Finding better ways to apply commonsense reasoning to downstream tasks (five pages; one-hundred seventy-five sentences)
   - Explain that this is an example of branch work (five sentences)
   - Methods (ten sentences)
@@ -357,6 +373,7 @@ Thesis proposal total length: fifteen pages
           - MultiWOZ (Budzianowski et al, 2018)
             - TODO: fill
         - Evaluation metrics
+          - TODO: fill from (Huang et al, 2020)
       - How is performance on this task measured?
       - Aims
       - Motivation
@@ -371,6 +388,8 @@ Thesis proposal total length: fifteen pages
     - Dialogue systems (thirty sentences)
       - What is it?
       - Methods
+        - Evaluation metrics
+          - TODO: fill from (Huang et al, 2020)
       - How is performance on this task measured?
       - Aims
       - Motivation

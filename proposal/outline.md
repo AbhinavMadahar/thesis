@@ -43,7 +43,12 @@ Thesis proposal total length: fifteen pages
     - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
     - TODO: fill
   - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches (five sentences)
+    - My research, during graduate school and beyond, will advance work in both directions, trunk and branch.
+    - My thesis in particular moves the field forward in both directions, the first part advancing in the trunk and the second part advancing along the branches.
+    - As such, accepting me into graduate school is a fantastic way to advance research in important ways, advancing research in both the trunk of improving 'fundamental' AI and in the branch of applying this 'fundamental' AI to specific tasks.
+    - (Plz accept me plzzzz 🙏🙏🙏.)
   - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments (fifteen sentences)
+    - TODO: fill
   - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis (ten sentences)
     - Rahimi argued that we should move away from merely creating new techniques which perform more well and towards developing a deeper understanding of how and why certain techniques work
     - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
@@ -90,11 +95,24 @@ Thesis proposal total length: fifteen pages
     - Proposition to find better ways to use NLE to do commonsense reasoning
   - Using pre-trained language models as neural knowledge bases (twenty sentences)
     - TODO: fill from (Lin et al, 2020)
+  - Improving commonsense reasoning system's generalisation (twenty sentences)
+    - Through improving transfer learning:
+      - TODO: fill from (Kim YJ et al, 2022)
   - Methods (one page) (fifteen sentences)
     - Datasets
       - NumerSense
         - TODO: fill from (Lin et al, 2020)
-  - TODO: add twenty sentences, ideally by adding another avenue through which we can potentially achieve commonsense reasoning
+    - Evaluation metrics
+      - SocialIQA (SIQA)
+        - TODO: fill from (Sap et al, 2019b)
+      - CommonsenseQA (CSQA)
+        - TODO: fill from (Talmor et al, 2018)
+      - Abductive NLI (a-NLI)
+        - TODO: fill from (Bhagavatula et al, 2020)
+      - PhysicalIQA (PIQA)
+        - TODO: fill from (Bisk et al, 2020)
+      - WinoGrande (WG)
+        - TODO: fill from (Sakaguchi et al, 2020)
 - Finding better ways to apply commonsense reasoning to downstream tasks (five pages; one-hundred seventy-five sentences)
   - Explain that this is an example of branch work (five sentences)
   - Methods (ten sentences)

@@ -1,43 +1,47 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 
 \usepackage{amsmath}
 \usepackage[OT1]{fontenc}
 \usepackage{fontspec}
 \usepackage{epsfig}
+\usepackage{geometry}
 \usepackage{graphics}
+\usepackage{lipsum}
 \usepackage{times}
+\usepackage[titles]{tocloft}
 
 \renewcommand\rmdefault{cmr}
 \renewcommand\sfdefault{cmss}
 \renewcommand\ttdefault{cmtt}
 
-\newfontfamily\devanagari{Noto Sans Devanagari}[Script=Devanagari]
+% change the font for chapter, section and subsection page numbers
+\renewcommand\cftchappagefont{\Large\bfseries}
+\renewcommand\cftsecpagefont{\Large}
+\renewcommand\cftsubsecpagefont{\large}
 
-% <http://psl.cs.columbia.edu/phdczar/proposal.html>:
-%
-% The standard departmental thesis proposal format is the following:
-%        30 pages
-%        12 point type
-%        1 inch margins all around = 6.5   inch column
-%        (Total:  30 * 6.5   = 195 page-inches)
-%
-% For letter-size paper: 8.5 in x 11 in
-% Latex Origin is 1''/1'', so measurements are relative to this.
+% change the spacing before chapter, section and subsection entries
+\setlength\cftbeforechapskip{2ex}
+\setlength\cftbeforesecskip{1ex}
+\setlength\cftbeforesubsecskip{0.8ex}
 
-\topmargin      0.0in
-\headheight     0.0in
-\headsep        0.0in
-\oddsidemargin  0.0in
-\evensidemargin 0.0in
-\textheight     9.0in
-\textwidth      6.5in
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
-\title{{\bf Doctoral Thesis Proposal}}
-\author{ {\bf Abhinav Madahar $\circ$ {\normalfont {\devanagari अभिनव मदहर}}}  \\
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\alph{subsection}}
+\renewcommand{\thesubsubsection}{\roman{subsubsection}}
+
+\newfontfamily\devanagari{Noto Serif Devanagari}[Script=Devanagari]
+
+\newcommand{\pageoftext}{\lipsum[1-8]}
+
+\title{\textbf{Doctoral Thesis Proposal}}
+\author{\textbf{Abhinav Madahar $\circ$ {\normalfont {\devanagari अभिनव मदहर}}}  \\
 Department of Computer Science \\
-(Your University Here!) \\
+University of TBD \\
 {\small abhinavmadahar@tbd.edu}}
-\date{December 1, 2023}
+\date{December 5, 2023}
 
 \begin{document}
 \pagestyle{plain}
@@ -50,41 +54,60 @@ Department of Computer Science \\
 
 \noindent Yasiin Bey, 1999
 \vspace*{\fill}
-
-
-\pagebreak
-\vspace*{\fill}
-\noindent
-When submitting an application to graduate school, you can include auxiliary documents.
-There are no restrictions on what you can upload.
-Your application to graduate school is reviewed by professors in your field.
-This means that, in effect, I have been given a megaphone through which I can send any message I want to American academia.
-
-\vspace{1cm}
-
-\noindent
-This is my message.
-
-\vspace*{\fill}
-
+ 
 \pagebreak
 \begin{abstract}
-
+    \lipsum[1]
 \end{abstract}
 
 \pagebreak
+\newgeometry{margin=1in}
 \tableofcontents
+\restoregeometry
 \pagebreak
 
 \cleardoublepage
 \pagenumbering{arabic}
 
+\newpage
+\chapter{Introduction}
+\section{Hi}
+\subsection{Hey}
+\subsubsection{Yo}
+\pageoftext
+\pageoftext
+\pageoftext
+
+\newpage
+\chapter{Background}
+\pageoftext
+\pageoftext
+
+\newpage
+\chapter{Finding Better Ways to Solve Commonsense Reasoning}
+\pageoftext
+\pageoftext
+\pageoftext
+\pageoftext
+
+\newpage
+\chapter{Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}
+\pageoftext
+\pageoftext
+\pageoftext
+\pageoftext
+\pageoftext
+
+\newpage
+\chapter{Timeline}
+\pageoftext
+
+\chapter{Conclusion}
+\lipsum
 
 \begin{footnotesize}
-\bibliographystyle{plain}
-\bibliography{string,itu,rfc,i-d}
+    \bibliographystyle{plain}
+    \bibliography{string,itu,rfc,i-d}
 \end{footnotesize}
 
 \end{document}
-
-

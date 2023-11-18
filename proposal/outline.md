@@ -6,7 +6,7 @@ I do not include auxiliary sections such as the title page, abstract, and refere
 One page of text has around seven hundred words.
 I expect to include some graphics in this document, but not so many that they break the one page ~= seven hundred words estimate.
 One sentence is around twenty words.
-This means that, fuor example, a single page should have around thirty-five sentences.
+This means that, roughly speaking, a single page should have around thirty-five sentences.
 This makes it easy to estimate how long each section should be.
 
 - Right now, there is no universally-agreed-upon scheme for codifying commonsense knowledge (Richardson and Heck, 2023).
@@ -17,14 +17,18 @@ Thesis proposal total length: fifteen pages
 
 - Introduction (three pages; one hundred sentences)
   - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)
-  - Based on this, define and raise the importance of pursuing the major endgoals of AGI and artificial conciousness (five sentences)
-    - Define AGI
-      - An artificial general intelligence is a machine which can perform intellectual labour
-    - Define artificial conciousness machine which can perform intellectual labour
+  - Based on this, define and raise the importance of pursuing the major endgoals of artificial conciousness and AG(S)I (fifteen sentences)
+    - Define artificial conciousness
       - An artificial conciousness is a machine which is aware of its own existence
+      - An example from literature is the AI named 'Samantha' from Her (2013)
       - Sentience is slightly different from conciousness
         - TODO: explain how they are different, relying on (Butlin et al, 2023)
+    - Define AGI
+      - An artificial general intelligence is a machine which can perform intellectual labour
     - TODO: add the two definitions of AI from the intro to the 2022 Daedalus issue on AI, noting how they are similar to my respective definitions of AGI and artificial conciousness
+    - Describe how we might evaluate whether a system is conscious
+      - Having a conversation with a system which is able to communicate in human language to ascertain to what extent it is conscious, if at all
+        - TODO: fill from (Perez E and Long R, 2023)
   - Distinguish between research on the trunk and research on the branches (ten sentences)
     - Artificial intelligence systems in present-day research tend to understand some concept and then do something with this understanding
       - For example, in machine translation via an attentionless encoder-decoder architecture, the encoder comes to understand the input text by putting it in the latent space and the decoder uses this latent-space-representation-based understanding to write text in the destination language
@@ -42,6 +46,8 @@ Thesis proposal total length: fifteen pages
   - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness (ten sentences)
     - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
     - TODO: fill
+  - Note that commonsense reasoning is not necessarily in NLP, but recent work in commonsense reasoning aligns with NLP more generally (ten sentences)
+    - TODO: fill
   - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches (five sentences)
     - My research, during graduate school and beyond, will advance work in both directions, trunk and branch.
     - My thesis in particular moves the field forward in both directions, the first part advancing in the trunk and the second part advancing along the branches.
@@ -54,10 +60,11 @@ Thesis proposal total length: fifteen pages
     - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
     - I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal
     - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
-  - TODO: somehow add thirty sentences
-- Background (two pages; seventy sentences)
-  - More precisely, what is commonsense reasoning? Why is important? (one-and-a-half pages)
-    - What it is: (one page)
+  - Note that my thesis itself will be structured similarly to the proposal, mostly using the same chapters, sections, etc.
+  - TODO: somehow add twenty sentences
+- Background (one-and-a-half pages; fifty sentences)
+  - More precisely, what is commonsense reasoning? Why is important? (one page; thirty sentences)
+    - What it is: (half page; fifteen sentences)
       - Specific definition:
         - TODO: fill
       - Broad overview of different techniques and avenues:
@@ -66,42 +73,30 @@ Thesis proposal total length: fifteen pages
         - Commonsense knowledge models (e.g. COMET (Bosselut et al, 2019)) generate implicit commonsense inferences in multiple dimensions based on the knowledge graph on which they are trained (Kim et al, 2022)
       - Discussion on implicit commonsense reasoning found in large language models:
         - TODO: fill
-    - Why it's important: (half page)
-  - What are the downstream tasks which use commonsense reasoning? Why are they important? (one-and-a-half pages)
-    - What they are: (one page)
-    - Why they're important: (half page)
+    - Why it's important: (half page; fifteen sentences)
+  - What are the downstream tasks which use commonsense reasoning? Why are they important? (half page; fifteen sentences)
+    - Quick summary of what each task is and why it's important (seven tasks; two sentences per task, one for what and one for why):
 - Finding better ways to do commonsense reasoning (four pages; one-hundred twenty sentences)
   - Explain that this is an example of trunk work (five sentences)
-  - Define and describe abductive reasoning (fifteen sentences)
-    - TODO: fill from (Qin et al, 2020)
-    - Describe abductive NLI
-      - TODO: fill from (Bhagavatula et al, 2020)
-    - Describe abductive NLG
-      - TODO: fill from (Bhagavatula et al, 2020)
-    - Prior work
+  - Background
+    - Define and describe abductive reasoning (fifteen sentences)
       - TODO: fill from (Qin et al, 2020)
-  - Define and describe counterfactual reasoning (fifteen sentences)
-    - TODO: fill from (Qin et al, 2020)
-  - Natural language explanations (NLE) (thirty sentences)
-    - What is NLE?
-    - Why is research in NLE important?
-      - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
-        - TODO: fill
-    - Prior work on using NLE to improve commonsense reasoning
-      - (Bosselut et al, 2019)
-        - TODO: fill
-      - (Gabriel et al, 2021)
-        - TODO: fill
-    - Proposition to find better ways to use NLE to do commonsense reasoning
-  - Using pre-trained language models as neural knowledge bases (twenty sentences)
-    - TODO: fill from (Lin et al, 2020)
-  - Improving commonsense reasoning system's generalisation (twenty sentences)
-    - Through improving transfer learning:
-      - TODO: fill from (Kim YJ et al, 2022)
+      - Describe abductive NLI
+        - TODO: fill from (Bhagavatula et al, 2020)
+      - Describe abductive NLG
+        - TODO: fill from (Bhagavatula et al, 2020)
+      - Prior work
+        - TODO: fill from (Qin et al, 2020)
+    - Define and describe counterfactual reasoning (fifteen sentences)
+      - TODO: fill from (Qin et al, 2020)
   - Methods (one page) (fifteen sentences)
     - Datasets
       - NumerSense
         - TODO: fill from (Lin et al, 2020)
+      - (Ilevski F et al, 2021)
+        - TODO: fill
+      - TIMEDIAL
+        - TODO: fill from (Qin L et al, 2021)
     - Evaluation metrics
       - SocialIQA (SIQA)
         - TODO: fill from (Sap et al, 2019b)
@@ -113,13 +108,59 @@ Thesis proposal total length: fifteen pages
         - TODO: fill from (Bisk et al, 2020)
       - WinoGrande (WG)
         - TODO: fill from (Sakaguchi et al, 2020)
-- Finding better ways to apply commonsense reasoning to downstream tasks (five pages; one-hundred seventy-five sentences)
+  - Promising avenues of research
+    - Natural language explanations (NLE) (thirty sentences)
+      - What is NLE?
+      - Why is research in NLE important?
+        - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
+          - TODO: fill
+      - Prior work on using NLE to improve commonsense reasoning
+        - (Bosselut et al, 2019)
+          - TODO: fill
+        - (Gabriel et al, 2021)
+          - TODO: fill
+      - Proposition to find better ways to use NLE to do commonsense reasoning
+    - Using pre-trained language models as neural knowledge bases (twenty sentences)
+      - Prior work in this direction
+        - TODO: fill from (Lin et al, 2020)
+        - TODO: fill from (Shwartz V et al, 2022)
+        - TODO: fill from (West P et al, 2021)
+        - TODO: fill from (Qin L et al, 2021)
+      - Potentially limitations of this direction
+        - TODO: fill from (Branco R et al, 2021)
+    - Improving commonsense reasoning systems' ability to generalise (twenty sentences)
+      - Through improving transfer learning:
+        - TODO: fill from (Kim YJ et al, 2022)
+- Finding better ways to apply commonsense reasoning to downstream tasks (five pages; two-hundred five sentences)
   - Explain that this is an example of branch work (five sentences)
   - Methods (ten sentences)
+    - Datasets
+      - CICERO (Ghosal D et al, 2022)
+        - TODO: fill
     - Evaluation metrics
       - GRADE (Huang et al, 2020)
         - TODO: fill
       - (Zhou et al, 2021)
+        - TODO: fill
+      - Rainbow (Lourie N et al, 2021)
+        - TODO: fill
+      - Cost equivalent curve (Lourie N et al, 2021)
+        - TODO: fill
+      - αNLI (Bhagavatula et al, 2019)
+        - TODO: fill
+      - CosmosQA (Huang et al, 2019)
+        - TODO: fill
+      - HellaSWAG (Zellers et al, 2019)
+        - TODO: fill
+      - PIQA (Bisk  et  al, 2020)
+        - TODO: fill
+      - SocialIQA (Sap et al, 2019b)
+        - TODO: fill
+      - WinoGrande (Sakaguchi et al, 2021)
+        - TODO: fill
+      - CycIC
+        - TODO: fill (I don't have the source paper, so find it lmao)
+      - CommonsenseQA 1.0 (Talmor et al, 2018)
         - TODO: fill
   - Techniques which apply to multiple tasks (thirty sentences)
     - Knowledge graph grounding (KGG)
@@ -151,8 +192,21 @@ Thesis proposal total length: fifteen pages
         - (Gupta, Jhamtani, and Bigham, 2022)
           - TODO: fill
       - Proposition to find better ways to use KGG to improve performance
-  - Subtasks (one-hundred fifty sentences)
+    - UNICORN
+      - TODO: fill from (Lourie N et al, 2021)
+  - Downstream tasks (one-hundred eighty sentences)
     - TODO: add non-NLP subtasks, such as those from computer vision
+    - Dialogue generation (one page) (thirty sentences)
+      - What is it?
+        - TODO: fill from (Varshney D et al, 2022)
+      - Methods
+      - Motivation
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - (Varshney D et al, 2022)
+          - TODO: fill
+        - (Xu F et al, 2022)
+          - TODO: fill
+      - Proposition to find better ways to do this
     - Dialogue summarisation (one page) (thirty sentences)
       - What is it?
         - Generating a summary of a conversation while preserving its context (Kim et al, 2022) and retaining factual consistency (Richardson and Heck, 2023).
@@ -169,8 +223,6 @@ Thesis proposal total length: fifteen pages
           - SAMsum (Gliwa et al, 2019)
             - TODO: fill
         - Evaluation metrics
-      - How is performance on this task measured?
-      - Aims
       - Motivation
         - Dialogue summarisation is useful for meetings, where virtual assistants can summarise a meeting's key points and action items (Richardson and Heck, 2023). An early work in this direction is (Tur et al, 2010). Finding better ways to summarise dialogue would make it easier for businesses to find key take-aways from their meetings.
           - TODO: add a bit more from (Tur et al, 2010).
@@ -220,8 +272,6 @@ Thesis proposal total length: fifteen pages
           - Methods
             - Datasets
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
@@ -230,8 +280,6 @@ Thesis proposal total length: fifteen pages
           - Methods
             - Datasets
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
@@ -240,8 +288,6 @@ Thesis proposal total length: fifteen pages
           - Methods
             - Datasets
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
@@ -251,20 +297,18 @@ Thesis proposal total length: fifteen pages
           - Methods
             - Datasets
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
             - (Ghosal et al, 2020)
               - TODO: fill
             - (Li et al, 2021)
               - TODO: fill
+            - (Tu G et al, 2022)
+              - TODO: fill
           - Proposition to find better ways to do this
         - Causal emotion entailment
           - What is this problem?
           - Methods
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
             - (Li et al, 2022)
@@ -274,8 +318,6 @@ Thesis proposal total length: fifteen pages
           - Methods
             - Datasets
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
@@ -284,23 +326,18 @@ Thesis proposal total length: fifteen pages
           - Methods
             - Datasets
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
     - Writing template-based explanations in task-oriented dialogue
       - What is this problem?
-      - Aims
       - Methods
-      - How is performance on this task measured?
       - Prior work on using commonsense reasoning to improve performance on this task
         - (Arabshahi et al, 2021)
           - TODO: fill
       - Proposition to find better ways to do this
     - Question answering (one page; thirty sentences)
       - What is it?
-      - Aims
       - Motivation
       - Methods
         - Evaluation metrics
@@ -315,27 +352,11 @@ Thesis proposal total length: fifteen pages
             - CyclC
               - TODO: find out what this is and fill
           - Short-answer multi-choice QA
-            - CommonsenseQA 1.0 (Talmor et al, 2018)
-              - TODO: fill
             - QASC (Khot et al, 2020)
               - TODO: fill
-            - WinoGrande (Sakaguchi et al, 2021)
-              - TODO: fill
           - Long-answer multi-choice QA
-            - SocialIQA (Sap et al, 2019b)
-              - TODO: fill
-            - CosmosQA (Huang et al, 2019)
-              - TODO: fill
-            - αNLI (Bhagavatula et al, 2019)
-              - TODO: fill
             - SWAG (Zellers et al, 2018)
               - TODO: fill
-            - HellaSWAG (Zellers et al, 2019)
-              - TODO: fill
-            - PIQA (Bisk  et  al, 2020)
-              - TODO: fill
-          - Rainbow (Lourie et al, 2021) combines other QA benchmarks into a single one.
-            - TODO: fill
           - NumerSense (Lin et al, 2020) is a masked language modelling benchmark focused on temporal commonsense
           - TODO: fill
         - Datasets
@@ -354,8 +375,6 @@ Thesis proposal total length: fifteen pages
               - Ubuntu Dialogue Corpus (Lowe et al, 2015)
                 - TODO: fill
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
@@ -369,8 +388,6 @@ Thesis proposal total length: fifteen pages
               - QuAC (Choi et al, 2018)
                 - TODO: fill
             - Evaluation metrics
-          - How is performance on this task measured?
-          - Aims
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
@@ -392,8 +409,6 @@ Thesis proposal total length: fifteen pages
             - TODO: fill
         - Evaluation metrics
           - TODO: fill from (Huang et al, 2020)
-      - How is performance on this task measured?
-      - Aims
       - Motivation
       - Prior work on using commonsense reasoning to improve performance on this task
         - (Zhou et al, 2021a)
@@ -406,13 +421,59 @@ Thesis proposal total length: fifteen pages
     - Dialogue systems (thirty sentences)
       - What is it?
       - Methods
+        - Datasets
+          - ProsocialDialog
+            - TODO: fill from (Kim H et al, 2022)
+          - Moral Integrity Corpus
+            - From (Ziems et al, 2022): The MORAL INTEGRITY CORPUS,  MIC, is such a resource,  which captures the moral assumptions of 38k prompt-reply pairs, using 99k  distinct Rules  of  Thumb (RoTs).    Each RoT  reflects  a  particular  moral  conviction that  can  explain  why  a  chatbot’s  reply  may appear acceptable or problematic.  We further organize RoTs with a set of 9 moral and social attributes   and   benchmark   performance   for attribute classification.  Most importantly, we show  that  current  neural  language  models can  automatically  generate  new  RoTs  that reasonably  describe  previously  unseen  inter- actions,  but  they  still  struggle  with  certain scenarios.   Our  findings  suggest  that  MIC Á will be a useful resource for understanding and language models’ implicit moral assumptions and flexibly benchmarking the integrity of con- versational agents.
+          - Two datasets from (Zhou P et al, 2021)
+            - TODO: fill
         - Evaluation metrics
           - TODO: fill from (Huang et al, 2020)
-      - How is performance on this task measured?
-      - Aims
+          - Metric for target-guided dialogue systems
+            - TODO: fill from (Gupta P et al, 2022)
+          - Process from (Zhou P et al, 2021)
+            - TODO: fill
       - Motivation
       - Prior work on using commonsense reasoning to improve performance on this task
         - (Majumder et al, 2020)
+          - TODO: fill
+        - (Zhou P et al, 2021)
+          - TODO: fill
+        - Using commonsense reasoning to avoid harmful dialogues
+          - TODO: fill from (Kim H et al, 2022)
+          - Canary:
+          - Prost:
+        - Using commonsense reasoning to guide a conversation towards a target
+          - What is the task of target-guided dialogue?
+            - TODO: fill from (Gupta P et al, 2022)
+          - TODO: fill from (Gupta P et al, 2022)
+        - Using commonsense reasoning to find unstated interlocator assumptions
+          - TODO: fill from (Arabshahi F et al, 2021)
       - Proposition to find better ways to do this
-- Timeline (half page)
-- Conclusion (half page)
+    - Recognizing Emotion Cause in Conversations (RECCON) and its subtask Conversational Causal Emotion Entailment (C2E2)
+      - First proposed by (Poria et al, 2021)
+      - What is it?
+        - TODO: fill from (Poria et al, 2021)
+        - What is RECCON?
+          - TODO: fill from (Poria et al, 2021)
+        - What is C2E2?
+          - TODO: fill from (Poria et al, 2021)
+      - Methods
+        - Dataset
+          - RECCON
+            - TODO: fill from (Poria et al, 2021)
+        - Evaluation metrics
+          - TODO: fill from (Poria et al, 2021)
+      - Motivation
+        - TODO: fill from (Poria et al, 2021)
+      - Prior work on using commonsense reasoning to improve performance on this task
+        - TODO: fill from (Li J et al, 2022)
+- Timeline (half page; fifteen sentences)
+  - GANTT chart (zero sentences)
+  - While I wait for graduate school decisions (three sentences)
+  - After I get accepted to graduate school (twelve sentences)
+- Conclusion (half page; fifteen sentences)
+  - The impact of artificial consciousness and AG(S)I (five sentences)
+  - How commonsense reasoning could be a step towards them (five sentences)
+  - How my doctoral thesis and matriculation into graduate school works towards this (five sentences)

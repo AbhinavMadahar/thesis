@@ -15,7 +15,7 @@ This makes it easy to estimate how long each section should be.
 
 Thesis proposal total length: fifteen pages
 
-- Introduction (three pages; one hundred sentences)
+- Introduction (two pages; eighty sentences)
   - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)
   - Based on this, define and raise the importance of pursuing the major endgoals of artificial conciousness and AG(S)I (fifteen sentences)
     - Define artificial conciousness
@@ -60,8 +60,8 @@ Thesis proposal total length: fifteen pages
     - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
     - I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal
     - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
+  - Note that there are ethical concerns to this research, which are explored in their own section
   - Note that my thesis itself will be structured similarly to the proposal, mostly using the same chapters, sections, etc.
-  - TODO: somehow add twenty sentences
 - Background (one-and-a-half pages; fifty sentences)
   - More precisely, what is commonsense reasoning? Why is important? (one page; thirty sentences)
     - What it is: (half page; fifteen sentences)
@@ -469,11 +469,41 @@ Thesis proposal total length: fifteen pages
         - TODO: fill from (Poria et al, 2021)
       - Prior work on using commonsense reasoning to improve performance on this task
         - TODO: fill from (Li J et al, 2022)
+- Ethical Concerns (one page; twenty sentences)
+  - Note that some concerns are more immediate and are easier to predict, while others are more distant and thus more difficult to predict
+  - Adverse economic impacts (six sentences)
+    - What is the concern?
+      - Automation leads to job losses
+    - Why might this happen?
+    - How can this be prevented?
+    - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
+  - Intentional misuse of AG(S)I (six sentences)
+    - What is the concern?
+    - Why might this happen?
+    - How can this be prevented?
+    - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
+  - Human extinction (six sentences)
+    - What is the concern?
+    - Why might this happen?
+    - How can this be prevented?
+    - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
 - Timeline (half page; fifteen sentences)
-  - GANTT chart (zero sentences)
+  - The two major halves of my thesis can be studied concurrently, and I expect to do so
+  - GANTT chart (ten sentences)
   - While I wait for graduate school decisions (three sentences)
-  - After I get accepted to graduate school (twelve sentences)
+    - I cannot run experiments because I do not have access to GPU clusters
+    - I will read papers and identify directions on which to work
+  - After I get accepted to graduate school (three sentences)
+    - I can expect to gain access to GPU clusters by April 15, assuming the standard graduate school admission response deadline
 - Conclusion (half page; fifteen sentences)
-  - The impact of artificial consciousness and AG(S)I (five sentences)
+  - The potential impact of artificial consciousness and AG(S)I (five sentences)
+    - Artificial consciousness
+      - Expand our understanding of what it means to be 'have a soul'
+    - AGI
+      - Lead to potentially massive economic gains as intellectual labour is automated, akin to how machine engines automated physical labour
+    - AGSI
+      - Lead to either Heaven on Earth or Hell on Earth (let's hope for the former)
   - How commonsense reasoning could be a step towards them (five sentences)
   - How my doctoral thesis and matriculation into graduate school works towards this (five sentences)
+    - My doctoral thesis and its associated papers would advance the field
+    - After graduation, as a professor I would continue conducting research towards artificial consciousness and AG(S)I

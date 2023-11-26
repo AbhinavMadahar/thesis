@@ -55,7 +55,25 @@ University of TBD \\
 
 \noindent Yasiin Bey, 1999
 \vspace*{\fill}
- 
+
+\pagebreak
+\newenvironment{tweet}{%
+  \newcommand{\tweetUserImage}[3]{%
+    \begingroup%
+      \includegraphics[keepaspectratio,height=1em]{##2}%
+      \quad
+    \endgroup
+  }%
+  \newcommand{\tweetUserName}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\\}%
+  \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
+  \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
+  \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
+  \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
+  \newcommand{\tweetItself}[2]{\flushright \href{https://twitter.com/statuses/##1}{##2}}%
+  \begin{tcolorbox}[size=small,nobeforeafter]%
+  \RaggedRight%
+}{\end{tcolorbox}}
+
 \pagebreak
 \begin{abstract}
     \lipsum[1]

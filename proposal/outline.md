@@ -97,6 +97,8 @@ Thesis proposal total length: fifteen pages
         - TODO: fill
       - TIMEDIAL
         - TODO: fill from (Qin L et al, 2021)
+      - COM2SENSE
+        - TODO: fill from (Singh S et al, 2021)
     - Evaluation metrics
       - SocialIQA (SIQA)
         - TODO: fill from (Sap et al, 2019b)
@@ -108,6 +110,11 @@ Thesis proposal total length: fifteen pages
         - TODO: fill from (Bisk et al, 2020)
       - WinoGrande (WG)
         - TODO: fill from (Sakaguchi et al, 2020)
+      - COM2SENSE
+        - TODO: fill from (Singh S et al, 2021)
+  - Avenues of research which I do not expect at this time to pursue but which are worth mentioning
+    - Retrieval-based commonsense reasoning
+      - TODO: fill from (Wang H et al, 2021)
   - Promising avenues of research
     - Natural language explanations (NLE) (thirty sentences)
       - What is NLE?
@@ -126,6 +133,7 @@ Thesis proposal total length: fifteen pages
         - TODO: fill from (Shwartz V et al, 2022)
         - TODO: fill from (West P et al, 2021)
         - TODO: fill from (Qin L et al, 2021)
+        - TODO: fill from (Bosselut A et al, 2021)
       - Potentially limitations of this direction
         - TODO: fill from (Branco R et al, 2021)
     - Improving commonsense reasoning systems' ability to generalise (twenty sentences)
@@ -470,19 +478,24 @@ Thesis proposal total length: fifteen pages
       - Prior work on using commonsense reasoning to improve performance on this task
         - TODO: fill from (Li J et al, 2022)
 - Ethical Concerns (one page; twenty sentences)
+  - Introduce this section by arguing that, as a result of the impact of the field, ethical concerns should be considered while conducting research in AI
   - Note that some concerns are more immediate and are easier to predict, while others are more distant and thus more difficult to predict
-  - Adverse economic impacts (six sentences)
+  - Adverse economic impacts (five sentences)
     - What is the concern?
-      - Automation leads to job losses
+      - Automation leads to job losses, which causes economic problems as proletarians lose their financial income flow
+    - How can this be prevented?
+      - This is ultimately a question of economics, not artificial intelligence, so economists and sociologists will be better able to resolve this problem should it arise
+      - Working within our system of political economy:
+        - Job retraining
+      - Forming new systems of political economy:
+        - UBI
+  - Intentional misuse of AG(S)I (five sentences)
+    - What is the concern?
     - Why might this happen?
     - How can this be prevented?
     - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
-  - Intentional misuse of AG(S)I (six sentences)
-    - What is the concern?
-    - Why might this happen?
-    - How can this be prevented?
-    - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
-  - Human extinction (six sentences)
+  - Rogue AGSI (five sentences)
+    - Open with some tweets by notable scholars in the field on this
     - What is the concern?
     - Why might this happen?
     - How can this be prevented?
@@ -490,6 +503,7 @@ Thesis proposal total length: fifteen pages
 - Timeline (half page; fifteen sentences)
   - The two major halves of my thesis can be studied concurrently, and I expect to do so
   - GANTT chart (ten sentences)
+    - Include joke about how hard it is to write a GANTT chart in LaTeX, but my undergrad was in mathematics and there's no way in Hell I'm not TeXing my writing
   - While I wait for graduate school decisions (three sentences)
     - I cannot run experiments because I do not have access to GPU clusters
     - I will read papers and identify directions on which to work

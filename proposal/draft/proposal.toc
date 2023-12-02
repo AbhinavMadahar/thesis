@@ -1,0 +1,9 @@
+\contentsline {chapter}{\numberline {I}Introduction}{1}{}%
+\contentsline {section}{\numberline {1}Motivation}{1}{}%
+\contentsline {section}{\numberline {2}Brief background}{2}{}%
+\contentsline {chapter}{\numberline {II}Background}{3}{}%
+\contentsline {chapter}{\numberline {III}Finding Better Ways to Solve Commonsense Reasoning}{7}{}%
+\contentsline {chapter}{\numberline {IV}Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}{15}{}%
+\contentsline {chapter}{\numberline {V}Ethical Concerns}{25}{}%
+\contentsline {chapter}{\numberline {VI}Timeline}{28}{}%
+\contentsline {chapter}{\numberline {VII}Conclusion}{29}{}%

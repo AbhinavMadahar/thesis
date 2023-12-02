@@ -15,52 +15,49 @@ This makes it easy to estimate how long each section should be.
 
 Abstract: (150 words; 7 sentences)
 
-- Artificial consciousness and artificial general (super)intelligence might be achievable in the near future
-- To advance research in this direction, I propose a thesis which focuses on commonsense reasoning, a potential step towards achieving these goals
-- The thesis is divided into two halves:
-  - The first focuses on ways to better achieve commonsense reasoning itself
-  - The second finds better ways to apply commonsense reasoning to downstream tasks
+- Artificial consciousness and artficial general (super)intelligence might be achievable in the near future
+- To advance research in this direction, I propose a thesis which focuses on commonsense reasoning, a potential step towards achieving these goals.
 
 Thesis proposal total length: fifteen pages
 
-- Introduction (two pages; seventy sentences)
-  - ~~Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)~~
-  - ~~Distinguish between research on the trunk and research on the branches (ten sentences)~~
-    - ~~Artificial intelligence systems in present-day research tend to understand some concept and then do something with this understanding~~
-      - ~~For example, in machine translation via an attentionless encoder-decoder architecture, the encoder comes to understand the input text by putting it in the latent space and the decoder uses this latent-space-representation-based understanding to write text in the destination language~~
-    - ~~What is research on the trunk?~~
-      - ~~It is research which advances how an artificial intelligence understands concepts~~
-      - ~~In the machine translation example given, improving the encoder's ability to understand the input text would be movement forwards in the trunk direction~~
-    - ~~What is research on the branches?~~
-      - ~~It is research which advances how an artificial intelligence uses its understanding to do something useful~~
-      - ~~In the machine translation example given, improving the decoder's ability to write text in the destination language would be movement forwards in the branch direction~~
-    - ~~Note that research can sometimes have both aspects~~
-      - ~~AlexNet (Krizhevsky et al, 2012) had~~
-        - ~~The trunk property of ushering in the modern era of deep networks~~
-        - ~~The branch property of applying deep networks to image classification~~
-  - ~~Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches (five sentences)~~
-    - ~~My research, during graduate school and beyond, will advance work in both directions, trunk and branch.~~
-    - ~~My thesis in particular moves the field forward in both directions, the first part advancing in the trunk and the second part advancing along the branches.~~
-    - ~~As such, accepting me into graduate school is a fantastic way to advance research in important ways, advancing research in both the trunk of improving 'fundamental' AI and in the branch of applying this 'fundamental' AI to specific tasks.~~
-    - ~~(Plz accept me plzzzz 🙏🙏🙏.)~~
-  - ~~Based on this, define and raise the importance of pursuing the major endgoals of artificial consciousness and AG(S)I (fifteen sentences)~~
-    - ~~Define artificial conciousness~~
-      - ~~An artificial conciousness is a machine which is aware of its own existence~~
-      - ~~An example from literature is the AI named 'Samantha' from Her (2013)~~
-    - ~~Define AGI~~
-      - ~~An artificial general intelligence is a machine which can perform intellectual labour~~
-  - ~~A recent survey of consciousness scientists (Frankcen JC et al, 2022) found that, when asked whether an AI system could be conscious, (figures rounded to the nearest integral percentage)~~
-    - ~~18% said definitely yes~~
-    - ~~49% said probably yes~~
-    - ~~21% were neutral~~
-    - ~~10% said probably not~~
-    - ~~2% said definitely not~~
-  - ~~As we can see, there is a promising chance that humanity in the near future might create a consciousness, our own Adam~~
-  - ~~Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply) (ten sentences)~~
+- Introduction (two pages; eighty sentences)
+  - Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)
+  - Based on this, define and raise the importance of pursuing the major endgoals of artificial conciousness and AG(S)I (fifteen sentences)
+    - Define artificial conciousness
+      - An artificial conciousness is a machine which is aware of its own existence
+      - An example from literature is the AI named 'Samantha' from Her (2013)
+      - Sentience is slightly different from conciousness
+        - TODO: explain how they are different, relying on (Butlin et al, 2023)
+    - Define AGI
+      - An artificial general intelligence is a machine which can perform intellectual labour
+    - TODO: add the two definitions of AI from the intro to the 2022 Daedalus issue on AI, noting how they are similar to my respective definitions of AGI and artificial conciousness
+    - Describe how we might evaluate whether a system is conscious
+      - Having a conversation with a system which is able to communicate in human language to ascertain to what extent it is conscious, if at all
+        - TODO: fill from (Perez E and Long R, 2023)
+  - Distinguish between research on the trunk and research on the branches (ten sentences)
+    - Artificial intelligence systems in present-day research tend to understand some concept and then do something with this understanding
+      - For example, in machine translation via an attentionless encoder-decoder architecture, the encoder comes to understand the input text by putting it in the latent space and the decoder uses this latent-space-representation-based understanding to write text in the destination language
+    - What is research on the trunk?
+      - It is research which advances how an artificial intelligence understands concepts
+      - In the machine translation example given, improving the encoder's ability to understand the input text would be movement forwards in the trunk direction
+    - What is research on the branches?
+      - It is research which advances how an artificial intelligence uses its understanding to do something useful
+      - In the machine translation example given, improving the decoder's ability to write text in the destination language would be movement forwards in the branch direction
+    - Note that research can sometimes have both aspects
+      - AlexNet (Krizhevsky et al, 2012) had
+        - The trunk property of ushering in the modern era of deep networks
+        - The branch property of applying deep networks to image classification
+  - Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply) (ten sentences)
   - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness (ten sentences)
-    - ~~State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).~~
-  - Note that commonsense reasoning is not necessarily in NLP, but recent work in commonsense reasoning aligns with NLP more generally (two sentences)
-    - We dive deeper into this in the Background section
+    - State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).
+    - TODO: fill
+  - Note that commonsense reasoning is not necessarily in NLP, but recent work in commonsense reasoning aligns with NLP more generally (ten sentences)
+    - TODO: fill
+  - Situate my thesis and graduate school application and matriculation within this context as a step along the trunk, not the branches (five sentences)
+    - My research, during graduate school and beyond, will advance work in both directions, trunk and branch.
+    - My thesis in particular moves the field forward in both directions, the first part advancing in the trunk and the second part advancing along the branches.
+    - As such, accepting me into graduate school is a fantastic way to advance research in important ways, advancing research in both the trunk of improving 'fundamental' AI and in the branch of applying this 'fundamental' AI to specific tasks.
+    - (Plz accept me plzzzz 🙏🙏🙏.)
   - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments (fifteen sentences)
     - TODO: fill
   - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis (ten sentences)
@@ -70,28 +67,16 @@ Thesis proposal total length: fifteen pages
     - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
   - Note that there are ethical concerns to this research, which are explored in their own section
   - Note that my thesis itself will be structured similarly to the proposal, mostly using the same chapters, sections, etc.
-- Background (one-and-a-half pages; sixty sentences)
-  - What is consciousness? (ten sentences)
-    - The question of what consciousness is is complex and difficult to answer
-    - The short answer is that consciousness is when a system is aware that it exists and is separate from the rest of the world, e.g. cogito ergo sum
-    - The term 'sentience' is often used slightly differently from the term 'conciousness'
-      - From (Butlin et al, 2023):
-        - The term 'sentience' can sometimes mean:
-          - Able to have senses (e.g. vision or audition)
-            - However, being conscious is not the same as sentience
-            - A system can sense its body and environment without being conscious of its existence
-          - Able to have emotional states or sensations such as pain and pleasure
-            - However, a system can be conscious while only having 'neutral' experiences
+- Background (one-and-a-half pages; fifty sentences)
   - More precisely, what is commonsense reasoning? Why is important? (one page; thirty sentences)
     - What it is: (half page; fifteen sentences)
-      - Specific definition (five sentences):
+      - Specific definition:
         - TODO: fill
-      - Broad overview of different techniques and avenues (five sentences):
-        - TODO: consider redoing this section based on the avenues in which I focus in the first half
+      - Broad overview of different techniques and avenues:
         - Two major avenues through which it can be achieved are commonsense knowledge graphs and commonsense knowledge models (Kim et al, 2022)
         - Static knowledge graphs (e.g. ATOMIC (Sap et al, 2019)) represent entities as nodes and relations as edges (Kim et al, 2022)
         - Commonsense knowledge models (e.g. COMET (Bosselut et al, 2019)) generate implicit commonsense inferences in multiple dimensions based on the knowledge graph on which they are trained (Kim et al, 2022)
-      - Discussion on implicit commonsense reasoning found in large language models (five sentences):
+      - Discussion on implicit commonsense reasoning found in large language models:
         - TODO: fill
     - Why it's important: (half page; fifteen sentences)
   - What are the downstream tasks which use commonsense reasoning? Why are they important? (half page; fifteen sentences)
@@ -514,12 +499,7 @@ Thesis proposal total length: fifteen pages
     - Why might this happen?
     - How can this be prevented?
     - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
-  - Misalignment
-    - What is the concern?
-    - Why might this happen?
-    - How can this be prevented?
-    - How might prevention efforts by circumvented, and how can we prevent these cirvumventions?
-  - Intentionally malignant rogue AGSI (five sentences)
+  - Rogue AGSI (five sentences)
     - Open with some tweets by notable scholars in the field on this
     - What is the concern?
     - Why might this happen?

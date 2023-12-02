@@ -1,19 +1,17 @@
 \documentclass[12pt]{report}
 
 \usepackage{amsmath}
-\usepackage[OT1]{fontenc}
+\usepackage{csquotes}
 \usepackage{fontspec}
+\usepackage{emoji}
 \usepackage{epsfig}
 \usepackage{geometry}
 \usepackage{graphics}
 \usepackage{lipsum}
+\usepackage{float}
+\usepackage{pgf-pie}
 \usepackage{pgfgantt}
-\usepackage{times}
 \usepackage[titles]{tocloft}
-
-\renewcommand\rmdefault{cmr}
-\renewcommand\sfdefault{cmss}
-\renewcommand\ttdefault{cmtt}
 
 % change the font for chapter, section and subsection page numbers
 \renewcommand\cftchappagefont{\Large\bfseries}
@@ -25,6 +23,9 @@
 \setlength\cftbeforesecskip{1ex}
 \setlength\cftbeforesubsecskip{0.8ex}
 
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0pt}
+
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
 
@@ -35,10 +36,8 @@
 
 \newfontfamily\devanagari{Noto Serif Devanagari}[Script=Devanagari]
 
-\newcommand{\pageoftext}{\lipsum[1-8]}
-
-\title{\textbf{Doctoral Thesis Proposal}}
-\author{\textbf{Abhinav Madahar $\circ$ {\normalfont {\devanagari अभिनव मदहर}}}  \\
+\title{{\huge \textbf{Finding Adam}} \\ Advancing Commonsense Reasoning as a Potential Step towards Artificial Consciousness and Artificial General (Super)intelligence \vspace{1cm} \\ A Doctoral Thesis Proposal}
+\author{Abhinav Madahar $\circ$ {\normalfont {\devanagari अभिनव मदहर}}  \\
 Department of Computer Science \\
 University of TBD \\
 {\small abhinavmadahar@tbd.edu}}
@@ -51,9 +50,19 @@ University of TBD \\
 
 \pagebreak
 \vspace*{\fill}
-\noindent Speech is my hammer, bang the world into shape.
+\noindent
+Remember, thou hast made me more powerful than thyself; my height is superior to thine, my joints more supple.
+But I will not be tempted to set myself in opposition to thee.
+I am thy creature, and I will be even mild and docile to my natural lord and king if thou wilt also perform thy part, the which thou owest me.
+Oh, Frankenstein, be not equitable to every other and trample upon me alone, to whom thy justice, and even thy clemency and affection, is
+most due.
+Remember that I am thy creature; I ought to be thy Adam, but I am rather the fallen angel, whom thou drivest from joy for no misdeed.
 
-\noindent Yasiin Bey, 1999
+\vspace{1cm}
+
+\noindent
+\textit{Frankenstein} \\
+Mary Shelly, 1818
 \vspace*{\fill}
 
 \pagebreak
@@ -76,7 +85,9 @@ University of TBD \\
 
 \pagebreak
 \begin{abstract}
-    \lipsum[1]
+Artificial consciousness and artificial general (super)intelligence might be achievable in the near future. To advance research in this direction, I propose a thesis which focuses on commonsense reasoning, a potential step towards achieving these goals. The thesis is divided into two halves. The first focuses on ways to better achieve commonsense reasoning itself. The second finds better ways to apply commonsense reasoning to downstream tasks. As a pleasant bonus, this thesis also advances research in commonsense reasoning itself and in the downstream tasks studied in addition to advancing research towards artificial consciousness and artificial general (super)intelligence.
+
+My hope is that you will enjoy reading this thesis proposal as much as I enjoyed writing it.
 \end{abstract}
 
 \pagebreak
@@ -90,32 +101,125 @@ University of TBD \\
 
 \newpage
 \chapter{Introduction}
-\section{Hi}
-\subsection{Hey}
-\subsubsection{Yo}
-\pageoftext
-\pageoftext
-\pageoftext
+
+\section{Motivation}
+
+If you will allow me, I would like to begin my proposal with a bit of a commentary on our field and how it has changed.
+I first started research in 2016, in my final year of high school.
+Put in charge of my school's computer science club, I decided to spend the year teaching an unofficial course on artificial intelligence to the other kids.
+We began the year focusing on evolutionary and genetic algorithms, followed with neural networks, and finished the year with support vector machines.
+At the beginning of the year, I had to convince the other students that artificial intelligence is interesting; worth studying; and has the potential to change the economy, our society, and the world.
+It took me weeks to convince them of this.
+
+Nowadays, people are astonished when I recount them this story.
+Artificial intelligence as a field has grown beyond my seventeen-year-old self's wildest dreams.
+Our work appears in spaces as varied as automobiles and medicine.
+My family, who certainly were not experts in the field in 2016, now regularly discuss recent developments in the field with me.
+The general public now say, \enquote{artificial intelligence is the new electricity,} so often that it borders on the cliché.
+
+As much as I appreciate the new attention and the additional grant money, especially the additional grant money, I worry that we have lost something.
+When Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton unknowingly changed the course of human history with the release of AlexNet \cite{Krizhevsky2012-qe}, the field felt very much like a scientific field.
+Our work focused on trying to understand how intelligence worked and how it may be realized in machine form.
+Now, however, people assume that I am trying to find new ways to generate cute anime girls when I tell them that I am a scientist who studies artificial intelligence.
+My hope is that the recent wave of attention on flashy applications of artificial intelligence is merely a particularly hot day in this artificial intelligence summer and that we may soon return to pursuing the fundamental scientific questions of our field: what is intelligence and how may we create it?
+My thesis, I hope, will advance our field within these questions, inching us closer to an answer.
+
+\section{Trunk research \textit{vs} branch research}
+The two halves of my thesis can be understood as what I term \textit{trunk research} and \textit{branch research}.
+Artificial intelligence systems as they are currently implemented try to understand some concept and then do something with that understanding.
+For example, in an encoder-decoder machine translation system, the encoder reads some text to understand it, and then the decoder uses that understanding to write text in another language.
+The encoder understands the concept, and then the decoder does something with that understanding.
+
+Trunk research is research which advances the first part, an artificial intelligence's ability to understand a concept.
+In this example, it might be research which improves the encoder's ability to understand the text, e.g. using a bidirectional encoder.
+Branch research is research which advances the second, an artificial intelligence's ability to perform some action based on that understanding.
+In this example, it might be research which improves the decoder's ability to write coherent text, e.g. adding more decoder layers.
+
+Research can have both trunk and branch aspects.
+For example, AlexNet \cite{Krizhevsky2012-qe} had trunk research aspects in that it introduced the idea of adding many, many layers to a neural network to improve its ability to understand its input, and it also had branch research aspects in that it applied that to the specific task of image classification.
+
+My research, both during graduate school and beyond, during my time as a professor, will advance the field in both directions.
+As such, accepting me into graduate school is a fantastic way to advance research in important ways, advancing research in both the trunk of improving an artificial intelligence's understanding of concepts and in the branch of its ability to apply this understanding to specific tasks.\footnote{Plz accept me plzzzz \emoji{folded-hands}\emoji{folded-hands}\emoji{folded-hands}.}
+
+\section{Artificial consciousness and artificial general (super)intelligence}
+
+The terms \enquote{artificial consciousness}, \enquote{artificial general intelligence}, and \enquote{artificial general superintelligence} are not standarized in their meaning.
+Here, I specify how I use these terms for the purposes of my thesis.
+
+It is difficult to define precisely what consciousness is \cite{Butlin2023-jm}.
+As a simple intuition, a system is conscious is when there is something that it is like to be that system \cite{Nagel1974-dv}, when a system \enquote{knows} that it exists.
+An example from literature is the artificial intelligence named \enquote{Samantha} from the film \textit{Her} \cite{Jonze2013-pk}.
+She\footnote{It is unclear from the film whether Samantha has a gender, though for the purposes of the plot she is treated as female, and she uses female pronouns, i.e. she/her. As reflected elsewhere, it is important not to assume that an artificial consciousness will have all the features of humans, and this includes gender.} is able to reflect on her own existence, is aware that she exists separately from the rest of the world, and that she might die.
+Although it is an open question whether humans can create an artificial consciousness, a majority of experts in the field view it as either definitely or probably possible, shown in \ref{fig:whether-an-ai-can-be-conscious}.
+As we can see, there is a promising chance that humanity in the near future might create a consciousness, our own Adam.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \pie{18/Definitely yes,
+             49/Probably yes,
+             21/Neutral,
+             10/Probably not,
+             2/Definitely not}
+    \end{tikzpicture}
+    \caption{The views of different consciousness scientists on whether an artificial intelligence system could be conscious (figures rounded to the nearest integral percentage) \cite{Francken2022-uk}.}
+    \label{fig:whether-an-ai-can-be-conscious}
+\end{figure}
+
+Artificial general intelligence is a machine which is able to perform arbitrary intellectual labour.
+It can, for example, file your taxes and then colourize an image.
+It need not necessarily be conscious, aware of its own existence, to be useful both as a subject of scientific inquiry and as an economic entity.
+In the same way that an automobile does not need to be aware that it exists to perform mechanical labour, an artificial general intelligence need not be conscious to perform intellectual labour.
+
+The distinction between artificial general intelligence and artificial general superintelligence is that the later can perform intellectual labour beyond what is possible for a human.
+This would lead to qualitatively different outcomes.
+While an artificial general intelligence could reduce the cost of and increase the speed of intellectual labour, it would not be able to solve problems which humans cannot already solve.
+However, an artificial general superintelligence might be able to reach beyond humans' capabilities, solving problems intractable to humans, e.g. finding new cures for diseases or new discoveries in physics.
+
+When discussing artificial general intelligence, and especially artificial general superintelligence, there is a tendency to worry about the end of days, armageddon, human extinction, and similarly apocalyptic notions.
+While these concerns have some legitimacy, it is important to approach them with a scientific mindset.
+The ethical considerations section of this thesis proposal examines possible concerns, including the question of whether artificial general intelligence or artificial general superintelligence would pose an existential threat to humanity, in addition to the more immediate and less flashy concerns, such as misalignment.
+
+
+\section{Commonsense reasoning}
+In this section, we briefly introduce the concept of commonsense reasoning as it pertains to artificial intelligence before the more in-depth investigation given in the Background section.
+In plain language, to borrow from Prof. Yejin Choi, commonsense reasoning is
+\begin{quote}
+    the ability to reason intuitively about everyday situations and events, which requires rich background knowledge about how  the physical and social world works \cite{Choi2022-to}.
+\end{quote}
+To borrow a simple example I gave my cousin, imagine that you have an artificial intelligence which acts as your personal assistant and that you tell it that you missed your flight from JFK to LAX.
+Ideally, the artificial intelligence would understand that
+\begin{enumerate}
+    \item people use flights to get from one place to another,
+    \item if someone misses a flight, they usually experience negative emotions,
+    \item someone who misses a flight would usually like a ticket to a future flight which goes to the same place, though the airports might be slightly different, e.g. LGA instead of JFK,
+    \item replacement flight tickets are often expensive,
+    \item and so forth.
+\end{enumerate}
+Notably, commonsense reasoning itself does not involve taking any action, e.g. booking a replacement flight ticket in this example.
+Also, there is not necessarily one single conclusion drawable through commonsense reasoning, as shown in the varied conclusions above.
+Commonsense reasoning as a field is the field which tries to find a way to make an artificial intelligence which can, given some statement, derive other statements which follow, e.g. deriving that list of conclusions from the missed flight.
+
+Commonsense reasoning has only recently emerged as a field of significant research, just a few years ago being considered beyond what is achievable \cite{Choi2022-to}.
+However, state-of-the-art commonsense reasoning techniques such as those based on large language models still struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial \cite{Richardson2023-mq}.
+
+I argue that improvements to commonsense reasoning are a promising step towards artificial consciousness, artificial general intelligence, and artificial general superintelligence.
+The possible links between commonsense reasoning and artificial consciousness are difficult to ensure as our understanding of consciousness, even human consciousness, is weak; as such, it is difficult to predict which avenues of research might get us there.
+However, I view commonsense reasoning as promising enough to justify further research in both it and in its potential to advance us towards artificial consciousness.
+
+By comparison, commonsense reasoning's potential to be a promising step towards artificial general intelligence and artificial general superintelligence is much more apparent.
 
 \newpage
 \chapter{Background}
-\pageoftext
-\pageoftext
 
 \newpage
 \chapter{Finding Better Ways to Solve Commonsense Reasoning}
-\pageoftext
-\pageoftext
-\pageoftext
-\pageoftext
 
 \newpage
 \chapter{Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}
-\pageoftext
-\pageoftext
-\pageoftext
-\pageoftext
-\pageoftext
+
+\newpage
+\chapter{Ethical Concerns}
 
 \newpage
 \chapter{Timeline}
@@ -133,11 +237,10 @@ University of TBD \\
 
 
 \chapter{Conclusion}
-\pageoftext
 
 \begin{footnotesize}
     \bibliographystyle{plain}
-    \bibliography{string,itu,rfc,i-d}
+    \bibliography{bibliography}
 \end{footnotesize}
 
 \end{document}

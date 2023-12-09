@@ -4,14 +4,23 @@
 \usepackage{csquotes}
 \usepackage{fontspec}
 \usepackage{emoji}
+\usepackage{environ}
 \usepackage{epsfig}
+\usepackage{float}
 \usepackage{geometry}
 \usepackage{graphics}
+\usepackage{graphicx}
 \usepackage{lipsum}
-\usepackage{float}
+\usepackage{kotex}
 \usepackage{pgf-pie}
 \usepackage{pgfgantt}
 \usepackage[titles]{tocloft}
+\usepackage[many]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{varwidth}
+\usepackage{xparse}
+\usepackage{caption}
+\usepackage{subcaption}
 
 % change the font for chapter, section and subsection page numbers
 \renewcommand\cftchappagefont{\Large\bfseries}
@@ -36,12 +45,87 @@
 
 \newfontfamily\devanagari{Noto Serif Devanagari}[Script=Devanagari]
 
+\newenvironment{tweet}{%
+  \newcommand{\tweetUserImage}[3]{%
+    \begingroup%
+      \includegraphics[keepaspectratio,height=1em]{##2}%
+      \quad
+    \endgroup
+  }%
+  \newcommand{\tweetUserName}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\\}%
+  \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
+  \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
+  \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
+  \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
+  \newcommand{\tweetItself}[2]{\flushright \href{https://twitter.com/statuses/##1}{##2}}%
+  \begin{tcolorbox}[size=small,nobeforeafter]%
+  \RaggedRight%
+}{\end{tcolorbox}}
+
+\newlength{\bubblewidth}
+\AtBeginDocument{\setlength{\bubblewidth}{.3\textwidth}}
+\definecolor{bubblegreen}{RGB}{103,184,104}
+\definecolor{bubblegray}{RGB}{241,240,240}
+
+\newcommand{\bubble}[4]{%
+  \tcbox[
+    colback=#1,
+    colframe=#1,
+    #2,
+  ]{\color{#3}\begin{varwidth}{\bubblewidth}#4\end{varwidth}}%
+}
+
+\ExplSyntaxOn
+\seq_new:N \l__ooker_bubbles_seq
+\tl_new:N \l__ooker_bubbles_first_tl
+\tl_new:N \l__ooker_bubbles_last_tl
+
+\NewEnviron{rightbubbles}
+ {
+  \raggedleft\sffamily
+  \seq_set_split:NnV \l__ooker_bubbles_seq { \par } \BODY
+  \int_compare:nTF { \seq_count:N \l__ooker_bubbles_seq < 2 }
+   {
+    \bubble{bubblegreen}{rounded~corners}{white}{\BODY}
+   }
+   {
+    \seq_pop_left:NN \l__ooker_bubbles_seq \l__ooker_bubbles_first_tl
+    \seq_pop_right:NN \l__ooker_bubbles_seq \l__ooker_bubbles_last_tl
+    \bubble{bubblegreen}{sharp~corners=southeast}{white}{\l__ooker_bubbles_first_tl}\par
+    \seq_map_inline:Nn \l__ooker_bubbles_seq
+     {
+      \bubble{bubblegreen}{sharp~corners=east}{white}{##1}\par
+     }
+    \bubble{bubblegreen}{sharp~corners=northeast}{white}{\l__ooker_bubbles_last_tl}\par
+   }
+ }
+\NewEnviron{leftbubbles}
+ {
+  \raggedright\sffamily
+  \seq_set_split:NnV \l__ooker_bubbles_seq { \par } \BODY
+  \int_compare:nTF { \seq_count:N \l__ooker_bubbles_seq < 2 }
+   {
+    \bubble{bubblegray}{rounded~corners}{black}{\BODY}
+   }
+   {
+    \seq_pop_left:NN \l__ooker_bubbles_seq \l__ooker_bubbles_first_tl
+    \seq_pop_right:NN \l__ooker_bubbles_seq \l__ooker_bubbles_last_tl
+    \bubble{bubblegray}{sharp~corners=southwest}{black}{\l__ooker_bubbles_first_tl}\par
+    \seq_map_inline:Nn \l__ooker_bubbles_seq
+     {
+      \bubble{bubblegray}{sharp~corners=west}{black}{##1}\par
+     }
+    \bubble{bubblegray}{sharp~corners=northwest}{black}{\l__ooker_bubbles_last_tl}\par
+   }
+ }
+\ExplSyntaxOff
+
 \title{{\huge \textbf{Finding Adam}} \\ Advancing Commonsense Reasoning as a Potential Step towards Artificial Consciousness and Artificial General (Super)intelligence \vspace{1cm} \\ A Doctoral Thesis Proposal}
 \author{Abhinav Madahar $\circ$ {\normalfont {\devanagari अभिनव मदहर}}  \\
 Department of Computer Science \\
 University of TBD \\
 {\small abhinavmadahar@tbd.edu}}
-\date{December 5, 2023}
+\date{\today}
 
 \begin{document}
 \pagestyle{plain}
@@ -66,26 +150,12 @@ Mary Shelly, 1818
 \vspace*{\fill}
 
 \pagebreak
-\newenvironment{tweet}{%
-  \newcommand{\tweetUserImage}[3]{%
-    \begingroup%
-      \includegraphics[keepaspectratio,height=1em]{##2}%
-      \quad
-    \endgroup
-  }%
-  \newcommand{\tweetUserName}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}\\}%
-  \newcommand{\tweetHashtag}[2]{\href{https://twitter.com/hashtag/##1}{##2}}%
-  \newcommand{\tweetUserMention}[2]{\href{https://twitter.com/intent/user?user_id=##1}{##2}}%
-  \newcommand{\tweetUrl}[4]{\href{##2}{##3}}%
-  \newcommand{\tweetPhoto}[4]{\\\includegraphics[keepaspectratio]{##3}\\}%
-  \newcommand{\tweetItself}[2]{\flushright \href{https://twitter.com/statuses/##1}{##2}}%
-  \begin{tcolorbox}[size=small,nobeforeafter]%
-  \RaggedRight%
-}{\end{tcolorbox}}
-
-\pagebreak
 \begin{abstract}
-Artificial consciousness and artificial general (super)intelligence might be achievable in the near future. To advance research in this direction, I propose a thesis which focuses on commonsense reasoning, a potential step towards achieving these goals. The thesis is divided into two halves. The first focuses on ways to better achieve commonsense reasoning itself. The second finds better ways to apply commonsense reasoning to downstream tasks. As a pleasant bonus, this thesis also advances research in commonsense reasoning itself and in the downstream tasks studied in addition to advancing research towards artificial consciousness and artificial general (super)intelligence.
+Artificial consciousness and artificial general (super)intelligence might be achievable in the near future.
+To advance research in this direction, I propose a thesis which focuses on commonsense reasoning, a potential step towards achieving these goals.
+The thesis is divided into two halves.
+The first focuses on ways to better achieve commonsense reasoning itself, and the second finds better ways to apply commonsense reasoning to downstream tasks.
+As a pleasant bonus, this thesis also advances research in commonsense reasoning itself and in the downstream tasks studied in addition to advancing research towards artificial consciousness and artificial general (super)intelligence.
 
 My hope is that you will enjoy reading this thesis proposal as much as I enjoyed writing it.
 \end{abstract}
@@ -167,7 +237,7 @@ As we can see, there is a promising chance that humanity in the near future migh
 \end{figure}
 
 Artificial general intelligence is a machine which is able to perform arbitrary intellectual labour.
-It can, for example, file your taxes and then colourize an image.
+It can, for example, file your taxes and then colourize\footnote{I follow the prescriptions of Oxford English, and this is the \enquote{correct} way to spell it in Oxford English. It is not a big deal, but I thought that the reader might be interested in this apparent mixture of dialects.} an image.
 It need not necessarily be conscious, aware of its own existence, to be useful both as a subject of scientific inquiry and as an economic entity.
 In the same way that an automobile does not need to be aware that it exists to perform mechanical labour, an artificial general intelligence need not be conscious to perform intellectual labour.
 
@@ -183,7 +253,7 @@ The ethical considerations section of this thesis proposal examines possible con
 
 \section{Commonsense reasoning}
 In this section, we briefly introduce the concept of commonsense reasoning as it pertains to artificial intelligence before the more in-depth investigation given in the Background section.
-In plain language, to borrow from Prof. Yejin Choi, commonsense reasoning is
+In plain language, to borrow from Prof. 최예진 (Choi Yejin\footnote{Family name appears first.}), commonsense reasoning is
 \begin{quote}
     the ability to reason intuitively about everyday situations and events, which requires rich background knowledge about how  the physical and social world works \cite{Choi2022-to}.
 \end{quote}
@@ -205,9 +275,51 @@ However, state-of-the-art commonsense reasoning techniques such as those based o
 
 I argue that improvements to commonsense reasoning are a promising step towards artificial consciousness, artificial general intelligence, and artificial general superintelligence.
 The possible links between commonsense reasoning and artificial consciousness are difficult to ensure as our understanding of consciousness, even human consciousness, is weak; as such, it is difficult to predict which avenues of research might get us there.
-However, I view commonsense reasoning as promising enough to justify further research in both it and in its potential to advance us towards artificial consciousness.
+By comparison, it is easier to see how commonsense reasoning might get us to artificial general intelligence and artificial general superintelligence.
+Large language models are, for now, the closest we have to artificial general intelligence.
+However, they often make reasoning mistakes, an example of which is given in \ref{fig:fish-ate-cat}.
+Improving commonsense reasoning is one potential avenue for improving large language models, both for their own sake and for the purposes of achieving artificial general intelligence and artificial general superintelligence.
 
-By comparison, commonsense reasoning's potential to be a promising step towards artificial general intelligence and artificial general superintelligence is much more apparent.
+\begin{figure}
+    \begin{minipage}{.5\textwidth}
+        \begin{rightbubbles}
+            My cat ate my fish yesterday. 
+        \end{rightbubbles}
+        \begin{leftbubbles}
+            Oh no!
+            I'm sorry to hear that.
+            Did you find out who did it?
+        \end{leftbubbles}
+    \end{minipage}
+    \begin{minipage}{.5\textwidth}
+        \begin{rightbubbles}
+            My fish ate my cat yesterday. 
+        \end{rightbubbles}
+        \begin{leftbubbles}
+            Oh no!
+            I'm sorry to hear that.
+            Did you find out who did it?
+        \end{leftbubbles}
+    \end{minipage}
+    \caption{
+        Although large-language-model-based systems such as conversational agents can reliably interact with normal dialogue, they have difficulty identifying lapses in sensibility, as shown in this example from \cite{Richardson2023-mq}. 
+        Advances in commonsense reasoning may lead to improvements in their ability to notice when the interlocutor says something abnormal and respond accordingly.}
+    \label{fig:fish-ate-cat}
+\end{figure}
+
+One note to make is that, although artificial consciousness, artificial general intelligence, and artificial general superintelligence are not necessarily subfields of natural language processing, the research which is most promising to get us to them is currently in natural language processing, particularly the spectacular work being done with large language models.
+As such, most of the potential advisers I have selected are in natural language processing.
+
+Before turning to the Background section where we dive more deeply into what artificial consciousness and commonsense reasoning are, I would like to examine this work within the recommendation made by Prof. Ali Rahimi\footnote{I had difficulty with rendering the Arabic script in \LaTeX. In the future, I expect to have a setup which can render Arabic-script text more readily to better support names written in the Perso-Arabic script.} during his influential 2017 NeurIPS talk \cite{Rahimi2017-ax}.
+In the talk, he decried the then-recent shift in the field away from \enquote{science} towards \enquote{alchemy}, to use his phrasing.
+As he argued, the field had moved away from asking and answering scientific questions to arrive at deep, fundamental truths.
+Instead, researchers spent their energy trying to create ever-more powerful and impressive models.
+He argued that we as a field should focus on understanding why some techniques work and why others do not, which would give a stronger scientific foundation to the models we produce.
+
+As someone in the early stages of his own research career, it is important that I examine my research within this framework, asking whether I am trying to find fundamental scientific truths or merely find more impressive tricks.
+The goal is my research is ultimately to discover a way to create an artificial consciousness, ideally one which can be constructed in the real world.
+I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subservient to my main goal.
+This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research.
 
 \newpage
 \chapter{Background}
@@ -223,17 +335,6 @@ By comparison, commonsense reasoning's potential to be a promising step towards 
 
 \newpage
 \chapter{Timeline}
-\begin{ganttchart}{1}{12}
-    \gantttitle{2011}{12} \\
-    \gantttitlelist{1,...,12}{1} \\
-    \ganttgroup{Group 1}{1}{7} \\
-    \ganttbar{Task 1}{1}{2} \\
-    \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-    \ganttmilestone{Milestone}{7} \ganttnewline
-    \ganttbar{Final Task}{8}{12}
-    \ganttlink{elem2}{elem3}
-    \ganttlink{elem3}{elem4}
-\end{ganttchart}
 
 
 \chapter{Conclusion}
@@ -242,5 +343,14 @@ By comparison, commonsense reasoning's potential to be a promising step towards 
     \bibliographystyle{plain}
     \bibliography{bibliography}
 \end{footnotesize}
+
+\appendix
+
+\chapter{Relevant Piled Higher and Deeper (PhD) Comic}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{phd-comics-718}
+    \caption{After writing my thesis title, I realized that it exactly fit this template, as the prophecy foretold. All credits to Jorge Cham \cite{Cham2006-zx}. Also, I had to cite this as an artwork in Paperpile, as all Piled Higher and Deeper comics should be.}
+\end{figure}
 
 \end{document}

@@ -23,7 +23,7 @@ Abstract: (150 words; 7 sentences)
 
 Thesis proposal total length: fifteen pages
 
-- Introduction (two pages; seventy sentences)
+- Introduction (two pages; fifty-five sentences)
   - ~~Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)~~
   - ~~Distinguish between research on the trunk and research on the branches (ten sentences)~~
     - ~~Artificial intelligence systems in present-day research tend to understand some concept and then do something with this understanding~~
@@ -57,19 +57,14 @@ Thesis proposal total length: fifteen pages
     - ~~2% said definitely not~~
   - ~~As we can see, there is a promising chance that humanity in the near future might create a consciousness, our own Adam~~
   - ~~Briefly explain what commonsense reasoning is, but don't go into too much detail (the background section covers this more deeply) (ten sentences)~~
-  - Explain why commonsense reasoning might be a step towards AGI and artificial conciousness (ten sentences)
+  - ~~Explain why commonsense reasoning might be a step towards AGI and artificial conciousness (ten sentences)~~
     - ~~State-of-the-art large language models struggle with tasks which require high-level reasoning, including cases where humans find the necessary reasoning trivial (Richardson and Heck, 2023).~~
-  - Note that commonsense reasoning is not necessarily in NLP, but recent work in commonsense reasoning aligns with NLP more generally (two sentences)
-    - We dive deeper into this in the Background section
-  - Detail the arguments against commonsense reasoning as a step towards AGI and artificial conciousness, including counterarguments (fifteen sentences)
-    - TODO: fill
-  - Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis (ten sentences)
-    - Rahimi argued that we should move away from merely creating new techniques which perform more well and towards developing a deeper understanding of how and why certain techniques work
-    - The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world
-    - I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal
-    - This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research
-  - Note that there are ethical concerns to this research, which are explored in their own section
-  - Note that my thesis itself will be structured similarly to the proposal, mostly using the same chapters, sections, etc.
+  - ~~Note that commonsense reasoning is not necessarily in NLP, but recent work in commonsense reasoning aligns with NLP more generally (two sentences)~~
+  - ~~Note responding to Ali Rahimi's 2017 NeurIPS talk and how it interplays with this thesis (ten sentences)~~
+    - ~~Rahimi argued that we should move away from merely creating new techniques which perform more well and towards developing a deeper understanding of how and why certain techniques work~~
+    - ~~The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world~~
+    - ~~I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal~~
+    - ~~This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research~~
 - Background (one-and-a-half pages; sixty sentences)
   - What is consciousness? (ten sentences)
     - The question of what consciousness is is complex and difficult to answer

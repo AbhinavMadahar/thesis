@@ -23,7 +23,7 @@ Abstract: (150 words; 7 sentences)
 
 Thesis proposal total length: thirteen pages
 
-- Introduction (two pages; fifty-five sentences)
+- ~~Introduction (two pages; fifty-five sentences)~~
   - ~~Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)~~
   - ~~Distinguish between research on the trunk and research on the branches (ten sentences)~~
     - ~~Artificial intelligence systems in present-day research tend to understand some concept and then do something with this understanding~~
@@ -65,7 +65,7 @@ Thesis proposal total length: thirteen pages
     - ~~The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world~~
     - ~~I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal~~
     - ~~This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research~~
-- Background (one page; fourty-two sentences)
+- ~~Background (one page; fourty-two sentences)~~
   - ~~What is consciousness? (ten sentences)~~
     - ~~The question of what consciousness is is complex and difficult to answer~~
     - ~~The short answer is that consciousness is when a system is aware that it exists and is separate from the rest of the world~~
@@ -77,8 +77,8 @@ Thesis proposal total length: thirteen pages
             - ~~A system can sense its body and environment without being conscious of its existence~~
           - ~~Able to have emotional states or sensations such as pain and pleasure~~
             - ~~However, a system can be conscious while only having 'neutral' experiences~~
-  - More precisely, what is commonsense reasoning? Why is important? (one page; twenty sentences)
-    - What it is: (half page; fifteen sentences)
+  - ~~More precisely, what is commonsense reasoning? Why is important? (one page; twenty sentences)~~
+    - ~~What it is: (half page; fifteen sentences)~~
       - ~~Specific definition (five sentences):~~
         - ~~TODO: fill~~
       - Broad overview of different techniques and avenues (five sentences):

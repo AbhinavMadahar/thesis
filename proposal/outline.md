@@ -90,8 +90,8 @@ Thesis proposal total length: thirteen pages
       - ~~Discussion on implicit commonsense reasoning found in large language models (five sentences):~~
         - ~~TODO: fill~~
     - ~~Why it's important: (five sentences)~~
-  - What are the downstream tasks which use commonsense reasoning? Why are they important? (quarter page; seven sentences)
-    - Quick summary of what each task is (seven tasks; one sentence per task):
+  - ~~What are the downstream tasks which use commonsense reasoning? Why are they important? (quarter page; seven sentences)~~
+    - ~~Quick summary of what each task is (seven tasks; one sentence per task):~~
 - Finding better ways to do commonsense reasoning (three pages; one-hundred sentences)
   - Explain that this is an example of trunk work (five sentences)
   - Background (thirty sentences)
@@ -354,8 +354,10 @@ Thesis proposal total length: thirteen pages
           - Motivation
           - Prior work on using commonsense reasoning to improve performance on this task
           - Proposition to find better ways to do this
-    - Writing template-based explanations in task-oriented dialogue
+    - Presumption detection
       - What is this problem?
+        - The problem of identifying the unstated presumptions of the speaker that allow the requested action to achieve the desired goal from the given state (perhaps elaborated by making the implicit pre- sumptions explicit) (Arabshahi et al, 2021)
+        - Example: in the command 'If it snows at night then wake me up early because I don’t want to be late for work' the speaker relies on commonsense reasoning of the listener to infer the implicit pre- sumption that they wish to be woken only if it snows enough to cause traffic slowdowns (Arabshahi et al, 2021)
       - Methods
       - Prior work on using commonsense reasoning to improve performance on this task
         - (Arabshahi et al, 2021)
@@ -483,7 +485,7 @@ Thesis proposal total length: thirteen pages
         - What is RECCON?
           - TODO: fill from (Poria et al, 2021)
         - What is C2E2?
-          - TODO: fill from (Poria et al, 2021)
+          - TODO: fill from (Li J et al, 2022)
       - Methods
         - Dataset
           - RECCON

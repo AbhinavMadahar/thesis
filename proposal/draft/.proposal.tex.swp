@@ -124,7 +124,7 @@
  }
 \ExplSyntaxOff
 
-\title{{\huge \textbf{Finding Adam}} \\ Advancing Commonsense Reasoning as a Potential Step towards Artificial Consciousness and Artificial General (Super)intelligence \vspace{1cm} \\ A Doctoral Thesis Proposal}
+\title{{\huge \textbf{Finding Adam}} \\ Advancing Commonsense Reasoning as a Potential Step towards Artificial Consciousness, Artificial General Intelligence, and Artificial General Superintelligence \vspace{1cm} \\ A Doctoral Thesis Proposal}
 \author{Abhinav Madahar $\circ$ {\normalfont {\devanagari अभिनव मदहर}}  \\
 Department of Computer Science \\
 University of TBD \\
@@ -155,11 +155,11 @@ Mary Shelly, 1818
 
 \pagebreak
 \begin{abstract}
-Artificial consciousness and artificial general (super)intelligence might be achievable in the near future.
+Artificial consciousness, artificial general intelligence, and artificial general superintelligence might be achievable in the near future.
 To advance research in this direction, I propose a thesis which focuses on commonsense reasoning, a potential step towards achieving these goals.
 The thesis is divided into two halves.
 The first focuses on ways to better achieve commonsense reasoning itself, and the second finds better ways to apply commonsense reasoning to downstream tasks.
-As a pleasant bonus, this thesis also advances research in commonsense reasoning itself and in the downstream tasks studied in addition to advancing research towards artificial consciousness and artificial general (super)intelligence.
+As a pleasant bonus, this thesis also advances research in commonsense reasoning itself and in the downstream tasks studied in addition to advancing research towards artificial consciousness, artificial general intelligence, and artificial general superintelligence.
 
 My hope is that you will enjoy reading this thesis proposal as much as I enjoyed writing it.
 \end{abstract}
@@ -173,7 +173,7 @@ My hope is that you will enjoy reading this thesis proposal as much as I enjoyed
 \cleardoublepage
 \pagenumbering{arabic}
 
-\newpage
+
 \chapter{Introduction}
 
 \section{Motivation}
@@ -215,7 +215,7 @@ For example, AlexNet \cite{Krizhevsky2012-qe} had trunk research aspects in that
 My research, both during graduate school and beyond, during my time as a professor, will advance the field in both directions.
 As such, accepting me into graduate school is a fantastic way to advance research in important ways, advancing research in both the trunk of improving an artificial intelligence's understanding of concepts and in the branch of its ability to apply this understanding to specific tasks.\footnote{Plz accept me plzzzz \emoji{folded-hands}\emoji{folded-hands}\emoji{folded-hands}.}
 
-\section{Artificial consciousness and artificial general (super)intelligence}
+\section{Artificial consciousness, artificial general intelligence, and artificial general superintelligence}
 
 The terms \enquote{artificial consciousness}, \enquote{artificial general intelligence}, and \enquote{artificial general superintelligence} are not standarized in their meaning.
 Here, I specify how I use these terms for the purposes of my thesis.
@@ -325,13 +325,19 @@ The ultimate goal of my research is to discover a way to create an artificial co
 I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subservient to my main goal.
 This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research.
 
+\section{Thesis Statement}
 
-\newpage
+My thesis will advance our understanding of commonsense reasoning and its application to downstream tasks.
+The first half will focus on improving our ability to implement commonsense reasoning itself, focusing on using natural language in place of logical formalisms, a promising new direction \cite{Choi2022-to}.
+The second half will focus on finding better ways to use commonsense reasoning to improve performance on downstream tasks, primarily those in natural language processing such as dialogue summarization and question answering.
+
+
 \chapter{Background}
 
-\section{What is Consciousness?}
+\section{What Are Artificial Consciousness, Artificial General Intelligence, and Artificial General Superintelligence?}
 
 Consciousness is hard to define \cite{Butlin2023-jm}, but we can intuitively understand that it is when a system \enquote{understands} that it exists and is separate from the rest of the world.
+An artificial consciousness is a conscious machine, a mechanical equivalent to human and animal consciousnesses \cite{Butlin2023-jm}.
 
 The terms \enquote{sentience} and \enquote{consciousness} are often used synonymously, but there is a distinction to be made between them.
 Sentience has two main meanings aside from being a synonym of consciousness \cite{Butlin2023-jm}.
@@ -340,7 +346,10 @@ This is different from consciousness as a system can sense the world and itself 
 The second definition is that sentience is when a system is able to have emotional states or sensations such as pain and pleasure \cite{Butlin2023-jm}; however, a system can be conscious while only having \enquote{neutral} experiences \cite{Butlin2023-jm}.
 We see that the first definition is weaker than the definition of consciousness and that the second is stronger.
 
-\section{What is Commonsense Reasoning and Why Is It Important?}
+An artificial general intelligence is an artificial intelligence which is broadly intelligent, capable of completing many or most tasks which a human intelligence can solve, and which is able to reason, plan, and learn from experience at a level comparable to humans \cite{Bubeck2023-gl}.
+Although some researchers use the term artificial general intelligence to refer to an artificial intelligence which can operate at a level beyond that reachable by a human, I reserve that distinction for an artificial general \textit{super}intelligence.
+
+\section{What Is Commonsense Reasoning and Why Is It Important?}
 
 Commonsense knowledge is the knowledge about the world which we expect all humans to possess \cite{Ilievski2021-ir}.
 For example, we expect all humans to understand that an apple can fall from a tree to the ground but that it cannot rise from the ground to the tree.
@@ -397,27 +406,41 @@ A simple overview of the downstream tasks which I plan to consider is given belo
         \textbf{Sequence classification} is the task of identifying some attribute of the dialogue, e.g.
         \begin{itemize}[nolistsep]
             \item what is the intent of the conversation?
-            \item what is the emotional state of the other speaker?
+            \item what is the emotional state of the other speaker? and
             \item what is the topic of the conversation?
         \end{itemize}
-        Two major subtasks on which I plan to focus, among others, are
+        The two major subtasks on which I plan to focus are
         \begin{itemize}[nolistsep]
-            \item \textit{emotion detection}, the detection of the emotion for each utterance in a given conversation \cite{Yi2022-tv}, and
+            \item \textit{emotion detection}, the detection of the emotion for each utterance in a given conversation \cite{Yi2022-tv} and
             \item \textit{causal emotion entailment}, the detection of causal utterances for a non-neutral targeted utterance from a conversation \cite{Li2022-jr}.
         \end{itemize}
+    \item
+        \textbf{Presumption detection}, as defined in \cite{Arabshahi2021-oz}, is the task of, given a command of the form \textbf{if}-\textbf{then}-\textbf{because}, inferring unstated additional conditions on the \textbf{if} or the \textbf{then} portion \cite{Arabshahi2021-oz}.
+    \item
+        \textbf{Question answering} is the task of answering questions posed in natural language about a database, a collection of text documents, or another corpus as context \cite{Calijorne_Soares2020-eo}.
+        Two major subtasks which I consider are:
+        \begin{itemize}[nolistsep]
+            \item \textit{multi-choice question answering (MCQA) over dialogues}, the problem of answering multi-choice questions given a dialogue as context \cite{Richardson2023-mq}, and
+            \item \textit{multi-turn conversational question answering (CQA)}, the problem of asking or answering questions in a multi-turn dialogue \cite{Richardson2023-mq}.
+        \end{itemize}
+    \item
+        \textbf{Dialogue modelling} is to dialogues what language modelling is to unstructured text \cite{Richardson2023-mq}.
+        It is used for both open dialogue, the setting where the conversation does not have any particular goal, as typified by the chatbot setting, and task-oriented dialogue \cite{Richardson2023-mq}.
+    \item
+        \textbf{Dialogue systems} are artificial intelligences which can have a conversation with a human interlocutor \cite{Ni2023-jk}.
+        Like dialogue modelling, they can be divided into two major subtasks: open dialogue systems and task-oriented dialogue systems \cite{Ni2023-jk,Richardson2023-mq}.
+    \item
+        \textbf{Recognizing Emotion Cause in Conversations (RECCON)} is the task of finding the emotion associated with an utterance in a conversation along with its cause \cite{Poria2020-xk}.
+        It has a subtask, \textit{C\textsubscript{2}E\textsubscript{2}}, the detection of causal utterances for a targeted utterance from conversations where the emotion is given \cite{Li2022-jr}.
 \end{itemize}
 
-\newpage
 \chapter{Finding Better Ways to Solve Commonsense Reasoning}
 \label{chapter:commonsense-reasoning}
 
-\newpage
 \chapter{Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}
 
-\newpage
 \chapter{Ethical Concerns}
 
-\newpage
 \chapter{Timeline}
 
 

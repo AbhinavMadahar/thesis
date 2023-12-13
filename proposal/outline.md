@@ -21,7 +21,7 @@ Abstract: (150 words; 7 sentences)
   - The first focuses on ways to better achieve commonsense reasoning itself
   - The second finds better ways to apply commonsense reasoning to downstream tasks
 
-Thesis proposal total length: fifteen pages
+Thesis proposal total length: thirteen pages
 
 - Introduction (two pages; fifty-five sentences)
   - ~~Raise the sense that it is important that the research community not shy away from revolutionary work in favour of merely evolutionary work (five sentences)~~
@@ -65,35 +65,36 @@ Thesis proposal total length: fifteen pages
     - ~~The goal is my research is ultimately to discover a way to create an artificial conciousness, ideally one which can be constructed in the real world~~
     - ~~I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subserviant to my main goal~~
     - ~~This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research~~
-- Background (one-and-a-half pages; sixty sentences)
-  - What is consciousness? (ten sentences)
-    - The question of what consciousness is is complex and difficult to answer
-    - The short answer is that consciousness is when a system is aware that it exists and is separate from the rest of the world, e.g. cogito ergo sum
-    - The term 'sentience' is often used slightly differently from the term 'conciousness'
-      - From (Butlin et al, 2023):
-        - The term 'sentience' can sometimes mean:
-          - Able to have senses (e.g. vision or audition)
-            - However, being conscious is not the same as sentience
-            - A system can sense its body and environment without being conscious of its existence
-          - Able to have emotional states or sensations such as pain and pleasure
-            - However, a system can be conscious while only having 'neutral' experiences
-  - More precisely, what is commonsense reasoning? Why is important? (one page; thirty sentences)
+- Background (one page; fourty-two sentences)
+  - ~~What is consciousness? (ten sentences)~~
+    - ~~The question of what consciousness is is complex and difficult to answer~~
+    - ~~The short answer is that consciousness is when a system is aware that it exists and is separate from the rest of the world~~
+    - ~~The term 'sentience' is often used slightly differently from the term 'conciousness'~~
+      - ~~From (Butlin et al, 2023):~~
+        - ~~The term 'sentience' can sometimes mean:~~
+          - ~~Able to have senses (e.g. vision or audition)~~
+            - ~~However, being conscious is not the same as sentience~~
+            - ~~A system can sense its body and environment without being conscious of its existence~~
+          - ~~Able to have emotional states or sensations such as pain and pleasure~~
+            - ~~However, a system can be conscious while only having 'neutral' experiences~~
+  - More precisely, what is commonsense reasoning? Why is important? (one page; twenty sentences)
     - What it is: (half page; fifteen sentences)
-      - Specific definition (five sentences):
-        - TODO: fill
+      - ~~Specific definition (five sentences):~~
+        - ~~TODO: fill~~
       - Broad overview of different techniques and avenues (five sentences):
-        - TODO: consider redoing this section based on the avenues in which I focus in the first half
-        - Two major avenues through which it can be achieved are commonsense knowledge graphs and commonsense knowledge models (Kim et al, 2022)
-        - Static knowledge graphs (e.g. ATOMIC (Sap et al, 2019)) represent entities as nodes and relations as edges (Kim et al, 2022)
-        - Commonsense knowledge models (e.g. COMET (Bosselut et al, 2019)) generate implicit commonsense inferences in multiple dimensions based on the knowledge graph on which they are trained (Kim et al, 2022)
-      - Discussion on implicit commonsense reasoning found in large language models (five sentences):
-        - TODO: fill
-    - Why it's important: (half page; fifteen sentences)
-  - What are the downstream tasks which use commonsense reasoning? Why are they important? (half page; fifteen sentences)
-    - Quick summary of what each task is and why it's important (seven tasks; two sentences per task, one for what and one for why):
-- Finding better ways to do commonsense reasoning (four pages; one-hundred twenty sentences)
+        - ~~Two example categories through which it can be achieved are commonsense knowledge graphs and commonsense knowledge models (Kim et al, 2022)~~
+          - ~~Static commonsense knowledge graphs (e.g. ATOMIC (Sap et al, 2019)) represent entities as nodes and relations as edges (Kim et al, 2022)~~
+          - ~~Commonsense knowledge models (e.g. COMET (Bosselut et al, 2019)) generate implicit commonsense inferences in multiple dimensions based on the knowledge graph on which they are trained (Kim et al, 2022)~~
+        - ~~My thesis will focus on a major direction of research which has garnered attention recently: neural knowledge bases~~
+          - ~~Briefly explain what this is~~
+      - ~~Discussion on implicit commonsense reasoning found in large language models (five sentences):~~
+        - ~~TODO: fill~~
+    - ~~Why it's important: (five sentences)~~
+  - What are the downstream tasks which use commonsense reasoning? Why are they important? (quarter page; seven sentences)
+    - Quick summary of what each task is (seven tasks; one sentence per task):
+- Finding better ways to do commonsense reasoning (three pages; one-hundred sentences)
   - Explain that this is an example of trunk work (five sentences)
-  - Background
+  - Background (thirty sentences)
     - Define and describe abductive reasoning (fifteen sentences)
       - TODO: fill from (Qin et al, 2020)
       - Describe abductive NLI
@@ -114,6 +115,8 @@ Thesis proposal total length: fifteen pages
         - TODO: fill from (Qin L et al, 2021)
       - COM2SENSE
         - TODO: fill from (Singh S et al, 2021)
+      - CATs
+        - TODO: fill from (Zhou X et al, 2020)
     - Evaluation metrics
       - SocialIQA (SIQA)
         - TODO: fill from (Sap et al, 2019b)
@@ -127,31 +130,31 @@ Thesis proposal total length: fifteen pages
         - TODO: fill from (Sakaguchi et al, 2020)
       - COM2SENSE
         - TODO: fill from (Singh S et al, 2021)
-  - Avenues of research which I do not expect at this time to pursue but which are worth mentioning
-    - Retrieval-based commonsense reasoning
+  - Avenues of research which I do not expect at this time to pursue but which are worth mentioning (five sentences)
+    - Retrieval-based commonsense reasoning (five sentences)
       - TODO: fill from (Wang H et al, 2021)
-  - Promising avenues of research
-    - Natural language explanations (NLE) (thirty sentences)
-      - What is NLE?
-      - Why is research in NLE important?
-        - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
-          - TODO: fill
-      - Prior work on using NLE to improve commonsense reasoning
-        - (Bosselut et al, 2019)
-          - TODO: fill
-        - (Gabriel et al, 2021)
-          - TODO: fill
-      - Proposition to find better ways to use NLE to do commonsense reasoning
-    - Using pre-trained language models as neural knowledge bases (twenty sentences)
-      - Prior work in this direction
+  - Promising avenues of research (fifty sentences)
+    - Using pre-trained language models as neural knowledge bases (fourty-five sentences)
+      - Why it might be wise to use natural language instead of logical formalisms to capture commonsense reasoning (fifteen sentences)
+        - Why is research in NLE important? (five sentences)
+          - (Choi, 2022) argues that natural language is a better medium through which an AI can understand the world because it is more expressive than logical formalisms, such as the three-tuples and knowledge graphs widespread in present-day commonsense reasoning research.
+            - TODO: fill
+        - Prior work on using NLE to improve commonsense reasoning (ten sentences)
+          - (Bosselut et al, 2019)
+            - TODO: fill
+          - (Gabriel et al, 2021)
+            - TODO: fill
+      - Prior work in this direction (twenty sentences)
         - TODO: fill from (Lin et al, 2020)
         - TODO: fill from (Shwartz V et al, 2022)
         - TODO: fill from (West P et al, 2021)
         - TODO: fill from (Qin L et al, 2021)
         - TODO: fill from (Bosselut A et al, 2021)
-      - Potentially limitations of this direction
+      - Potentially limitations of this direction (five sentences)
         - TODO: fill from (Branco R et al, 2021)
-    - Improving commonsense reasoning systems' ability to generalise (twenty sentences)
+      - Statement that I will pursue this direction because it is the most promising (five sentences)
+        - Clarify that, because commonsense reasoning as a field is very young, only really gaining possibility a few years ago, it is very much conceivable that over the course of doing my thesis, new avenues will be opened, so this section is subject to change
+    - Improving commonsense reasoning systems' ability to generalise (five sentences)
       - Through improving transfer learning:
         - TODO: fill from (Kim YJ et al, 2022)
 - Finding better ways to apply commonsense reasoning to downstream tasks (five pages; two-hundred five sentences)
@@ -218,7 +221,6 @@ Thesis proposal total length: fifteen pages
     - UNICORN
       - TODO: fill from (Lourie N et al, 2021)
   - Downstream tasks (one-hundred eighty sentences)
-    - TODO: add non-NLP subtasks, such as those from computer vision
     - Dialogue generation (one page) (thirty sentences)
       - What is it?
         - TODO: fill from (Varshney D et al, 2022)

@@ -1,26 +1,30 @@
 \documentclass[12pt]{report}
 
 \usepackage{amsmath}
+\usepackage{caption}
+\usepackage{cite}
 \usepackage{csquotes}
+\usepackage{hyperref}  % must be loaded before cleveref
+\usepackage[nameinlink]{cleveref}  % must be loaded after hyperref
 \usepackage{fontspec}
 \usepackage{emoji}
+\usepackage{enumitem}
 \usepackage{environ}
 \usepackage{epsfig}
 \usepackage{float}
-\usepackage{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphics}
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{kotex}
+\usepackage{subcaption}
 \usepackage{pgf-pie}
 \usepackage{pgfgantt}
-\usepackage[titles]{tocloft}
 \usepackage[many]{tcolorbox}
-\usepackage{xcolor}
+\usepackage[titles]{tocloft}
 \usepackage{varwidth}
+\usepackage{xcolor}
 \usepackage{xparse}
-\usepackage{caption}
-\usepackage{subcaption}
 
 % change the font for chapter, section and subsection page numbers
 \renewcommand\cftchappagefont{\Large\bfseries}
@@ -220,7 +224,7 @@ It is difficult to define precisely what consciousness is \cite{Butlin2023-jm}.
 As a simple intuition, a system is conscious is when there is something that it is like to be that system \cite{Nagel1974-dv}, when a system \enquote{knows} that it exists.
 An example from literature is the artificial intelligence named \enquote{Samantha} from the film \textit{Her} \cite{Jonze2013-pk}.
 She\footnote{It is unclear from the film whether Samantha has a gender, though for the purposes of the plot she is treated as female, and she uses female pronouns, i.e. she/her. As reflected elsewhere, it is important not to assume that an artificial consciousness will have all the features of humans, and this includes gender.} is able to reflect on her own existence, is aware that she exists separately from the rest of the world, and that she might die.
-Although it is an open question whether humans can create an artificial consciousness, a majority of experts in the field view it as either definitely or probably possible, shown in \ref{fig:whether-an-ai-can-be-conscious}.
+Although it is an open question whether humans can create an artificial consciousness, a majority of experts in the field view it as either definitely or probably possible, shown in \cref{fig:whether-an-ai-can-be-conscious}.
 As we can see, there is a promising chance that humanity in the near future might create a consciousness, our own Adam.
 
 \begin{figure}
@@ -259,7 +263,7 @@ In plain language, to borrow from Prof. 최예진 (Choi Yejin\footnote{Family na
 \end{quote}
 To borrow a simple example I gave my cousin, imagine that you have an artificial intelligence which acts as your personal assistant and that you tell it that you missed your flight from JFK to LAX.
 Ideally, the artificial intelligence would understand that
-\begin{enumerate}
+\begin{enumerate}[nolistsep]
     \item people use flights to get from one place to another,
     \item if someone misses a flight, they usually experience negative emotions,
     \item someone who misses a flight would usually like a ticket to a future flight which goes to the same place, though the airports might be slightly different, e.g. LGA instead of JFK,
@@ -277,7 +281,7 @@ I argue that improvements to commonsense reasoning are a promising step towards 
 The possible links between commonsense reasoning and artificial consciousness are difficult to ensure as our understanding of consciousness, even human consciousness, is weak; as such, it is difficult to predict which avenues of research might get us there.
 By comparison, it is easier to see how commonsense reasoning might get us to artificial general intelligence and artificial general superintelligence.
 Large language models are, for now, the closest we have to artificial general intelligence.
-However, they often make reasoning mistakes, an example of which is given in \ref{fig:fish-ate-cat}.
+However, they often make reasoning mistakes, an example of which is given in \cref{fig:fish-ate-cat}.
 Improving commonsense reasoning is one potential avenue for improving large language models, both for their own sake and for the purposes of achieving artificial general intelligence and artificial general superintelligence.
 
 \begin{figure}
@@ -317,15 +321,95 @@ Instead, researchers spent their energy trying to create ever-more powerful and 
 He argued that we as a field should focus on understanding why some techniques work and why others do not, which would give a stronger scientific foundation to the models we produce.
 
 As someone in the early stages of his own research career, it is important that I examine my research within this framework, asking whether I am trying to find fundamental scientific truths or merely find more impressive tricks.
-The goal is my research is ultimately to discover a way to create an artificial consciousness, ideally one which can be constructed in the real world.
+The ultimate goal of my research is to discover a way to create an artificial consciousness, ideally one which can be constructed in the real world.
 I am interested in building a deeper understanding of how and why certain techniques work, but that goal is subservient to my main goal.
 This is not necessarily the best goal, and other computer scientists might differ from me on this point, but it forms the structure of my own research.
+
 
 \newpage
 \chapter{Background}
 
+\section{What is Consciousness?}
+
+Consciousness is hard to define \cite{Butlin2023-jm}, but we can intuitively understand that it is when a system \enquote{understands} that it exists and is separate from the rest of the world.
+
+The terms \enquote{sentience} and \enquote{consciousness} are often used synonymously, but there is a distinction to be made between them.
+Sentience has two main meanings aside from being a synonym of consciousness \cite{Butlin2023-jm}.
+The first is that sentience is when an intelligent system is able to sense either the external world or its internal world \cite{Butlin2023-jm}.
+This is different from consciousness as a system can sense the world and itself without being conscious \cite{Butlin2023-jm}, such as when a self-driving car is able to see the world around it.
+The second definition is that sentience is when a system is able to have emotional states or sensations such as pain and pleasure \cite{Butlin2023-jm}; however, a system can be conscious while only having \enquote{neutral} experiences \cite{Butlin2023-jm}.
+We see that the first definition is weaker than the definition of consciousness and that the second is stronger.
+
+\section{What is Commonsense Reasoning and Why Is It Important?}
+
+Commonsense knowledge is the knowledge about the world which we expect all humans to possess \cite{Ilievski2021-ir}.
+For example, we expect all humans to understand that an apple can fall from a tree to the ground but that it cannot rise from the ground to the tree.
+Finding better ways to represent commonsense knowledge is a major area of research \cite{Ilievski2021-ir}, and major recent works include ATOMIC \cite{Sap2019-ob} and ConceptNet \cite{Speer2017-vu}.
+Commonsense reasoning is the ability to contextualize and draw upon commonsense knowledge and generalize to novel situations \cite{Singh2021-ui}.
+
+There are many ways to implement commonsense reasoning, and there is disagreement on which one will bear the most fruit in the long term.
+As an example, some researchers view commonsense knowledge graphs as the most promising route while others have more faith in commonsense knowledge models.
+Commonsense knowledge graphs capture knowledge about the world through graphs, capturing entities as nodes and describing relationships between the entities as edges between the nodes \cite{Kim2022-pz}.
+An example is ATOMIC \cite{Sap2019-ob}, which captures \textit{if-then} reasoning.
+As an example of the logic contained in ATOMIC, consider the reasoning \textit{if \textup{X} pays \textup{Y} a compliment, then \textup{Y} will likely return the compliment}.
+A more complete example of the structure of ATOMIC is given in \cref{figure:atomic}.
+While commonsense knowledge graphs are static, capturing only the information contained in them and nothing more, commonsese knowledge models are able to generate new knowledge about the world \cite{Kim2022-pz} by extending a given commonsense knowledge graph, adding novel nodes and edges \cite{Kim2022-pz,Bosselut2019-he}.
+An example is COMET, whose structure is shown in \cref{figure:comet}.
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{diagrams/atomic-example.png}
+    \caption{An example of the structure of ATOMIC \cite{Sap2019-ob}, a commonsense knowledge graph. As you can see, the logic is captured as nodes and edges.}
+    \label{figure:atomic}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{diagrams/comet-example.png}
+    \caption{An example of the structure of COMET \cite{Bosselut2019-he}, a commonsense knowledge model. Given an existing commonsense knowledge graph, shown in solid nodes and edges, it infers novel entities and relationships, shown in dashed nodes and edges. With this, it can better respond to unseen events, helping it generalize more well.}
+    \label{figure:comet}
+\end{figure}
+
+My thesis will focus on a major direction of research which has garnered attention recently: capturing and manipulating commonsense knowledge as natural language instead of as logical formalisms, an idea detailed in \cref{chapter:commonsense-reasoning}.
+The simple intuition is that, rather than trying to capture how the world works in a formal system, such as in a graph with nodes and edges, it might be more fruitful to capture the world in natural language, the reasoning being that no other medium can contain the complexities of the world \cite{Choi2022-to}.
+
+One important development which bears noting is that large language models have been shown to exhibit a rudimentary form of commonsense reasoning \cite{Zhou2020-wi,Trinh2018-pm,Rajani2019-zk}.
+However, they have their limitations.
+They struggle to solve tasks which require several chained inferences steps \cite{Zhou2020-wi}, though there is work being done to try to improve performance in this \cite{Wei2022-nf}.
+They also are often unable to solve dual tasks which are correlated such that the correct prediction of one sample should lead to correct prediction of the other \cite{Zhou2020-wi}.
+This is understood to be a sign that they only possess a shallow understanding of commonsense, not the deep one we want them to have \cite{Zhou2020-wi}.
+
+Improving commonsense reasoning might be a step towards artificial general intelligence and artificial general superintelligence.
+Large language models are currently the most promising avenue towards artificial general intelligence \cite{Bubeck2023-gl}.
+Considering that they struggle with commonsense reasoning \cite{Zhou2020-wi}, improving commonsense reasoning might take us one step closer to true artificial general intelligence.
+Although it is difficult to know precisely what needs to be done to arrive at artificial general superintelligence, the most reasonable direction is to first achieve artificial general intelligence, so commonsense reasoning would likely be a step in that direction as well.
+
+\section{What Are the Downstream Tasks Which Use Commonsense Reasoning?}
+
+My thesis will focus on applying commonsense reasoning to natural language processing tasks.
+Although commonsense reasoning can be applied to improve performance in downstream tasks in other fields, such as computer vision \cite{Zellers2019-to} and human activity recognition \cite{Martinez_del_Rincon2013-qo}, most work in applying it to downstream tasks has focused on those in natural language processing.
+A simple overview of the downstream tasks which I plan to consider is given below.
+
+\begin{itemize}[nolistsep]
+    \item
+        \textbf{Dialogue generation} is the task of, given a two-person dialogue history and a user utterance, generating an appropriate response \cite{Li2016-ef}.
+    \item 
+        \textbf{Dialogue summarization} is the task of generating a summary of a conversation while preserving its context \cite{Kim2022-pz} and retaining factual consistency \cite{Richardson2023-mq}.
+    \item 
+        \textbf{Sequence classification} is the task of identifying some attribute of the dialogue, e.g.
+        \begin{itemize}[nolistsep]
+            \item what is the intent of the conversation?
+            \item what is the emotional state of the other speaker?
+            \item what is the topic of the conversation?
+        \end{itemize}
+        Two major subtasks on which I plan to focus, among others, are
+        \begin{itemize}[nolistsep]
+            \item \textit{emotion detection}, the detection of the emotion for each utterance in a given conversation \cite{Yi2022-tv}, and
+            \item \textit{causal emotion entailment}, the detection of causal utterances for a non-neutral targeted utterance from a conversation \cite{Li2022-jr}.
+        \end{itemize}
+\end{itemize}
+
 \newpage
 \chapter{Finding Better Ways to Solve Commonsense Reasoning}
+\label{chapter:commonsense-reasoning}
 
 \newpage
 \chapter{Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}

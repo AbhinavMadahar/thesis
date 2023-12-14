@@ -93,14 +93,14 @@ Thesis proposal total length: thirteen pages
   - ~~What are the downstream tasks which use commonsense reasoning? Why are they important? (quarter page; seven sentences)~~
     - ~~Quick summary of what each task is (seven tasks; one sentence per task):~~
 - Finding better ways to do commonsense reasoning (three pages; one-hundred sentences)
-  - Explain that this is an example of trunk work (five sentences)
+  - ~~Explain that this is an example of trunk work (five sentences)~~
   - Background (thirty sentences)
     - Define and describe abductive reasoning (fifteen sentences)
       - TODO: fill from (Qin et al, 2020)
       - Describe abductive NLI
-        - TODO: fill from (Bhagavatula et al, 2020)
+        - TODO: fill from (Bhagavatula et al, 2019)
       - Describe abductive NLG
-        - TODO: fill from (Bhagavatula et al, 2020)
+        - TODO: fill from (Bhagavatula et al, 2019)
       - Prior work
         - TODO: fill from (Qin et al, 2020)
     - Define and describe counterfactual reasoning (fifteen sentences)
@@ -109,14 +109,15 @@ Thesis proposal total length: thirteen pages
     - Datasets
       - NumerSense
         - TODO: fill from (Lin et al, 2020)
-      - (Ilevski F et al, 2021)
-        - TODO: fill
       - TIMEDIAL
         - TODO: fill from (Qin L et al, 2021)
       - COM2SENSE
         - TODO: fill from (Singh S et al, 2021)
-      - CATs
-        - TODO: fill from (Zhou X et al, 2020)
+      - SocialIQA
+      - PIQA
+      - ARC
+      - QASC
+      - HellaSWAG
     - Evaluation metrics
       - SocialIQA (SIQA)
         - TODO: fill from (Sap et al, 2019b)
@@ -130,10 +131,7 @@ Thesis proposal total length: thirteen pages
         - TODO: fill from (Sakaguchi et al, 2020)
       - COM2SENSE
         - TODO: fill from (Singh S et al, 2021)
-  - Avenues of research which I do not expect at this time to pursue but which are worth mentioning (five sentences)
-    - Retrieval-based commonsense reasoning (five sentences)
-      - TODO: fill from (Wang H et al, 2021)
-  - Promising avenues of research (fifty sentences)
+  - Natural-language-based commonsense reasoning (fifty sentences)
     - Using pre-trained language models as neural knowledge bases (fourty-five sentences)
       - Why it might be wise to use natural language instead of logical formalisms to capture commonsense reasoning (fifteen sentences)
         - Why is research in NLE important? (five sentences)
@@ -145,18 +143,22 @@ Thesis proposal total length: thirteen pages
           - (Gabriel et al, 2021)
             - TODO: fill
       - Prior work in this direction (twenty sentences)
-        - TODO: fill from (Lin et al, 2020)
+        - ~~TODO: fill from (Lin et al, 2020)~~
         - TODO: fill from (Shwartz V et al, 2022)
         - TODO: fill from (West P et al, 2021)
         - TODO: fill from (Qin L et al, 2021)
         - TODO: fill from (Bosselut A et al, 2021)
+        - ~~TODO: fill from (Bian N et al, 2023)~~
+        - ~~TODO: fill from (Liu J et al, 2021)~~
       - Potentially limitations of this direction (five sentences)
         - TODO: fill from (Branco R et al, 2021)
       - Statement that I will pursue this direction because it is the most promising (five sentences)
-        - Clarify that, because commonsense reasoning as a field is very young, only really gaining possibility a few years ago, it is very much conceivable that over the course of doing my thesis, new avenues will be opened, so this section is subject to change
+        - Clarify that, because commonsense reasoning as a field is very young, only really gaining possibility a few years ago (Choi Y, 2022), it is very much conceivable that over the course of doing my thesis, new avenues will be opened, so this section is subject to change
     - Improving commonsense reasoning systems' ability to generalise (five sentences)
       - Through improving transfer learning:
         - TODO: fill from (Kim YJ et al, 2022)
+  - Retrieval-based commonsense reasoning (five sentences)
+    - TODO: fill from (Wang H et al, 2021)
 - Finding better ways to apply commonsense reasoning to downstream tasks (five pages; two-hundred five sentences)
   - Explain that this is an example of branch work (five sentences)
   - Methods (ten sentences)

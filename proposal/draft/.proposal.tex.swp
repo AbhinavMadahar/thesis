@@ -1,6 +1,7 @@
 \documentclass[12pt]{report}
 
 \usepackage{amsmath}
+\usepackage{booktabs}
 \usepackage{caption}
 \usepackage{cite}
 \usepackage{csquotes}
@@ -25,6 +26,9 @@
 \usepackage{varwidth}
 \usepackage{xcolor}
 \usepackage{xparse}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
 
 % change the font for chapter, section and subsection page numbers
 \renewcommand\cftchappagefont{\Large\bfseries}
@@ -252,7 +256,6 @@ However, an artificial general superintelligence might be able to reach beyond h
 
 When discussing artificial general intelligence, and especially artificial general superintelligence, there is a tendency to worry about the end of days, armageddon, human extinction, and similarly apocalyptic notions.
 While these concerns have some legitimacy, it is important to approach them with a scientific mindset.
-The ethical considerations section of this thesis proposal examines possible concerns, including the question of whether artificial general intelligence or artificial general superintelligence would pose an existential threat to humanity, in addition to the more immediate and less flashy concerns, such as misalignment.
 
 
 \section{Commonsense reasoning}
@@ -331,6 +334,10 @@ My thesis will advance our understanding of commonsense reasoning and its applic
 The first half will focus on improving our ability to implement commonsense reasoning itself, focusing on using natural language in place of logical formalisms, a promising new direction \cite{Choi2022-to}.
 The second half will focus on finding better ways to use commonsense reasoning to improve performance on downstream tasks, primarily those in natural language processing such as dialogue summarization and question answering.
 
+\section{Timeline}
+
+I expect to conduct research for the various parts of my thesis concurrently as most of my thesis is, as the parallel processing researchers say, \enquote{embarrassingly parallelizable} \cite{Vrajitoru_undated-xc}.
+Assuming the standard graduate school decision deadline, I can expect to have access to a university compute cluster by April 15 at the latest \cite{Council_of_Graduate_Schools2021-qf}, at which point I can begin running experiments.
 
 \chapter{Background}
 
@@ -350,6 +357,7 @@ An artificial general intelligence is an artificial intelligence which is broadl
 Although some researchers use the term artificial general intelligence to refer to an artificial intelligence which can operate at a level beyond that reachable by a human, I reserve that distinction for an artificial general \textit{super}intelligence.
 
 \section{What Is Commonsense Reasoning and Why Is It Important?}
+\label{section:background--commonsense-reasoning}
 
 Commonsense knowledge is the knowledge about the world which we expect all humans to possess \cite{Ilievski2021-ir}.
 For example, we expect all humans to understand that an apple can fall from a tree to the ground but that it cannot rise from the ground to the tree.
@@ -363,7 +371,7 @@ An example is ATOMIC \cite{Sap2019-ob}, which captures \textit{if-then} reasonin
 As an example of the logic contained in ATOMIC, consider the reasoning \textit{if \textup{X} pays \textup{Y} a compliment, then \textup{Y} will likely return the compliment}.
 A more complete example of the structure of ATOMIC is given in \cref{figure:atomic}.
 While commonsense knowledge graphs are static, capturing only the information contained in them and nothing more, commonsese knowledge models are able to generate new knowledge about the world \cite{Kim2022-pz} by extending a given commonsense knowledge graph, adding novel nodes and edges \cite{Kim2022-pz,Bosselut2019-he}.
-An example is COMET, whose structure is shown in \cref{figure:comet}.
+An example is COMET \cite{Bosselut2019-he}, whose structure is shown in \cref{figure:comet}.
 
 \begin{figure}
     \includegraphics[width=0.5\textwidth]{diagrams/atomic-example.png}
@@ -377,10 +385,10 @@ An example is COMET, whose structure is shown in \cref{figure:comet}.
     \label{figure:comet}
 \end{figure}
 
-My thesis will focus on a major direction of research which has garnered attention recently: capturing and manipulating commonsense knowledge as natural language instead of as logical formalisms, an idea detailed in \cref{chapter:commonsense-reasoning}.
+My thesis will focus on a major direction of research which has garnered attention recently \cite{Choi2022-to}: capturing and manipulating commonsense knowledge as natural language instead of as logical formalisms, an idea detailed in \cref{chapter:commonsense-reasoning}.
 The simple intuition is that, rather than trying to capture how the world works in a formal system, such as in a graph with nodes and edges, it might be more fruitful to capture the world in natural language, the reasoning being that no other medium can contain the complexities of the world \cite{Choi2022-to}.
 
-One important development which bears noting is that large language models have been shown to exhibit a rudimentary form of commonsense reasoning \cite{Zhou2020-wi,Trinh2018-pm,Rajani2019-zk}.
+One important development is that large language models have been shown to exhibit a rudimentary form of commonsense reasoning \cite{Zhou2020-wi,Trinh2018-pm,Rajani2019-zk}.
 However, they have their limitations.
 They struggle to solve tasks which require several chained inferences steps \cite{Zhou2020-wi}, though there is work being done to try to improve performance in this \cite{Wei2022-nf}.
 They also are often unable to solve dual tasks which are correlated such that the correct prediction of one sample should lead to correct prediction of the other \cite{Zhou2020-wi}.
@@ -390,6 +398,7 @@ Improving commonsense reasoning might be a step towards artificial general intel
 Large language models are currently the most promising avenue towards artificial general intelligence \cite{Bubeck2023-gl}.
 Considering that they struggle with commonsense reasoning \cite{Zhou2020-wi}, improving commonsense reasoning might take us one step closer to true artificial general intelligence.
 Although it is difficult to know precisely what needs to be done to arrive at artificial general superintelligence, the most reasonable direction is to first achieve artificial general intelligence, so commonsense reasoning would likely be a step in that direction as well.
+Similarly, commonsense reasoning is reasonably likely to be a step towards artificial consciousness.
 
 \section{What Are the Downstream Tasks Which Use Commonsense Reasoning?}
 
@@ -431,18 +440,111 @@ A simple overview of the downstream tasks which I plan to consider is given belo
         Like dialogue modelling, they can be divided into two major subtasks: open dialogue systems and task-oriented dialogue systems \cite{Ni2023-jk,Richardson2023-mq}.
     \item
         \textbf{Recognizing Emotion Cause in Conversations (RECCON)} is the task of finding the emotion associated with an utterance in a conversation along with its cause \cite{Poria2020-xk}.
-        It has a subtask, \textit{C\textsubscript{2}E\textsubscript{2}}, the detection of causal utterances for a targeted utterance from conversations where the emotion is given \cite{Li2022-jr}.
+        It has a subtask, \textit{Conversational Causal Emotion Entailment (C\textsubscript{2}E\textsubscript{2})}, the detection of causal utterances for a targeted utterance from conversations where the emotion is given \cite{Li2022-jr}.
 \end{itemize}
 
 \chapter{Finding Better Ways to Solve Commonsense Reasoning}
 \label{chapter:commonsense-reasoning}
 
+This is an example of trunk work in that advancements made to commonsense reasoning advance our ability to create an artificial intelligence which is able to understand concepts.
+We can use these trunk advancements in branch research by applying commonsense reasoning to downstream tasks, the focus of \cref{chapter:downstream-tasks}.
+
+Large language models have been shown to be viable sources of information, internally storing knowledge contained in their training data \cite{Petroni2019-uz,Feldman2019-gc,Bouraoui2020-fw}.
+A large language model used in this way is called a \textit{neural knowledge bases} \cite{Lin2020-ik}.
+Recently, one promising direction of research in commonsense reasoning has emerged, using the implicit commonsense reasoning found in pretrained language models \cite{Zhou2020-wi,Trinh2018-pm,Rajani2019-zk} such as BERT \cite{Lin2020-ik,Devlin2018-om}.
+State-of-the-art techniques have weaknesses, however \cite{Bian2023-rj,Lin2020-ik}.
+
+The avenues through which I will attempt to advance the research in commonsense reasoning loosely fall under the umbrella of natural-language-based commonsense reasoning.
+Because this is where the most promising research is currently being done \cite{Choi2022-to}, I intend to focus on this.
+
+\section{Methods}
+
+For this section of my thesis, I will use the following datasets.
+
+\begin{itemize}
+    \item
+        \textsc{NumerSense} \cite{Lin2020-ik} is a dataset of 13.6k masked-word-prediction probes each masked word is a number in a sentence, e.g. \enquote{a bird usually has <blank> legs}, along with the appropriate number, \enquote{two} in the example given.
+    \item
+        \textsc{TimeDial} \cite{Qin2021-jy} is a multiple choice cloze task of 1.1k dialogues. Each element of the dataset is a two-person dialogue, a final utterance containing a blank, four possible fill-ins for the blank (three incorrect, one correct), and a note of which fill-in is correct.
+    \item
+        \textsc{COM2SENSE} \cite{Singh2021-ui} is a collection of natural language true/false statements expressed in complementary sentence pairs. There are 4k samples in the dataset.
+    \item
+        \textsc{SocialIQA} \cite{Sap2019-hu} is a dataset of 38k multiple choice questions, each on a social scenario.
+        For example, the social scenario might be \enquote{Alice asks Bob not to speak loudly in the library,} while the question and correct answer are \enquote{why did Alice do this?} and \enquote{because people are reading,} respectively.
+        Two incorrect answers are also given for each sample.
+    \item
+        \textsc{Physical Interaction: Question Answering (PIQA)} \cite{Bisk2020-hw} is a dataset which considers physical concepts, such as the correct ways to apply makeup.
+        Each of the 21k samples consists of a question about the physical world and two possible answers to the question, only one of which is correct, along with a label of which of the two possible answers is correct.
+    \item
+        \textsc{The AI2 Reasoning Challenge (ARC)} \cite{Clark2018-md} dataset is a corpus of 8k grade-school science questions, each question paired with three incorrect answers and one correct answer.
+        There is an adjoining ARC Corpus, which consists of 14M science sentences.
+    \item
+        \textsc{Question Answering via Sentence Composition (QASC)} \cite{Khot2020-dh} is a multi-hop reasoning dataset.
+        Like other question answering datasets, it consists of questions paired with possible answers, only one of which is correct.
+        What is distinctive of QASC is that it also contains a corpus of facts and, to answer a given question, multiple facts must be composed, creating a chain of reasoning.
+    \item
+        \textsc{HellaSWAG} \cite{Zellers2019-gw} is a dataset consisting of scenarios paired with possible next steps, only one of which is correct.
+        For example, the scenario might be, \enquote{a boy opens a water bottle}, and the correct next step might be, \enquote{he drinks from the water bottle}.
+        The samples contained in the dataset were specifically chosen for their difficulty to contemporary commonsense reasoning techniques.
+\end{itemize}
+
+\section{Numerical Commonsense Reasoning as a Step Towards General Commonsense Reasoning}
+
+\textit{Numerical commonsense reasoning} is the task of reasoning about numerical quantities \cite{Lin2020-ik}.
+It is often presented as a masking task, i.e. given a sentence such as \enquote{a dog has <blank> legs}, the model is used to fill in the blank when restricted to only numeric words, in this case ideally with \enquote{four} \cite{Lin2020-ik,Bian2023-rj}.
+My research in this task will use the NumerSense dataset \cite{Lin2020-ik}.
+
+Improvements in this direction have downstream effects, most notably that
+\begin{itemize}[nolistsep]
+    \item they would make it easier to populate numerical facts in current commonsense knowledge bases \cite{Lin2020-ik} and
+    \item they would improve performance in open-domain question answering, e.g. given the question \enquote{how many legs do ants have?}, a numerical-commonsense-reasoning-powered question answering model would be more likely to correct answer with \enquote{six} \cite{Lin2020-ik}.
+\end{itemize}
+
+One recent work which has improved performance in numerical commonsense reasoning is \textit{generated knowledge prompting}, the generation of knowledge from a language model followed by the provision of the knowledge as additional input when answering a question \cite{Liu2021-iq}.
+Formally, they represent the task as the prediction of an answer $a \in A_q$, represented as natural language, given a question $q \in Q$, also represented as natural language, where the set of choices $A_q$ is finite, though in my research on numeric commonsense reasoning $A_q$ would ideally be the infinite set of all numbers.
+They then use a language model $p_G(k|q)$ to generate knowledge statements $K_q$ conditioned on the question using
+\begin{equation*}
+    K_q = \left\{k_m: k_m \sim p_G(k|q), m = 1, \cdots, M \right\}
+\end{equation*}
+where $M$ is the quantity of knowledge statements to generate.
+The second step is to integrate this into the commonsense reasoning step, where a language model $p_I$ is used to predict the answer using
+\begin{equation*}
+    \hat{a} = \underset{a \in A_q}{\text{arg\ max}}\ p_I(a|q,K_q).
+\end{equation*}
+This contrasts with the vanilla technique, which omits the $K_q$, i.e.
+\begin{equation*}
+    \hat{a} = \underset{a \in A_q}{\text{arg\ max}}\ p_I(a|q).
+\end{equation*}
+As you can see, it is similar in spirit to chaining logical inferences in natural language \cite{Wei2022-nf}.
+
+I intend to extend this direction, finding better ways to use it to solve numerical commonsense reasoning.
+Although generated knowledge prompting can be used for non-numerical commonsense reasoning, such as scientific commonsense \cite{Liu2021-iq}, I will focus on numerical commonsense reasoning.
+
+It is possible, however, that improvements to numerical commonsense reasoning based on generated knowledge prompting can be transferred to other tasks, such as scientific, social, event, physical, prototypical, and temporal commonsense \cite{Bian2023-rj}.
+The datasets which I would use for these tasks include Social IQA \cite{Sap2019-hu} for social commonsense reasoning, ARC \cite{Clark2018-md} and QASC \cite{Khot2020-dh} for scientific commonsense reasoning, etc.
+
+After finding new techniques to implement \textit{numerical} commonsense reasoning, I intend to conduct research in extending these techniques to other forms of commonsense reasoning.
+In effect, I intend to use numerical commonsense reasoning as a step towards general commonsense reasoning, a simpler task whose solutions may solve a more complex task.
+
+\section{Using Large Language Models to Generate and Extend Knowledge Graphs}
+
+As discussed in \cref{section:background--commonsense-reasoning}, we can generate knowledge graphs automatically rather than manually.
+While some researchers argue against the utility of knowledge graphs, they remain worth considering.
+In this section of my thesis, I will investigate ways to use large language models to generate or extend knowledge graphs.
+A major work in this direction which will form the foundation for my own research is COMET \cite{Bosselut2019-he}.
+
+COMET generates novel commonsense knowledge.
+Its training knowledge base consists of tuples in $\{s, r, o\}$ format where $s$ is the natural language phrase subject of the tuple, $r$ is the relation of the tuple, and $o$ is the natural language phrase object of the tuple
+An example tuple is $(s=\text{\enquote{drop a ball}}, r=\text{causes}, o=\text{\enquote{ball falls on the ground}})$.
+It interprets novel commonsense knowledge generation as the task of generating $o$ given $s$ and $r$ as inputs.
+To achieve this, it is trained to maximize the conditional loglikelihood of predicting the $o$ tokens.
+We can represent these tuples as a knowledge graph by interpreting $s$ and $o$ as nodes and $r$ as an edge.
+
+I intend to continue research in this direction, finding new techniques to extend knowledge graphs.
+
+
 \chapter{Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}
-
-\chapter{Ethical Concerns}
-
-\chapter{Timeline}
-
+\label{chapter:downstream-tasks}
 
 \chapter{Conclusion}
 

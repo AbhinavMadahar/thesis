@@ -421,26 +421,23 @@ A simple overview of the downstream tasks which I plan to consider is given belo
         The two major subtasks on which I plan to focus are
         \begin{itemize}[nolistsep]
             \item \textit{emotion detection}, the detection of the emotion for each utterance in a given conversation \cite{Yi2022-tv} and
-            \item \textit{causal emotion entailment}, the detection of causal utterances for a non-neutral targeted utterance from a conversation \cite{Li2022-jr}.
+            \item \textit{causal emotion entailment}, the detection of causal utterances for a non-neutral targeted utterance from a conversation \cite{Richardson2023-mq,Li2022-jr}.
         \end{itemize}
     \item
         \textbf{Presumption detection}, as defined in \cite{Arabshahi2021-oz}, is the task of, given a command of the form \textbf{if}-\textbf{then}-\textbf{because}, inferring unstated additional conditions on the \textbf{if} or the \textbf{then} portion \cite{Arabshahi2021-oz}.
-    \item
-        \textbf{Question answering} is the task of answering questions posed in natural language about a database, a collection of text documents, or another corpus as context \cite{Calijorne_Soares2020-eo}.
-        Two major subtasks which I consider are:
-        \begin{itemize}[nolistsep]
-            \item \textit{multi-choice question answering (MCQA) over dialogues}, the problem of answering multi-choice questions given a dialogue as context \cite{Richardson2023-mq}, and
-            \item \textit{multi-turn conversational question answering (CQA)}, the problem of asking or answering questions in a multi-turn dialogue \cite{Richardson2023-mq}.
-        \end{itemize}
     \item
         \textbf{Dialogue modelling} is to dialogues what language modelling is to unstructured text \cite{Richardson2023-mq}.
         It is used for both open dialogue, the setting where the conversation does not have any particular goal, as typified by the chatbot setting, and task-oriented dialogue \cite{Richardson2023-mq}.
     \item
         \textbf{Dialogue systems} are artificial intelligences which can have a conversation with a human interlocutor \cite{Ni2023-jk}.
-        Like dialogue modelling, they can be divided into two major subtasks: open dialogue systems and task-oriented dialogue systems \cite{Ni2023-jk,Richardson2023-mq}.
+        Two major subfields on which I intend to focus are:
+        \begin{itemize}[nolistsep]
+            \item avoiding harmful dialogues, reacting appropriately to troubling user statements and
+            \item target-guided dialogue, when a dialogue system tries to guide a conversation towards a particular sentence.
+        \end{itemize}
     \item
         \textbf{Recognizing Emotion Cause in Conversations (RECCON)} is the task of finding the emotion associated with an utterance in a conversation along with its cause \cite{Poria2020-xk}.
-        It has a subtask, \textit{Conversational Causal Emotion Entailment (C\textsubscript{2}E\textsubscript{2})}, the detection of causal utterances for a targeted utterance from conversations where the emotion is given \cite{Li2022-jr}.
+        Researchers sometimes view causal emotion entailment as a subtask of RECCON, dubbing it \textit{Conversational Causal Emotion Entailment (C\textsubscript{2}E\textsubscript{2})}, the detection of causal utterances for a targeted utterance from conversations where the emotion is given \cite{Li2022-jr}.
 \end{itemize}
 
 \chapter{Finding Better Ways to Solve Commonsense Reasoning}
@@ -546,7 +543,66 @@ I intend to continue research in this direction, finding new techniques to exten
 \chapter{Finding Better Ways to Apply Commonsense Reasoning to Downstream Tasks}
 \label{chapter:downstream-tasks}
 
+This is an example of branch work in that it applies an artificial intelligence's ability to understand concepts to specific tasks.
+We consider here how applying commonsense reasoning can improve performance on several downstream tasks, examining prior work on which I intend to build in my thesis.
+Notably, many seemingly different tasks can involve commonsense reasoning in similar ways, such as how SICK \cite{Kim2022-pz} and CISPER \cite{Yi2022-tv} both intermix commonsense reasoning inferences with the original data to improve performance on their respective tasks.
+
+\section{Dialogue Generation}
+
+To improve performance on dialogue generation, \textit{Dynamic Multi-form Knowledge Fusion based Open-domain Chatting Machine (DMKCM)} \cite{Xu2022-fv} uses both a commonsense knowledge graph and unstructured text from natural language documents.
+They use a virtual knowledge base, an indexed corpus of documents linked to related documents via keywords.
+The key insight was using a virtual knowledge base to locate relevant documents and then expanding the content of the dialogue and the relevant documents using a commonsense knowledge graph to get apposite triples.
+
+\section{Dialogue Summarization}
+
+Two novel techniques, \textit{Summarizing with Injected Commonsense Knowledge (SICK)} and \textit{SICK++} \cite{Kim2022-pz}, improve performance on document summarization.
+To do so, SICK uses commonsense inferences as additional context, interlacing utterances with commonsense inferences based on them, before feeding them together to a standard document summarizer.
+They also extend on this with SICK++, which uses commonsense as supervision by adding commonsense inference generation as an additional task in a multi-task learning setting.
+
+\section{Sequence Classification}
+
+\textbf{Emotion detection.}
+Similar to SICK's \cite{Kim2022-pz} approach to dialogue summarization, CISPER \cite{Yi2022-tv} improves emotion detection by interweaving commonsense inferences with utterances.
+
+\textbf{Causal emotion entailment.}
+To integrate commonsense reasoning in causal emotion entailment, \textit{Knowledge Enhanced Conversation graph (KEC)} \cite{Li2022-jr} propagates social commonsense knowledge between the given utterances.
+They also propose a novel filtering strategy for selecting commonsense knowledge based on sentiment.
+Their final contribution is a novel method for processing KEC, the construction of Knowledge Enhanced Directed Acyclic Graph networks.
+
+\section{Presumption Detection}
+
+A recently proposed technique for presumption detection \cite{Arabshahi2021-ly} improves performance on the task through two innovations.
+The first is an iterative knowledge query mechanism which uses a multi-hop reasoning chain to significantly reduce the search space.
+They use a neural knowledge base, which necessarily has gaps in knowledge.
+They include a second innovation, a mechanism for querying a human user to fill gaps in the neural knowledge base, but I do not intend to extend work in this direction.
+I would ideally focus on what we may term \textit{human-NOT-in-the-loop artificial intelligence}, i.e. artificial intelligence techniques which do not need a human to fill in gaps in knowledge or reasoning.
+As such, although this second innovation certainly has utility in certain real-world use cases, I will not continue work in this direction.
+
+\section{Dialogue Modelling}
+
+Think-Before-Speaking \cite{Zhou2021-iy} incorporates commonsense reasoning into dialogue modelling by first externalizing commonsense knowledge, which they term the \textit{think} step, and then using this knowledge to generate responses, which they term the \textit{speak} step.
+
+\section{Dialogue Systems}
+
+\textbf{Avoiding harmful dialogues.}
+A recent work \cite{Kim2022-ji} has two contributions.
+The first is a dialogue safety detection module, Canary, which generates prosocial commonsense reasoning rules given a dialogue; Canary can even be plugged into off-the-shelf language models to increase their prosocial tendencies.
+The second is a socially-informed dialogue system, Prost, which generates dialogues which are more prosocial than previous state-of-the-art dialogue systems.
+I intend to expand on this, finding better ways to reason about prosocial behaviour, in some sense creating a moral compass based on commonsense reasoning.
+
+\textbf{Target-guided dialogue.}
+In a spirit similar to chaining commonsense inferences, a recent work \cite{Gupta2022-bs} guides a dialogue towards a target through two steps.
+The first step is finding a chaining path of commonsense inferences from the current sentence to the target sentence.
+The second step is using the commonsense inferences to generate transition responses.
+Like other recent developments in commonsense reasoning, they use reasoning chains, so finding better ways to chain together commonsense inferences would be a promising direction, and I intend to conduct research to this effect.
+
+\section{Recognizing Emotion Cause in Conversations}
+\textit{Causal Aware Interaction Network (CauAIN)} \cite{Zhao2022-hv} retrieves commonsense causal clues to guide the process of causal utterance, conducting both the retrieval and traceback steps from both the perspective of the human user and the dialogue system.
+This is arguably the most promising work in this task, and I intend to investigate potential extensions of it.
+
+
 \chapter{Conclusion}
+
 
 \begin{footnotesize}
     \bibliographystyle{plain}

@@ -160,7 +160,7 @@ Thesis proposal total length: thirteen pages
   - Retrieval-based commonsense reasoning (five sentences)
     - TODO: fill from (Wang H et al, 2021)
 - Finding better ways to apply commonsense reasoning to downstream tasks (five pages; two-hundred five sentences)
-  - Explain that this is an example of branch work (five sentences)
+  - ~~Explain that this is an example of branch work (five sentences)~~
   - Methods (ten sentences)
     - Datasets
       - CICERO (Ghosal D et al, 2022)

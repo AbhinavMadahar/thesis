@@ -13,7 +13,7 @@ The third is the `proposals` directory, which contains my thesis proposal.
 
 ## How to use this repository
 
-If you just want to read my thesis, then just open the file `thesis/draft.pdf`.
+If you just want to read my thesis, then just open the file `thesis/thesis.pdf`.
 If you want to re-run my experiments or view my data, then open the appropriate directory in `experiments`.
 My code is licensed under the MIT License.
 

@@ -13,10 +13,16 @@ The third is the `proposals` directory, which contains my thesis proposal.
 
 ## How to use this repository
 
-If you just want to read my thesis, then just open the file `thesis/thesis.pdf`.
-If you want to re-run my experiments or view my data, then open the appropriate directory in `experiments`.
-My code is licensed under the MIT License.
+Please consult this table to match your desire with the appropriate directory:
 
-My thesis is written in XeLaTex and must be built with a compiler which supports it; if you try to build my thesis with `pdflatex`, then it will fail.
+| Desire                                | Directory     |
+|---------------------------------------|---------------|
+| Read my thesis                        | `thesis`      |
+| Re-run my experiments or view my data | `experiments` |
+| Verify my data analyses               | `analyses`    |
+| Check out my research ideas           | `ideas`       |
+| Read my thesis proposal               | `proposal`    |
+
+My thesis is written in LuaLaTex and must be built with a compiler which supports it; if you try to build my thesis with `pdflatex`, then it will fail.
 The code which runs my thesis is written in Python 3, and I use PyTorch.
 Data is stored in JSON.

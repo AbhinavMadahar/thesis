@@ -6,10 +6,11 @@ _Author: Abhinav Madahar <abhinavmadahar@gmail.com>_
 
 ## Navigating this repository
 
-This repository has three major directories.
+This repository has four major directories.
 The first is the `thesis` directory, which contains my thesis document.
 The second is the `experiments` directory, which contains the code I used to run experiments along with the data I collected from this.
-The third is the `proposals` directory, which contains my thesis proposal.
+The third is the `ideas` directory, where I add potential ideas for new research directions.
+The fourth is the `proposals` directory, which contains my thesis proposal.
 
 ## How to use this repository
 

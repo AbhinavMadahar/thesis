@@ -26,4 +26,5 @@ Please consult this table to match your desire with the appropriate directory:
 
 My thesis is written in LuaLaTex and must be built with a compiler which supports it; if you try to build my thesis with `pdflatex`, then it will fail.
 The code which runs my thesis is written in Python 3, and I use PyTorch.
+The required packages are stored in `requirements.txt`.
 Data is stored in JSON.

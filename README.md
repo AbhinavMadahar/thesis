@@ -26,18 +26,16 @@ Data is stored in JSON.
 All of the work in my thesis is built using a single Makefile.
 To build a particular entity, consult the following table; e.g. to build my thesis document, you would run `make thesis`.
 
-| Entity                                       | Make target                     |
-|----------------------------------------------|---------------------------------|
-| Everything                                   | `everything`                    |
-| My thesis document                           | `thesis`                        |
-| All the experiments                          | `experiment`                    |
-| A particular experiment                      | `experiment--<experiment id>`   |
-| All the analyses                             | `analysis`                      |
-| A particular analysis                        | `analysis--<analysis id>`       |
-| All the reports I write for my committee     | `committee-report`              |
-| A particular report I write for my committee | `committee-report--<report id>` |
-| All the libraries                            | `library`                       |
-| A particular library                         | `library--<library id>`         |
+| Entity                                                                 | Make target                                  |
+|------------------------------------------------------------------------|----------------------------------------------|
+| Everything                                                             | `all` (this is the default target)           |
+| My thesis document                                                     | `thesis`                                     |
+| All the experiments                                                    | `experiment`                                 |
+| A particular experiment                                                | `experiment--<experiment id>`                |
+| All the analyses                                                       | `analysis`                                   |
+| A particular analysis                                                  | `analysis--<analysis id>`                    |
+| All the libraries                                                      | `library`                                    |
+| A particular library                                                   | `library--<library id>`                      |
 
 Each experiment and each analysis has its own Python virtual environment.
 This is by necessity; by the time I finish my thesis, the most recent code will have been written years after the oldest code, so there would likely be version incompatibilities.

@@ -1,4 +1,4 @@
-# Identifying and Addressing Bias in Commonsense Reasoning
+# Identifying and Addressing Social Bias in Commonsense Reasoning
 
 Commonsense reasoning engines may exhibit social biases (e.g. race-based, gender-based, etc.).
 In this section, we try to identify whether existing models do and, if so, to what extent and how.

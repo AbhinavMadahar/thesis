@@ -39,3 +39,22 @@ To build a particular entity, consult the following table; e.g. to build my thes
 
 Each experiment and each analysis has its own Python virtual environment.
 This is by necessity; by the time I finish my thesis, the most recent code will have been written years after the oldest code, so there would likely be version incompatibilities.
+
+An experiment uses a script, `experiment.py`, to generate data, which is stored in its `data.json` file.
+The `data.json` file always includes at least the following keys:
+
+| Key        | Content                                                 |
+|------------|---------------------------------------------------------|
+| `title`    | the title of the experiment                             |
+| `time`     | the date and time when this run of the experiment began |
+| `duration` | how long it took to run the experiment in this run      |
+
+An analysis uses a Jupyter file, `analysis.ipynb`, to generate findings, which are stored in its `findings.json` file.
+Analyses may generate images and other rich media files; if this occurs, then they are stored in the analysis' `media` directory and the `findings.json` file includes the path to the media file.
+The `findings.json` file always contains at least the following keys:
+
+| Key        | Content                                                 |
+|------------|---------------------------------------------------------|
+| `title`    | the title of the analysis                               |
+| `time`     | the date and time when this run of the analysis began   |
+| `duration` | how long it took to run the analysis in this run        |

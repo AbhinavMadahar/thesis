@@ -20,7 +20,7 @@ endef
 # OVERALL STRUCTURE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-all: thesis committee-report
+all: thesis
 
 .PHONY: clean
 

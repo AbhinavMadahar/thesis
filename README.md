@@ -1,6 +1,6 @@
 # Finding Adam
 
-_Advancing Commonsense Reasoning as a Potential Step towards Artificial Consciousness, Artificial General Intelligence, and Artificial General Superintelligence_
+_Advancing Commonsense Reasoning as a Potential Step towards Artificial General Intelligence, Artificial General Superintelligence, and Artificial Consciousness_
 
 _Author: Abhinav Madahar <abhinavmadahar@gmail.com>_
 
@@ -40,18 +40,22 @@ To build a particular entity, consult the following table; e.g. to build my thes
 Each experiment and each analysis has its own Python virtual environment.
 This is by necessity; by the time I finish my thesis, the most recent code will have been written years after the oldest code, so there would likely be version incompatibilities.
 
-An experiment uses a script, `experiment.py`, to generate data, which is stored in its `data.json` file.
-The `data.json` file always includes at least the following keys:
+An experiment uses a script, `experiment.py`, to generate data, which is stored in its `data` directory.
+The `data` directory contains several directories, each containing the data gained from a particular trial; the data from the $n^\text{th}$ trial (0-indexed) is kept in the `trial-n` directory.
+The `data` directory always includes a `trial.json` file and may also contain other files, such as CSV files containing data.
+The `trial.json` file always includes at least the following keys:
 
-| Key        | Content                                                 |
-|------------|---------------------------------------------------------|
-| `title`    | the title of the experiment                             |
-| `time`     | the date and time when this run of the experiment began |
-| `duration` | how long it took to run the experiment in this run      |
+| Key        | Content                                                   |
+|------------|-----------------------------------------------------------|
+| `title`    | the title of the experiment                               |
+| `time`     | the date and time when this trial of the experiment began |
+| `duration` | how long it took to run the experiment in this trial      |
 
-An analysis uses a Jupyter file, `analysis.ipynb`, to generate findings, which are stored in its `findings.json` file.
-Analyses may generate images and other rich media files; if this occurs, then they are stored in the analysis' `media` directory and the `findings.json` file includes the path to the media file.
+An analysis uses a Jupyter file, `analysis.ipynb`, to generate findings, which are stored in its `findings` directory.
+The `findings` directory always contains a `findings.json` file which gives information about the findings.
+Analyses may generate CSV files or images and other rich media files; if this occurs, then they are stored in the analysis' `findings` directory.
 The `findings.json` file always contains at least the following keys:
+Note that, because analyses are assumed to consider all trials of an experiment, only one trial of an analysis is kept.
 
 | Key        | Content                                                 |
 |------------|---------------------------------------------------------|

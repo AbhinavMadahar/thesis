@@ -1,0 +1,25 @@
+\xpginauxfiletrue 
+\selectlanguage *{latex}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{5}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{2}{History}}{7}{}%
+\contentsline {section}{\tocsection {}{1}{The History of Progress}}{7}{}%
+\contentsline {section}{\tocsection {}{2}{The History of Conceptualizations of Change and Progress}}{7}{}%
+\contentsline {section}{\tocsection {}{3}{The History of Decelerationism}}{7}{}%
+\contentsline {section}{\tocsection {}{4}{The History of Scientific Research and Progress in Artificial\nonbreakingspace Intelligence}}{7}{}%
+\contentsline {section}{\tocsection {}{5}{The History of Conceptualizations of Artificial\nonbreakingspace Intelligence}}{7}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{3}{What Are Intelligence and Consciousness?}}{9}{}%
+\contentsline {section}{\tocsection {}{1}{What Is Intelligence?}}{9}{}%
+\contentsline {section}{\tocsection {}{2}{What Is Consciousness?}}{9}{}%
+\contentsline {section}{\tocsection {}{3}{What Is the Relationship between Language and Intelligence?}}{9}{}%
+\contentsline {section}{\tocsection {}{4}{Is There a Qualitative or Merely a Quantatative Difference between Artificial\nonbreakingspace General\nonbreakingspace Intelligence and Artificial\nonbreakingspace General\nonbreakingspace Superintelligence?}}{9}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Advancing Commonsense\nonbreakingspace Reasoning}}{11}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{5}{How Advancing Commonsense\nonbreakingspace Reasoning Can Achieve Artificial\nonbreakingspace General\nonbreakingspace Intelligence, Artificial\nonbreakingspace General\nonbreakingspace Superintelligence, and Artificial\nonbreakingspace Consciousness}}{13}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Applying Commonsense\nonbreakingspace Reasoning to Downstream Tasks other than Artificial\nonbreakingspace General\nonbreakingspace Intelligence, Artificial\nonbreakingspace General\nonbreakingspace Superintelligence, and Artificial\nonbreakingspace Consciousness}}{15}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Ethical Matters}}{17}{}%
+\contentsline {section}{\tocsection {}{1}{Ethical Downsides}}{17}{}%
+\contentsline {section}{\tocsection {}{2}{Ethical Upsides}}{17}{}%
+\contentsline {section}{\tocsection {}{3}{Alignment}}{17}{}%
+\contentsline {section}{\tocsection {}{4}{Effective Accelerationism}}{17}{}%
+\contentsline {section}{\tocsection {}{5}{Protecting an Artificial\nonbreakingspace Consciousness}}{17}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{8}{Conclusion}}{19}{}%
+\xpginauxfilefalse 

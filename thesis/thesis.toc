@@ -14,12 +14,11 @@
 \contentsline {section}{\tocsection {}{4}{Is There a Qualitative or Merely a Quantatative Difference between Artificial\nonbreakingspace General\nonbreakingspace Intelligence and Artificial\nonbreakingspace General\nonbreakingspace Superintelligence?}}{9}{}%
 \contentsline {chapter}{\tocchapter {Chapter}{IV}{Advancing Commonsense\nonbreakingspace Reasoning}}{11}{}%
 \contentsline {chapter}{\tocchapter {Chapter}{V}{How Advancing Commonsense\nonbreakingspace Reasoning Can Achieve Artificial\nonbreakingspace General\nonbreakingspace Intelligence, Artificial\nonbreakingspace General\nonbreakingspace Superintelligence, and Artificial\nonbreakingspace Consciousness}}{13}{}%
-\contentsline {chapter}{\tocchapter {Chapter}{VI}{Applying Commonsense\nonbreakingspace Reasoning to Downstream Tasks other than Artificial\nonbreakingspace General\nonbreakingspace Intelligence, Artificial\nonbreakingspace General\nonbreakingspace Superintelligence, and Artificial\nonbreakingspace Consciousness}}{15}{}%
-\contentsline {chapter}{\tocchapter {Chapter}{VII}{Ethical Matters}}{17}{}%
-\contentsline {section}{\tocsection {}{1}{Ethical Downsides}}{17}{}%
-\contentsline {section}{\tocsection {}{2}{Ethical Upsides}}{17}{}%
-\contentsline {section}{\tocsection {}{3}{Alignment}}{17}{}%
-\contentsline {section}{\tocsection {}{4}{Effective Accelerationism}}{17}{}%
-\contentsline {section}{\tocsection {}{5}{Protecting an Artificial\nonbreakingspace Consciousness}}{17}{}%
-\contentsline {chapter}{\tocchapter {Chapter}{VIII}{Conclusion}}{19}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{VI}{Ethical Matters}}{15}{}%
+\contentsline {section}{\tocsection {}{1}{Ethical Downsides}}{15}{}%
+\contentsline {section}{\tocsection {}{2}{Ethical Upsides}}{15}{}%
+\contentsline {section}{\tocsection {}{3}{Alignment}}{15}{}%
+\contentsline {section}{\tocsection {}{4}{Effective Accelerationism}}{15}{}%
+\contentsline {section}{\tocsection {}{5}{Protecting an Artificial\nonbreakingspace Consciousness}}{15}{}%
+\contentsline {chapter}{\tocchapter {Chapter}{VII}{Conclusion}}{17}{}%
 \xpginauxfilefalse 

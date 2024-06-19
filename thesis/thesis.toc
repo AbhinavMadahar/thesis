@@ -18,8 +18,8 @@
 \contentsline {chapter}{\tocchapter {Chapter}{VI}{Ethical Matters}}{15}{chapter.6}%
 \contentsline {section}{\tocsection {}{1}{Ethical Downsides}}{15}{section.6.1}%
 \contentsline {section}{\tocsection {}{2}{Ethical Upsides}}{15}{section.6.2}%
-\contentsline {section}{\tocsection {}{3}{Alignment}}{15}{section.6.3}%
-\contentsline {section}{\tocsection {}{4}{Effective Accelerationism}}{15}{section.6.4}%
+\contentsline {section}{\tocsection {}{3}{Effective Accelerationism}}{15}{section.6.3}%
+\contentsline {section}{\tocsection {}{4}{Alignment}}{15}{section.6.4}%
 \contentsline {section}{\tocsection {}{5}{Protecting an Artificial\nonbreakingspace Consciousness}}{15}{section.6.5}%
 \contentsline {chapter}{\tocchapter {Chapter}{VII}{Conclusion}}{17}{chapter.7}%
 \xpginauxfilefalse 

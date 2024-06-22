@@ -1,7 +1,7 @@
 \newcommand{\directorboomer}[2]{
-    \ifthenelse{\equal{\mode}{director}}{
-        #1
-    }{
+    \ifboomer
         #2
-    }
+    \else
+        #1
+    \fi
 }

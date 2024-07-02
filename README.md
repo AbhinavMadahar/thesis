@@ -1,6 +1,6 @@
 # Finding Adam
 
-_Advancing Commonsense Reasoning as a Potential Step towards Artificial General Intelligence, Artificial General Superintelligence, and Artificial Consciousness_
+_Advancing Commonsense Reasoning as a Potential Step towards Artificial General Superintelligence_
 
 _Author: Abhinav Madahar <abhinavmadahar@gmail.com>_
 

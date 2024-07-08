@@ -1,7 +1,7 @@
 # Finding Adam
 
 _Advancing Commonsense Reasoning as a Potential Step towards Artificial General Superintelligence_
-
+<br />
 _Author: Abhinav Madahar <abhinavmadahar@gmail.com>_
 
 ## Navigating this repository

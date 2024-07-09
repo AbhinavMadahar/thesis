@@ -1,0 +1,50 @@
+% here, we modify the \chapter, \section, \subsection, etc. commands
+
+% here, we create a new command which starts a new chapter.
+% in the boomer cut, the chapter includes the title and epigraph but not the abstract.
+% in the director cut, the chapter includes all three.
+% arguments:
+%     1. the chapter title
+%     2. epigraphs, expressed as a list of qitems, i.e.
+%         \qitem{quote 1}{author 1}
+%         \qitem{quote 2}{author 2}
+%         ...
+%     3. an abstract for the chapter
+
+\newcommand{\chapterpage}[3]{
+	\directorboomer{
+        \newpage
+        \newgeometry{margin=0cm}  % note that LaTeX imposes a minimum margin
+                                  % size, so this sets the margins close to but
+                                  % not exactly zero
+        \begin{multicols}{2}
+            % left-hand column
+                \chapter{#1}
+                \newcommand{\originalepigraphwidth}{\epigraphwidth}
+                \setlength{\epigraphwidth}{0.4\textwidth}
+                \begin{epigraphs}
+                    #2
+                \end{epigraphs}
+                \setlength{\epigraphwidth}{\originalepigraphwidth}
+
+            \columnbreak
+
+            % right-hand column
+                \begin{abstract}
+                    #3
+                \end{abstract}
+        \end{multicols}
+        \null\vfill
+        \restoregeometry
+        \newpage
+    }{
+        \chapter{#1}
+        \begin{epigraphs}
+            #2
+        \end{epigraphs}
+    }
+}
+
+% here, we modify the \section command
+
+\AddToHook{cmd/section/before}{\clearpage}

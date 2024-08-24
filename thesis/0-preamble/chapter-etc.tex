@@ -1,5 +1,17 @@
 % here, we modify the \chapter, \section, \subsection, etc. commands
 
+% here, we set the sections to number independently of the chapters, e.g.
+%   chapter 1
+%     section 1
+%     section 2
+%   chapter 2
+%     section 3
+%     section 4
+
+\makeatletter
+  \@removefromreset{section}{chapter}
+\makeatother
+
 % here, we create a new command which starts a new chapter.
 % in the boomer cut, the chapter includes the title and epigraph but not the abstract.
 % in the director cut, the chapter includes all three.

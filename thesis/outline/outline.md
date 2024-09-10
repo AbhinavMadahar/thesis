@@ -7,8 +7,11 @@ Current estimated word count: 0
 ## Outline
 
 - Introduction
+  - Explain that I am dropping the downstream tasks section originally planned in my proposal because AGI is a stronger problem [100 words]
 - History
 - What are intelligence and consciousness?
+  - Methodoloy
+    - Note that I take inspiration from (Andreas, 2022) [40 words]
 - Advancing commonsense reasoning capabilities
 - Ethical matters
 - Conclusion

@@ -2,8 +2,6 @@
 
 Goal word count: 100 000
 
-Current estimated word count: 0
-
 ## Outline
 
 - Introduction

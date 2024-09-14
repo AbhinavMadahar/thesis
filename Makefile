@@ -16,6 +16,12 @@ all: thesis experiment analysis library
 
 clean: thesis--clean
 
+watch:
+	while true; do \
+		$(MAKE); \
+		inotifywait -qre close_write .; \
+	done
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # EXPERIMENTS
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

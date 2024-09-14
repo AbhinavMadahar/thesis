@@ -1,0 +1,465 @@
+      1 Alipoormolabashi, Pegah
+      1 Allaway, Emily
+      1 Amplayo, Reinald Kim
+      1 Ant{\'o}nio Rodrigues, Jo{\~a}o
+      1 Ashby, Simone
+      1 Azaria, Amos
+      1 Balahur, Alexandra
+      1 Bapna, Ankur
+      1 Baron, D
+      1 Basart, Steven
+      1 Batra, Dhruv
+      1 Beerendonk, Lola
+      1 Berant, Jonathan
+      1 Berg-Kirkpatrick, Taylor
+      1 Bhardwaj, Rishabh
+      1 Bian, Ning
+      1 Biesek, Maciej
+      1 Bigham, Jeffrey P
+      1 Birch, Jonathan
+      1 Bordes, Antoine
+      1 Bosma, Maarten
+      1 Bouraoui, Zied
+      1 Bourban, Sebastien
+      1 Branco, Ant{\'o}nio
+      1 Branco, Ruben
+      1 Bras, Ronan Le
+      1 Bubeck, S{\'e}bastien
+      1 Burns, Collin
+      1 Butlin, Patrick
+      1 Calijorne Soares, Marco Antonio
+      1 Camacho-Collados, Jose
+      1 Cambria, E
+      1 Cambria, Erik
+      1 Cao, Caiyan
+      1 Cao, Yanan
+      1 Cao, Ziqiang
+      1 Cardie, Claire
+      1 Carletta, Jean
+      1 Casanova, Arantxa
+      1 Celikyilmaz, Asli
+      1 Chae, Hyungjoo
+      1 Chai, Joyce Y
+      1 Cham, Jorge
+      1 Chandrasekaran, Varun
+      1 Chang, Ming-Wei
+      1 Chang, Ting-Yun
+      1 Chaturvedi, I
+      1 Chen, Danqi
+      1 Chen, Derek
+      1 Chen, Jianshu
+      1 Chhaya, Niyati
+      1 Chi, Ed
+      1 Chin, Joshua
+      1 Choi, Eunsol
+      1 Choi, Jinho D
+      1 Cho, Justin
+      1 Constant, Axel
+      1 {Council of Graduate Schools}
+      1 Cowhey, Isaac
+      1 Critch, Andrew
+      1 Cucurull, Guillem
+      1 Da, Jeff
+      1 Dauphin, Yann
+      1 Davison, Joe
+      1 Deane, George
+      1 Dean, Jeff
+      1 Dean, Tom
+      1 Devlin, Jacob
+      1 Dinan, Emily
+      1 Dowding, John
+      1 Downey, Doug
+      1 Edwards, J
+      1 Ekbal, Asif
+      1 Eldan, Ronen
+      1 Ellis, D
+      1 Elmoznino, Eric
+      1 Etzioni, Oren
+      1 Fahrenfort, Johannes J
+      1 Fan, Wei
+      1 Faruqui, Manaal
+      1 Favre, Benoit
+      1 Fei, Zhengcong
+      1 Feldman, Joshua
+      1 Feng, Will
+      1 Feng, Xiachong
+      1 Feng, Xiaocheng
+      1 Feng, Yang
+      1 Fernandez, Raquel
+      1 Fisch, Adam
+      1 Fleming, Stephen M
+      1 Flynn, Mike
+      1 Frampton, Matthew
+      1 Francis, Jonathan
+      1 Francken, Jolien C
+      1 Frandsen, Mike
+      1 Frederickson, Clint
+      1 Frith, Chris
+      1 Fu, Peng
+      1 Gabriel, Saadia
+      1 Gao, Qiaozi
+      1 Gawarecki, Mikayla
+      1 Gehrke, Johannes
+      1 Gelbart, D
+      1 Ghosh, Romila
+      1 Ghosh, Shalini
+      1 Gliwa, Bogdan
+      1 Goldberg, Yoav
+      1 Gomez, Aidan N
+      1 Gong, Ming
+      1 Gordon, Andrew S
+      1 Graciarena, Martin
+      1 Grice, H Paul
+      1 Guerquin, Michal
+      1 Guillemot, Mael
+      1 Gupta, Aditya
+      1 Gupta, Prakhar
+      1 Gurevych, Iryna
+      1 Hain, Thomas
+      1 Hajishirzi, Hannaneh
+      1 Halevy, Alon
+      1 Han, Xianpei
+      1 Havasi, Catherine
+      1 Hazarika, Devamanyu
+      1 He, Ben
+      1 He, He
+      1 He, Luheng
+      1 Hendrycks, Dan
+      1 Hermida, Jes{\'u}s M
+      1 Hessel, Jack
+      1 Hinton, Geoffrey
+      1 Hinton, Geoffrey E
+      1 Hobbs, Jerry R
+      1 Ho, Daniel
+      1 Horvitz, Eric
+      1 Hou, Yu
+      1 Hristidis, Vagelis
+      1 Huang, Dandan
+      1 Huang, Lifu
+      1 Huang, Lishan
+      1 Hwang, Jena
+      1 Ichter, Brian
+      1 Iyyer, Mohit
+      1 Jaech, Aaron
+      1 Jamour, Fuad
+      1 Jandaghi, Pegah
+      1 Janin, A
+      1 Jansen, Peter
+      1 Jiang, Dazhi
+      1 Jian, Samson Yu Bai
+      1 Ji, Xu
+      1 Jones, Llion
+      1 Jonze, Spike
+      1 Joo, Se June
+      1 Jurafsky, Dan
+      1 Kadlec, Jaroslav
+      1 Kaiser, Lukasz
+      1 Kamar, Ece
+      1 Kanai, Ryota
+      1 Karaiskos, Vasilis
+      1 Khashabi, Daniel
+      1 Kiela, Douwe
+      1 Kim, Chaehyeong
+      1 Kim, Gunhee
+      1 Kim, Hyunwoo
+      1 Kim, Seungone
+      1 Kim, Youngwook
+      1 Kim, Yu Jin
+      1 Kintzing, Donald
+      1 Kiverstein, Julian D
+      1 Klein, Colin
+      1 Kraaij, Wessel
+      1 Krizhevsky, Alex
+      1 Kronenthal, Melissa
+      1 Kumar, A
+      1 Kwak, Beong-Woo
+      1 Lathoud, Guillaume
+      1 Le bras, Ronan
+      1 LeBras, Ronan
+      1 Lee, Kenton
+      1 Lee, Peter
+      1 Lee, Yin Tat
+      1 Le, Quoc
+      1 Le, Quoc V
+      1 Leveque, Kyle
+      1 Liang, Bin
+      1 Liang, Percy
+      1 Liang, Xiaodan
+      1 Li, Jerry
+      1 Li, Jiangnan
+      1 Li, Jiwei
+      1 Li, Junlong
+      1 Li, Lihong
+      1 Lincoln, Mike
+      1 Lindsay, Grace
+      1 Lin, Hongyu
+      1 Lin, Liang
+      1 Lin, Zheng
+      1 Li{\`o}, Pietro
+      1 Lisowska, Agnes
+      1 Liu, Alisa
+      1 Liu, H
+      1 Liu, Jiacheng
+      1 Liu, Rui
+      1 Liu, Shujie
+      1 Liu, Ting
+      1 Liu, Ye
+      1 Li, Wenjie
+      1 Li, Yanran
+      1 Li, Ying
+      1 Li, Yuanzhi
+      1 Li, Zekang
+      1 Li, Zhisong
+      1 Lowe, Ryan
+      1 Lu, Jiasen
+      1 Lundberg, Scott
+      1 Lu, Xin
+      1 Lu, Yaojie
+      1 Majumder, Bodhisattwa Prasad
+      1 Manning, Christopher D
+      1 Mart{\'\i}nez del Rinc{\'o}n, Jes{\'u}s
+      1 Mason, Shane
+      1 Ma, Xuezhe
+      1 Ma, Yunpu
+      1 Mazaitis, Kathryn
+      1 McAuley, Julian
+      1 McCann, Bryan
+      1 McCowan, Iain
+      1 McGuinness, Deborah L
+      1 Meng, Fandong
+      1 Mesnil, Gregoire
+      1 Miao, Chunyan
+      1 Michel, Matthias
+      1 Miller, Alexander H
+      1 Mochol, Iwona
+      1 Molenaar, Dylan
+      1 Monroe, Will
+      1 Montoyo, Andr{\'e}s
+      1 Moon, S
+      1 Morgan, N
+      1 Mudrik, Liad
+      1 Nagel, Thomas
+      1 Nebel, Jean-Christophe
+      1 Niekrasz, John
+      1 Ni, Jinjie
+      1 Niu, Shuzi
+      1 Nori, Harsha
+      1 Nyberg, Eric
+      1 Ostendorf, Mari
+      1 {others}
+      1 Palangi, Hamid
+      1 Pandelea, Vlad
+      1 Parikh, Devi
+      1 Parmar, Niki
+      1 Parreiras, Fernando Silva
+      1 Peng, Nanyun
+      1 Perez, Ethan
+      1 Peskin, B
+      1 Peters, Megan A K
+      1 Peters, Stanley
+      1 Petroni, Fabio
+      1 Pfau, T
+      1 Pineau, Joelle
+      1 Polosukhin, Illia
+      1 Post, Wilfried
+      1 Pow, Nissan
+      1 Prabhakar, Akshara
+      1 Purver, Matthew
+      1 Qin, Bing
+      1 Qin, Jinghui
+      1 Rahimi, Ali
+      1 Rajani, Nazneen Fatema
+      1 Reddy, Siva
+      1 Reidsma, Dennis
+      1 Reimers, Nils
+      1 Ribeiro, Marco Tulio
+      1 Richardson, Christopher
+      1 Riedhammer, Korbinian
+      1 Ritter, Alan
+      1 Rockt{\
+      1 Romero, Adriana
+      1 Roof, Brendan
+      1 Roy, Abhinaba
+      1 Roy, Scott
+      1 Rush, Alexander M
+      1 Santofimia, Maria J
+      1 Schockaert, Steven
+      1 Schoenick, Carissa
+      1 Schuurmans, Dale
+      1 Schwartz, Roy
+      1 Schwitzgebel, Eric
+      1 Serban, Iulian
+      1 Seth, Anil K
+      1 Shah, P
+      1 Shazeer, Noam
+      1 Shen, Xiaoyu
+      1 Shou, Linjun
+      1 Shriberg, E
+      1 Shriberg, Elizabeth
+      1 Siddique, A B
+      1 Silva, Jo{\~a}o Ricardo
+      1 Simon, Jonathan
+      1 Singh, P
+      1 Singh, Shikhar
+      1 Smith, Noah A
+      1 Socher, Richard
+      1 Song, Dawn
+      1 Speer, Robyn
+      1 Steinhardt, Jacob
+      1 Stolcke, A
+      1 Stolcke, Andreas
+      1 Storks, Shane
+      1 Strope, Brian
+      1 Subba, R
+      1 Su, Hui
+      1 Sun, Kai
+      1 Sun, Le
+      1 Sutskever, Ilya
+      1 Szekely, Pedro
+      1 Szlam, Arthur
+      1 Tafjord, Oyvind
+      1 Talmor, Alon
+      1 Tien, Jing
+      1 Toutanova, Kristina
+      1 Trinh, Trieu H
+      1 Tu, Geng
+      1 Upadhyay, Shyam
+      1 Urbanek, Jack
+      1 Uszkoreit, Jakob
+      1 van Gaal, Simon
+      1 VanRullen, Rufin
+      1 Varshney, Deeksha
+      1 Vaswani, Ashish
+      1 Veli{\v c}kovi{\'c}, Petar
+      1 Vergyri, Dimitra
+      1 Voss, Lynn
+      1 Vrajitoru, Dana
+      1 Wang, Di
+      1 Wang, Han
+      1 Wang, Weiping
+      1 Wang, Xinpeng
+      1 Wang, Xuezhi
+      1 Wang, Yi-Chia
+      1 Wawer, Aleksander
+      1 Wei, Jason
+      1 Wellner, Pierre
+      1 Wen, Nuan
+      1 Wooters, C
+      1 Wu, Sixing
+      1 Wu, Te-Lin
+      1 Wu, Yu
+      1 Wu, Zhonghai
+      1 Xia, Fei
+      1 Xiao, Yanghua
+      1 Xiong, Caiming
+      1 Xue, Fuzhao
+      1 Xu, Feifei
+      1 Xu, Luxun
+      1 Xu, Ruifeng
+      1 Xu, Yichong
+      1 Yang, Deqing
+      1 Yang, Diyi
+      1 Yang, Fan
+      1 Yang, Tao
+      1 Yao, Kaisheng
+      1 Yatskar, Mark
+      1 Ye, Zheng
+      1 Yih, Scott Wen-Tau
+      1 Yih, Wen-Tau
+      1 Yi, Jingjie
+      1 Yoran, Ori
+      1 Young, T
+      1 Young, Tom
+      1 You, Zeyu
+      1 Yuan, Siyu
+      1 Yu, Dian
+      1 Yu, Dong
+      1 Yu, Jane A
+      1 Yu, Philip S
+      1 Yu, Youngjae
+      1 Zahiri, Sayyed M
+      1 Zeng, Michael
+      1 Zettlemoyer, Luke
+      1 Zhang, Bin
+      1 Zhang, Dawei
+      1 Zhang, Jinchao
+      1 Zhang, Saizheng
+      1 Zhang, Wenkai
+      1 Zhang, Yi
+      1 Zhang, Zhiyao
+      1 Zhang, Zhuosheng
+      1 Zhao, Hai
+      1 Zhao, Weixiang
+      1 Zhao, Yanyan
+      1 Zhong, Peixiang
+      1 Zhou, Denny
+      1 Zhou, H
+      1 Zhou, Ming
+      1 Zhou, Shanlin
+      1 Zhou, Xuhui
+      1 Zhou, Yang
+      1 Zhu, Chenguang
+      1 Ziems, Caleb
+      1 Zweig, Geoffrey
+      2 Arabshahi, Forough
+      2 Clark, Peter
+      2 Cui, Leyang
+      2 Farhadi, Ali
+      2 Forbes, Maxwell
+      2 Galley, Michel
+      2 Gelbukh, Alexander
+      2 Holtzman, Ari
+      2 Hong, Pengfei
+      2 Hwang, Seung-Won
+      2 Ilievski, Filip
+      2 Jhamtani, Harsh
+      2 Jiang, Liwei
+      2 Khanna, Rahul
+      2 Khot, Tushar
+      2 Kim, Seokhwan
+      2 Lee, Jennifer
+      2 Lee, Seyeon
+      2 Long, Robert
+      2 Lourie, Nicholas
+      2 Ma, Kaixin
+      2 Malaviya, Chaitanya
+      2 Mitchell, Tom
+      2 Oltramari, Alessandro
+      2 Qin, Lianhui
+      2 Sabharwal, Ashish
+      2 Shen, Siqi
+      2 Tur, Gokhan
+      2 Vinyals, Oriol
+      2 Welleck, Sean
+      2 Weston, Jason
+      2 Yeo, Jinyoung
+      2 Zhang, Yue
+      2 Zhou, Jie
+      3 Bengio, Yoshua
+      3 Gao, Jianfeng
+      3 Gopalakrishnan, Karthik
+      3 Hedayatnia, Behnam
+      3 Hwang, Jena D
+      3 Lin, Bill Yuchen
+      3 Lu, Ximing
+      3 Sakaguchi, Keisuke
+      4 Ghosal, Deepanway
+      4 Heck, Larry
+      4 Liu, Yang
+      4 Majumder, Navonil
+      4 Mihalcea, Rada
+      4 Poria, Soujanya
+      4 Pujara, Jay
+      4 Rashkin, Hannah
+      4 Shwartz, Vered
+      4 West, Peter
+      4 Zellers, Rowan
+      5 Bisk, Yonatan
+      5 Bosselut, Antoine
+      5 Hakkani-Tur, Dilek
+      5 Ren, Xiang
+      5 Sap, Maarten
+      5 Zhou, Pei
+     11 Bhagavatula, Chandra
+     12 Le Bras, Ronan
+     26 Choi, Yejin

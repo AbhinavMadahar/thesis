@@ -43,7 +43,7 @@ def main(outline_filename: str) -> ExitStatus:
                         total_word_count += int(match.group(1).split(' ')[0])
                 print(total_word_count, 'words')
         except IsADirectoryError:
-            print(f"Supplied file is a directory, not a file: {outline_filename}")
+            print(f"Supplied file is not a file: {outline_filename}")
             return ExitStatus.NOT_A_FILE
     except FileNotFoundError:
         print(f"File not found: {outline_filename}")

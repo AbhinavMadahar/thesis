@@ -57,7 +57,7 @@ thesis/thesis.pdf: thesis/* $(filter-out thesis/thesis.pdf, $(shell find thesis 
 		${LATEX_COMPILER} -jobname='thesis' '\documentclass{amsbook} \newif\ifboomer \boomerfalse \input{thesis.tex}' && \
 		rm -f thesis.aux thesis.log thesis.out thesis.toc **/*.aux **/*.log texput.*
 
-thesis/thesis-boomer.pdf: thesis/* $(filter-out thesis/thesis.pdf, $(shell find thesis -type f))
+thesis/thesis-boomer.pdf: thesis/* $(filter-out thesis/thesis.pdf thesis/thesis-boomer.pdf, $(shell find thesis -type f))
 	cd thesis && \
 		${LATEX_COMPILER} -jobname='thesis-boomer' '\documentclass{amsbook} \newif\ifboomer \boomertrue \input{thesis.tex}' && \
 		${LATEX_COMPILER} -jobname='thesis-boomer' '\documentclass{amsbook} \newif\ifboomer \boomertrue \input{thesis.tex}' && \

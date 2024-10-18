@@ -6,16 +6,24 @@ Scratchpad:
   - Note that all of my knowledge on commonsense reasoning has been autodidactical, so my strong understanding of the state of the field provides a substantial bull signal
     - Define bull and bear signals
     - If I've come this far without institutional support, imagine how far I could go under your tutelage
+    - XXX: It might make sense to just ignore my grades. After all, my thesis proposal, early draft, and prescient prediction of the importance of CoT reasoning demonstrate my aptitude
 
 Outline:
 
 - My research interests
+  - Using the framing advanced by Prof. James Mickens, that computer science is asking good questions about computers and then answering them
 - My intended advisor(s) and committee
 - How my being in the aforementioned advisor(s)'s lab would strengthen both of our research
 - Detail the unusual path I took to get here and how it makes it misleading to evaluate me with the standard rubric applied for a graduate school applicant
 - Highlight strengths of my application
 - Dispel concerns about seeming weaknesses of my application
+  - Lack of publications:
+    - Lack of institutional support
+    - Note that Prof. Choi Yejin did not have publications when she applied to Cornell
+      - For other professors, try to see if the same argument can be made for them
 - Explain my career plan
   - I intend to go to the Bay Area for the first five to ten years following graduate school where I would build an artificial general superintelligence alongside other computer scientists and engineers
     - Explain that I expect that an artificial general superintelligence will be built in industry
   - After that, I will return to academia as a professor
+  - Tie this in with Rowan Zeller's decision to go to OpenAI instead of pursuing a professorship
+  - Note that it is difficult to make long-term career plans in artificial intelligence because of how quickly and substantially the field moves

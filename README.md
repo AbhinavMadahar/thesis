@@ -2,7 +2,7 @@
 
 _Advancing Commonsense Reasoning as a Potential Step towards Artificial General Superintelligence_
 <br />
-_Author: Abhinav Madahar <abhinavmadahar@gmail.com>_
+_Author: Abhinav Madahar · अभिनव ਮਦਾਹਰ <abhinavmadahar@gmail.com>_
 
 ## Navigating this repository
 
